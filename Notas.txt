@@ -1,0 +1,62 @@
+LINKEO DE LIBRERIAS:
+Se hace con las opciones -L y -l
+-L es para una carpeta, -l es para un archivo
+Si la compilacion da errores, buscar el error en google y ver la libreria que se necesita linkear
+Hay dos formas de linkear, de forma estática y dinámica. La forma dinámica usa dll y necesita esos dll para que el programa se ejecute, es decir, 
+si no están no puedes ejecutar el programa. La forma estática te mete todo lo que necesitas sin necesidad de los dll, directamente si el archivo 
+está compilado puedes ejecutarlo.
+
+GLFW
+Solo es se usa para crear ventanas y manejar inputs
+Para usar OpenGL se necesita una libreria extra, como puede ser GLAD o GLEW
+Esa libreria se tiene que inicializar DESPUES DE CREAR EL CONTEXTO de la ventana, si no salta un error
+
+
+OpenGL
+Documentación en esta página: https://docs.gl/
+
+
+VertexBuffer
+Es literalmente un buffer pero que está en la GPU, al que le podemos meter info sobre cualquier cosa, por ejemplo, triángulos
+El buffer está en la VRAM de la GPU
+Luego, con ese buffer se hara una drawCall. La GPU va a leer la info de ese buffer y va a displayear lo que sea que le hayas puesto (triángulos)
+Tenemos que decirle a la GPU cómo tiene que interpretar la info y cómo queremos que la dibuje. Esto es el maravilloso SHADER
+
+Shaders
+Es un codigo especial para la GPU, que permite interpretar info dentro de los buffers
+Se ejecuta en la GPU!!! (es mucho más rápido que la CPU asiq es muy bueno)
+
+glGenBuffers(int cuantosBuffersQuieres, unsigned int elBuffer)
+Se usa unsigned int porque al final no deja de ser una posicion de memoria con 4 bytes para almacenar datos
+No vamos a usar ese int como tal, si no su posición en memoria
+
+glBindBuffer(GLenum propósito, uint buffer)
+Esto te selecciona el buffer, y con el propósito le dices qué quieres hacer con el buffer
+
+glBufferData(propósito, tamañoDelBuffer, laInfo (toda junta), queVamosAHacer)
+En queVamosAHacer hay varias opciones, Stream-Static-Dynamic + Draw-Read-Copy. Todo esto está bien explicado en la documentacion de arriba
+
+Formas de dibujar:
+glDrawArrays(loQueQuieresDibujar, dondeEmpiezasALeer, numeroDeVertices)
+glDrawElements(loQueQuieresDibujar, numeroDeVertices, tipoDeDatoPrimitivo, punteroALosIndices (suele ser NULL) )
+SE VA A DIBUJAR LO QUE HAYAMOS BINDEADO, para eso sirve bindear. Si hicieramos glBindBuffer(..., 0) no se dibujaría nada (el 0 es como null)
+Es como photoshop, tienes que seleccionar lo que quieres modificar/pintar antes de hacer nada con eso
+
+VertexAttributes
+Necesitamos decirle a la GPU qué es lo que está recibiendo en el buffer
+glVertexAttribPointer(indice, tamaño, tipoPrimitivo, normalized, stride, pointer)
+- El indice te dice qué atributo estas viendo
+- El tamaño es el número de tipos que tiene ese atributo. Puede tener de 1 a 4 (un solo número, o un vec4)
+- El tipoPrimitivo es el tipo de los datos que hay en ese atributo, float, int...
+- Normalized se usa, por ejemplo, en colores cuando tienes que tener un numero entre 0 y 1, pero tienes un numero entre 0 y 255. Lo podrias hacer tu, 
+pero tambien lo puede hacer la GPU por ti.
+- Stride es el número de bytes entre los diferentes Vertex (la longitud del Vertex). NOTA: los Vertex no tienen que ser solo posiciones, pueden tener 
+tambien colores y otros atributos
+- Pointer se refiere al offset en bytes entre los atributos dentro del mismo Vertex. Puede ser util usar offsetof() de C++ para conseguir esto 
+(cuando se trabaja con una estructura definida)
+
+Shaders - Continuación
+Hay dos tipos principales, vertex y fragment shaders 
+El vertex shader se llama para cada vertex que tengamos. Especifica donde van a ir las posiciones de los vertex. Tambien te genera resultados para 
+la siguiente fase, para el fragment shader
+El fragment shader se llama para cada pixel que haya que dibujar
