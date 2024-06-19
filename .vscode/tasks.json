@@ -13,7 +13,8 @@
                 "-L${workspaceFolder}/lib",
                 "${workspaceFolder}/src/main.cpp",
                 "${workspaceFolder}/src/glad.c",
-                "-lglfw3dll",
+                "-lglfw3",
+                "-lgdi32",
                 "-o",
                 "${workspaceFolder}/glfw.exe"
             ],
