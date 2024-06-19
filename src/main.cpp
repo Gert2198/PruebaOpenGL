@@ -14,24 +14,36 @@ using namespace std;
 #define DEFAULT_HEIGHT 600
 bool fullscreen = false;
 
-// Shader code
-const string vertexShader = 
-    "#version 330 core\n"
-    "\n"
-    "layout(location = 0) in vec4 position;\n"
-    "\n"
-    "void main() {\n"
-    "   gl_Position = position;\n"
-    "}\n";
+// Create shaders with files
+string vertexShaderPath = "shaders/vertexShader.glsl";
+string fragmentShaderPath = "shaders/fragmentShader.glsl";
+char* get_shader_content(string &path) {
+    const char* fileName = path.c_str();
 
-const string fragmentShader = 
-    "#version 330 core\n"
-    "\n"
-    "layout(location = 0) out vec4 color;\n"
-    "\n"
-    "void main() {\n"
-    "   color = vec4(1.0, 0.0, 0.0, 1.0);\n"
-    "}\n";
+    FILE *fp;
+    long size = 0;
+    char* shaderContent;
+    
+    /* Read File to get size */
+    fp = fopen(fileName, "rb");
+    if(fp == NULL) {
+        cerr << "Error: shader " << path << " not found. " << endl;
+        return nullptr;
+    }
+    fseek(fp, 0L, SEEK_END);
+    size = ftell(fp)+1;
+    fclose(fp);
+
+    /* Read File for Content */
+    fp = fopen(fileName, "r");
+    shaderContent = (char*) memset(malloc(size), '\0', size);
+    fread(shaderContent, 1, size-1, fp);
+    fclose(fp);
+
+    return shaderContent;
+}
+const char* vertexShader = get_shader_content(vertexShaderPath);
+const char* fragmentShader = get_shader_content(fragmentShaderPath);
 
 static void key_callback(GLFWwindow*, int, int, int, int);
 void framebuffer_size_callback(GLFWwindow*, int, int);
@@ -85,9 +97,8 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 }
 
 // Shader functions
-static unsigned int CompileShader(unsigned int type, const string &source) {
+static unsigned int CompileShader(unsigned int type, const char* src) {
     unsigned int id = glCreateShader(type);
-    const char* src = source.c_str();
     glShaderSource(id, 1, &src, nullptr);
     glCompileShader(id);
 
@@ -106,7 +117,7 @@ static unsigned int CompileShader(unsigned int type, const string &source) {
 
     return id;
 }
-static unsigned int CreateShader(const string &vertexShader, const string &fragmentShader) {
+static unsigned int CreateShader(const char* vertexShader, const char* fragmentShader) {
     unsigned int program = glCreateProgram();
     unsigned int vs = CompileShader(GL_VERTEX_SHADER, vertexShader);
     unsigned int fs = CompileShader(GL_FRAGMENT_SHADER, fragmentShader);
@@ -122,8 +133,7 @@ static unsigned int CreateShader(const string &vertexShader, const string &fragm
     return program;
 }
 
-int main()
-{
+int main() {
     glfwSetErrorCallback(error_callback);
 
     if (!glfwInit()) {
