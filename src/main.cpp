@@ -71,7 +71,7 @@ string getShaderContent(string &path) {
     }
     return content;
 }
-
+// QUYE ES ESTO DE STATICO BRO
 static void key_callback(GLFWwindow*, int, int, int, int);
 void framebuffer_size_callback(GLFWwindow*, int, int);
 
