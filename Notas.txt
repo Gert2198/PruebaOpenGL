@@ -48,15 +48,14 @@ glVertexAttribPointer(indice, tamaño, tipoPrimitivo, normalized, stride, pointe
 - El indice te dice qué atributo estas viendo
 - El tamaño es el número de tipos que tiene ese atributo. Puede tener de 1 a 4 (un solo número, o un vec4)
 - El tipoPrimitivo es el tipo de los datos que hay en ese atributo, float, int...
-- Normalized se usa, por ejemplo, en colores cuando tienes que tener un numero entre 0 y 1, pero tienes un numero entre 0 y 255. Lo podrias hacer tu, 
-pero tambien lo puede hacer la GPU por ti.
-- Stride es el número de bytes entre los diferentes Vertex (la longitud del Vertex). NOTA: los Vertex no tienen que ser solo posiciones, pueden tener 
-tambien colores y otros atributos
-- Pointer se refiere al offset en bytes entre los atributos dentro del mismo Vertex. Puede ser util usar offsetof() de C++ para conseguir esto 
-(cuando se trabaja con una estructura definida)
+- Normalized se usa, por ejemplo, en colores cuando tienes que tener un numero entre 0 y 1, pero tienes un numero entre 0 y 255. Lo podrias hacer tu, pero tambien lo puede hacer la GPU por ti.
+- Stride es el número de bytes entre los diferentes Vertex (la longitud del Vertex). NOTA: los Vertex no tienen que ser solo posiciones, pueden tener tambien colores y otros atributos
+- Pointer se refiere al offset en bytes entre los atributos dentro del mismo Vertex. Puede ser util usar offsetof() de C++ para conseguir esto (cuando se trabaja con una estructura definida)
 
 Shaders - Continuación
 Hay dos tipos principales, vertex y fragment shaders 
-El vertex shader se llama para cada vertex que tengamos. Especifica donde van a ir las posiciones de los vertex. Tambien te genera resultados para 
-la siguiente fase, para el fragment shader
+El vertex shader se llama para cada vertex que tengamos. Especifica donde van a ir las posiciones de los vertex. Tambien te genera resultados para la siguiente fase, para el fragment shader
 El fragment shader se llama para cada pixel que haya que dibujar
+Realmente lo unico importante que he aprendido de esto de momento es a como pasar ficheros a string
+He creado dos funciones, una para leer un único shader en un fichero, y otra para leer varios shaders en un mismo fichero.
+Todavia no se la potencia que puede llegar a tener un shader, ni qué parámetros se le puede asignar, de momento solo se posicion y color

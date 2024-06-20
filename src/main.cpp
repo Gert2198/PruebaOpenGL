@@ -2,11 +2,11 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#include <string>
+#include <fstream>
+#include <sstream>
+
 #include "linmath.h"
- 
-#include <stdlib.h>
-#include <stddef.h>
-#include <stdio.h>
 
 using namespace std; 
 
@@ -15,35 +15,49 @@ using namespace std;
 bool fullscreen = false;
 
 // Create shaders with files
-string vertexShaderPath = "shaders/vertexShader.glsl";
-string fragmentShaderPath = "shaders/fragmentShader.glsl";
-char* get_shader_content(string &path) {
-    const char* fileName = path.c_str();
+// string vertexShaderPath = "res/shaders/vertexShader.glsl";
+// string fragmentShaderPath = "res/shaders/fragmentShader.glsl";
+string basicShaderPath = "res/shaders/basic.shader";
 
-    FILE *fp;
-    long size = 0;
-    char* shaderContent;
-    
-    /* Read File to get size */
-    fp = fopen(fileName, "rb");
-    if(fp == NULL) {
-        cerr << "Error: shader " << path << " not found. " << endl;
-        return nullptr;
+struct ShaderProgramSource {
+    string vertexSource;
+    string fragmentSource;
+};
+
+static ShaderProgramSource getShaderContentSingleFile(const string &path) {
+    ifstream stream(path);
+
+    enum class ShaderType {
+        NONE = -1, VERTEX = 0, FRAGMENT = 1
+    };
+
+    string line;
+    stringstream ss[2];
+    ShaderType type = ShaderType::NONE;
+    while (getline(stream, line)) {
+        if (line.find("#shader") != string::npos) {
+            if (line.find("vertex") != string::npos) {
+                type = ShaderType::VERTEX;
+            } else if (line.find("fragment") != string::npos) {
+                type = ShaderType::FRAGMENT;
+            }
+        } else {
+            ss[(int)type] << line << '\n';
+        }
     }
-    fseek(fp, 0L, SEEK_END);
-    size = ftell(fp)+1;
-    fclose(fp);
 
-    /* Read File for Content */
-    fp = fopen(fileName, "r");
-    shaderContent = (char*) memset(malloc(size), '\0', size);
-    fread(shaderContent, 1, size-1, fp);
-    fclose(fp);
-
-    return shaderContent;
+    return { ss[0].str(), ss[1].str() };
 }
-const char* vertexShader = get_shader_content(vertexShaderPath);
-const char* fragmentShader = get_shader_content(fragmentShaderPath);
+
+string getShaderContent(string &path) {
+    ifstream file(path);
+    string str;
+    string content;
+    while (getline(file, str)) {
+        content.append(str + "\n");
+    }
+    return content;
+}
 
 static void key_callback(GLFWwindow*, int, int, int, int);
 void framebuffer_size_callback(GLFWwindow*, int, int);
@@ -97,8 +111,9 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 }
 
 // Shader functions
-static unsigned int CompileShader(unsigned int type, const char* src) {
+static unsigned int CompileShader(unsigned int type, const string &source) {
     unsigned int id = glCreateShader(type);
+    const char* src = source.c_str();
     glShaderSource(id, 1, &src, nullptr);
     glCompileShader(id);
 
@@ -117,7 +132,7 @@ static unsigned int CompileShader(unsigned int type, const char* src) {
 
     return id;
 }
-static unsigned int CreateShader(const char* vertexShader, const char* fragmentShader) {
+static unsigned int CreateShader(const string &vertexShader, const string &fragmentShader) {
     unsigned int program = glCreateProgram();
     unsigned int vs = CompileShader(GL_VERTEX_SHADER, vertexShader);
     unsigned int fs = CompileShader(GL_FRAGMENT_SHADER, fragmentShader);
@@ -184,7 +199,12 @@ int main() {
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), 0);
     
-    unsigned int shader = CreateShader(vertexShader, fragmentShader);
+    // const string vertexShader = getShaderContent(vertexShaderPath);
+    // const string fragmentShader = getShaderContent(fragmentShaderPath);
+    const ShaderProgramSource basicShader = getShaderContentSingleFile(basicShaderPath);
+
+    
+    unsigned int shader = CreateShader(basicShader.vertexSource, basicShader.fragmentSource);
     glUseProgram(shader);
 
     while(!glfwWindowShouldClose(window)) {
@@ -196,7 +216,7 @@ int main() {
         glfwPollEvents();    
     }
 
-    glfwDestroyWindow(window);
+    // glDeleteProgram(shader);
     
     glfwTerminate();
     return 0;
