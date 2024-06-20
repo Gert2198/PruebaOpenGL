@@ -72,3 +72,8 @@ Cosas importantes que estoy leyendo:
     ¿Como sabe OpenGL qué posiciones tiene que leer si no se las he pasado? Primero bindeamos el ArrayBuffer y luego el ElementArrayBuffer, por eso el ArrayBuffer "sigue bindeado", es como que el ArrayBuffer y el ElementArrayBuffer no se afectan entre ellos al bindear.
     IMPORTANTE: los indices tienen que ir en sentido antihorario para que se dibuje todo en el mismo sentido. Esto no importa mucho ahora, pero luego cuando rendericemos texturas y eso sí que hará falta para que la imagen no salga invertida!!
 
+https://www.youtube.com/watch?v=FBbPWSOQ0-w&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2&index=10&ab_channel=TheCherno
+Errores
+Hay una funcion muy bonita, glGetError(), que te devuelve uno de los errores, solo uno
+Entonces lo que se hace para debuggear una seccion de codigo es limpiar todos los errores que hubiera antes, hacer la seccion y luego llamar a esa funcion. Para limpiar los errores de antes, se hace con un while comprobando que no queden errores, es decir, que la funcion no te devuelva un error. He creado dos funciones para hacer esto, aunque no es el mejor approach si no sabemos donde se puede estar formando el error
+Tambien hay otra funcion, glDebugMessageCallback(), que da info más detallada del posible error, pero está para versiones recientes de OpenGL ( de la 4.3 en adelante)

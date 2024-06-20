@@ -8,7 +8,20 @@
 
 #include "linmath.h"
 
-using namespace std; 
+//Macros
+#define ASSERT(x) if (!(x)) __debugbreak();
+#define GLDebug(x) GLClearErrors();\
+    x;\
+    ASSERT(GLCheckErrors(#x, __FILE__, __LINE__))
+// #x devuelve x como un string, __FILE__ y __LINE__ devuelven el fichero y la linea donde se ha producido el error
+
+using std::cout; 
+using std::cerr; 
+using std::endl; 
+using std::string;
+using std::getline;
+using std::ifstream;
+using std::stringstream;
 
 #define DEFAULT_WIDTH 800
 #define DEFAULT_HEIGHT 600
@@ -146,6 +159,44 @@ static unsigned int CreateShader(const string &vertexShader, const string &fragm
     glDeleteShader(fs);
 
     return program;
+}
+
+// Error handling
+static void GLClearErrors() {
+    while(glGetError() != GL_NO_ERROR) 
+        cout << "Watch out before!" << endl;
+}
+static bool GLCheckErrors(const char* function, const char* file, int line) {
+    while(GLenum error = glGetError()) {
+        string str;
+        switch(error) {
+            case 1280: 
+                str = "INVALID_ENUM";
+                break;
+            case 1281:
+                str = "INVALID_VALUE";
+                break;
+            case 1282:
+                str = "INVALID_OPERATION";
+                break;
+            case 1283:
+                str = "STACK_OVERFLOW";
+                break;
+            case 1284:
+                str = "STACK_UNDERFLOW";
+                break;
+            case 1285:
+                str = "OUT_OF_MEMORY";
+                break;
+            case 1286:
+                str = "INVALID_FRAMEBUFFER_OPERATION";
+                break;
+        }
+
+        cout << "OpenGL error " << error << " in function " << function << ", " << file << ":" << line << "\n\t" << str << endl;
+        return false;
+    }
+    return true;
 }
 
 int main() {

@@ -13,14 +13,15 @@
                 "-L${workspaceFolder}/lib",
                 "${workspaceFolder}/src/main.cpp",
                 "${workspaceFolder}/src/glad.c",
-                "-lglfw3dll",
+                "-lglfw3",
+                "-lgdi32",
                 "-o",
                 "${workspaceFolder}/glfw.exe"
             ],
             "stopAtEntry": false,
             "externalConsole": true,
             "cwd": "c:/Users/Usuario/Desktop/PruebaOpenGL/src",
-            "program": "c:/Users/Usuario/Desktop/PruebaOpenGL/src/build/Debug/outDebug",
+            "program": "${workspaceFolder}/glfw.exe",
             "MIMode": "gdb",
             "miDebuggerPath": "gdb",
             "setupCommands": [
