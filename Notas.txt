@@ -26,6 +26,7 @@ Shaders
 Es un codigo especial para la GPU, que permite interpretar info dentro de los buffers
 Se ejecuta en la GPU!!! (es mucho más rápido que la CPU asiq es muy bueno)
 
+https://www.youtube.com/watch?v=0p9VxImr7Y0&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2&index=4&ab_channel=TheCherno
 glGenBuffers(int cuantosBuffersQuieres, unsigned int elBuffer)
 Se usa unsigned int porque al final no deja de ser una posicion de memoria con 4 bytes para almacenar datos
 No vamos a usar ese int como tal, si no su posición en memoria
@@ -42,6 +43,7 @@ glDrawElements(loQueQuieresDibujar, numeroDeVertices, tipoDeDatoPrimitivo, punte
 SE VA A DIBUJAR LO QUE HAYAMOS BINDEADO, para eso sirve bindear. Si hicieramos glBindBuffer(..., 0) no se dibujaría nada (el 0 es como null)
 Es como photoshop, tienes que seleccionar lo que quieres modificar/pintar antes de hacer nada con eso
 
+https://www.youtube.com/watch?v=x0H--CL2tUI&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2&index=5&ab_channel=TheCherno
 VertexAttributes
 Necesitamos decirle a la GPU qué es lo que está recibiendo en el buffer
 glVertexAttribPointer(indice, tamaño, tipoPrimitivo, normalized, stride, pointer)
@@ -52,6 +54,9 @@ glVertexAttribPointer(indice, tamaño, tipoPrimitivo, normalized, stride, pointe
 - Stride es el número de bytes entre los diferentes Vertex (la longitud del Vertex). NOTA: los Vertex no tienen que ser solo posiciones, pueden tener tambien colores y otros atributos
 - Pointer se refiere al offset en bytes entre los atributos dentro del mismo Vertex. Puede ser util usar offsetof() de C++ para conseguir esto (cuando se trabaja con una estructura definida)
 
+https://www.youtube.com/watch?v=5W7JLgFCkwI&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2&index=6&ab_channel=TheCherno
+https://www.youtube.com/watch?v=71BLZwRGUJE&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2&index=7&ab_channel=TheCherno
+https://www.youtube.com/watch?v=2pv0Fbo-7ms&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2&index=8&ab_channel=TheCherno
 Shaders - Continuación
 Hay dos tipos principales, vertex y fragment shaders 
 El vertex shader se llama para cada vertex que tengamos. Especifica donde van a ir las posiciones de los vertex. Tambien te genera resultados para la siguiente fase, para el fragment shader
@@ -59,3 +64,11 @@ El fragment shader se llama para cada pixel que haya que dibujar
 Realmente lo unico importante que he aprendido de esto de momento es a como pasar ficheros a string
 He creado dos funciones, una para leer un único shader en un fichero, y otra para leer varios shaders en un mismo fichero.
 Todavia no se la potencia que puede llegar a tener un shader, ni qué parámetros se le puede asignar, de momento solo se posicion y color
+
+https://www.youtube.com/watch?v=MXNMC1YAxVQ&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2&index=9&ab_channel=TheCherno
+IndexBuffer
+Permite reutilizar vertices existentes, por ejemplo, para dibujar un rectangulo. Podriamos hacerlo con dos triangulos, que ya sabemos dibujar, pero eso hace que los dos vertices que se tocan de cada triangulo estén repetidos (estariamos usando 6 vertices en vez de solo 4)
+Cosas importantes que estoy leyendo: 
+    ¿Como sabe OpenGL qué posiciones tiene que leer si no se las he pasado? Primero bindeamos el ArrayBuffer y luego el ElementArrayBuffer, por eso el ArrayBuffer "sigue bindeado", es como que el ArrayBuffer y el ElementArrayBuffer no se afectan entre ellos al bindear.
+    IMPORTANTE: los indices tienen que ir en sentido antihorario para que se dibuje todo en el mismo sentido. Esto no importa mucho ahora, pero luego cuando rendericemos texturas y eso sí que hará falta para que la imagen no salga invertida!!
+

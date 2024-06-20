@@ -177,27 +177,40 @@ int main() {
 
     cout << glGetString(GL_VERSION) << endl;
 
-    // Creo el buffer
-    unsigned int buffer;
-    // Lo creo de verdad (no sabemos qué longitud tiene)
-    glGenBuffers(1, &buffer);
-    // Lo seleccionamos para hacer cosas con él
-    // Le decimos que es un array normal
-    glBindBuffer(GL_ARRAY_BUFFER, buffer);
+    // Triangulo con Array Buffer
+    // float positions[6] = { 
+    //     -0.5f, -0.5f,
+    //      0.0f,  0.5f, 
+    //      0.5f, -0.5f
+    // };
 
-    // Ahora queremos meterle info
-    float positions[6] = { 
-        -0.5f, -0.5f,
-         0.0f,  0.5f, 
-         0.5f, -0.5f
+    // Cuadrado con Index Buffer
+    float positions[] = {
+        -0.5f, -0.5f, // 0
+         0.5f, -0.5f, // 1
+         0.5f,  0.5f, // 2
+        -0.5f,  0.5f  // 3
     };
-    // Aqui especificamos la longitud de nuestro buffer
-    // Hacemos 6 * sizeof(float) porque tenemos que almacenar 6 posiciones
-    glBufferData(GL_ARRAY_BUFFER, 6 * sizeof(float), positions, GL_STATIC_DRAW);
 
-    // Le decimos los atributos
+    // TIENE QUE SER UNSIGNED, glDrawElements solo trata con datos sin signo
+    unsigned int indices[] = {
+        0, 1, 2, // triangulo 1
+        2, 3, 0  // triangulo 2
+    };
+
+    // Triangulo
+    unsigned int buffer;
+    glGenBuffers(1, &buffer);
+    glBindBuffer(GL_ARRAY_BUFFER, buffer);
+    glBufferData(GL_ARRAY_BUFFER, 4 * 2 * sizeof(float), positions, GL_STATIC_DRAW); // 4 vertices, con 2 floats cada uno
+
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), 0);
+
+    unsigned int indexBufferObj;
+    glGenBuffers(1, &indexBufferObj);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBufferObj);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, 6 * sizeof(unsigned int), indices, GL_STATIC_DRAW);
     
     // const string vertexShader = getShaderContent(vertexShaderPath);
     // const string fragmentShader = getShaderContent(fragmentShaderPath);
@@ -210,13 +223,14 @@ int main() {
     while(!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
 
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        // glDrawArrays(GL_TRIANGLES, 0, 3);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr); // Lo que dibujamos, numero de indices, tipo en el buffer, puntero a los indices (como está bindeado se pone null)
 
         glfwSwapBuffers(window);
         glfwPollEvents();    
     }
 
-    // glDeleteProgram(shader);
+    glDeleteProgram(shader);
     
     glfwTerminate();
     return 0;
