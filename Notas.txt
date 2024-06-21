@@ -77,3 +77,19 @@ Errores
 Hay una funcion muy bonita, glGetError(), que te devuelve uno de los errores, solo uno
 Entonces lo que se hace para debuggear una seccion de codigo es limpiar todos los errores que hubiera antes, hacer la seccion y luego llamar a esa funcion. Para limpiar los errores de antes, se hace con un while comprobando que no queden errores, es decir, que la funcion no te devuelva un error. He creado dos funciones para hacer esto, aunque no es el mejor approach si no sabemos donde se puede estar formando el error
 Tambien hay otra funcion, glDebugMessageCallback(), que da info más detallada del posible error, pero está para versiones recientes de OpenGL ( de la 4.3 en adelante)
+
+https://www.youtube.com/watch?v=DE6Xlx_kbo0&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2&index=13&ab_channel=TheCherno
+Pasar variables de la CPU (C++) a la GPU (shaders)
+Se hace declarando una variable de tipo uniform en el shader. Al ser uniform, se actualiza en cada drawCall. 
+Para pasar realmente la info al shader tenemos que usar la funcion glUniform...(location, ...), por ejemplo, si queremos usar un vec4 en el shader, debemos usar la funcion glUniform4f(location, f1, f2, f3, f4)
+Tenemos que pasarle la localizacion de la variable que tiene el uniform en el shader. Esta localizacion se obtiene con la funcion glGetUniformLocation(programa, nombreDeLaVariable)
+Detalle tonto: el programa (linkeado con el shader) tiene que estar creado antes de poder obtener la localizacion (sería tonto querer obtener algo que no hemos definido todavia)
+
+https://www.youtube.com/watch?v=Bcs56Mm-FJY&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2&index=12&ab_channel=TheCherno
+Vertex Arrays 
+Pequeño detalle que comenta en el video: imaginemos el caso en el que bindeamos un ArrayBuffer y le especificamos los atributos que tiene el buffer, en nuestro caso las posiciones. Despues creamos otro buffer y lo bindeamos y hacemos lo que tengamos que hacer con él. Despues de eso, VOLVEMOS a bindear el primer buffer. ¿Tenemos que volver a especificar los atributos? SÍ, los atributos no se "guadran" con el buffer, cada vez que desbindeamos un buffer corremos el riesgo de que otro buffer haya modificado la informacion de los atributos, por lo que hay que volver a poner esa info. ¿Y eso que significa? Que si tuvieramos varios objetos que dibujar, tendriamos que estar todo el rato bindeando y especificando atributos para cada objeto que dibujamos. Esto es un rollo
+Entonces, en vez de hacer un ArrayBuffer, podemos bindear un VertexArray, que si que guarda el estado de todo.
+Realmente ya estamos usando un VertexArray, cuando llamamos a GLDebug(glEnableVertexAttribArray(0)). El 0 es como el VertexArray predeterminado, que viene en el Compatibility Profile por defecto. Pero si estuvieramos en el Core Profile, no tendriamos este VertexArray, tendriamos que bindearlo nosotros
+¿Pero qué tiene de bueno bindearlo nosotros? QUE EL PROBLEMA DESAPARECE, el VertexArray guadra el estado del buffer y de sus atributos, y por eso no hay que especificarlos, ni siquiera hace falta volver a bindear el ArrayBuffer. 
+Pero pero, ¿cual es el codigo que linkea el ArrayBuffer con el VertexArray?? Es la funcion glVertexAttribPointer, si tenemos bindeado el VertexArray y el ArrayBuffer, cuando llamamos a esa funcion, ambos se linkean. 
+De momento no hablamos de linkear varios ArrayBuffers al mismo VertexArray, pero llegaremos. Pequeña preview: cuando bindeas otro ArrayBuffer, si llamas a la funcion glVertexAttribPointer con otro índice en el primer parámetro, este segundo ArrayBuffer tambien se linkea con el VertexArray. Los dos buffers estan linkeados al mismo VertexArray.
