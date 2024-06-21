@@ -7,16 +7,9 @@
 #include <sstream>
 
 #include "linmath.h"
-
-static void GLClearErrors();
-static bool GLCheckErrors(const char*, const char*, int);
-
-//Macros
-#define ASSERT(x) if (!(x)) __debugbreak();
-#define GLDebug(x) GLClearErrors();\
-    x;\
-    ASSERT(GLCheckErrors(#x, __FILE__, __LINE__))
-// #x devuelve x como un string, __FILE__ y __LINE__ devuelven el fichero y la linea donde se ha producido el error
+#include "Renderer.h"
+#include "VertexBuffer.h"
+#include "IndexBuffer.h"
 
 using std::cout; 
 using std::cerr; 
@@ -33,7 +26,7 @@ bool fullscreen = false;
 // Create shaders with files
 // string vertexShaderPath = "res/shaders/vertexShader.glsl";
 // string fragmentShaderPath = "res/shaders/fragmentShader.glsl";
-string basicShaderPath = "res/shaders/basic.shader";
+string basicShaderPath = "res/shaders/basic.glsl";
 
 struct ShaderProgramSource {
     string vertexSource;
@@ -167,44 +160,6 @@ static unsigned int CreateShader(const string &vertexShader, const string &fragm
     return program;
 }
 
-// Error handling
-static void GLClearErrors() {
-    while(glGetError() != GL_NO_ERROR) 
-        cout << "Watch out before!" << endl;
-}
-static bool GLCheckErrors(const char* function, const char* file, int line) {
-    while(GLenum error = glGetError()) {
-        string str;
-        switch(error) {
-            case 1280: 
-                str = "INVALID_ENUM";
-                break;
-            case 1281:
-                str = "INVALID_VALUE";
-                break;
-            case 1282:
-                str = "INVALID_OPERATION";
-                break;
-            case 1283:
-                str = "STACK_OVERFLOW";
-                break;
-            case 1284:
-                str = "STACK_UNDERFLOW";
-                break;
-            case 1285:
-                str = "OUT_OF_MEMORY";
-                break;
-            case 1286:
-                str = "INVALID_FRAMEBUFFER_OPERATION";
-                break;
-        }
-
-        cout << "OpenGL error " << error << " in function " << function << ", " << file << ":" << line << "\n\t" << str << endl;
-        return false;
-    }
-    return true;
-}
-
 int main() {
     glfwSetErrorCallback(error_callback);
 
@@ -265,18 +220,12 @@ int main() {
     GLDebug(glGenVertexArrays(1, &vao));
     GLDebug(glBindVertexArray(vao));
 
-    unsigned int buffer;
-    GLDebug(glGenBuffers(1, &buffer));
-    GLDebug(glBindBuffer(GL_ARRAY_BUFFER, buffer));
-    GLDebug(glBufferData(GL_ARRAY_BUFFER, 4 * 2 * sizeof(float), positions, GL_STATIC_DRAW)); // 4 vertices, con 2 floats cada uno
+    VertexBuffer vbo(positions, 4 * 2 * sizeof(float));
 
     GLDebug(glEnableVertexAttribArray(0));
     GLDebug(glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), 0));
 
-    unsigned int indexBufferObj;
-    GLDebug(glGenBuffers(1, &indexBufferObj));
-    GLDebug(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBufferObj));
-    GLDebug(glBufferData(GL_ELEMENT_ARRAY_BUFFER, 6 * sizeof(unsigned int), indices, GL_STATIC_DRAW));
+    IndexBuffer ibo(indices, 6);
     
     // const string vertexShader = getShaderContent(vertexShaderPath);
     // const string fragmentShader = getShaderContent(fragmentShaderPath);
@@ -291,8 +240,8 @@ int main() {
 
     GLDebug(glBindVertexArray(0));
     GLDebug(glUseProgram(0));
-    GLDebug(glBindBuffer(GL_ARRAY_BUFFER, 0));
-    GLDebug(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0));
+    vbo.Unbind();
+    ibo.Unbind();
 
     float r = 0.0f;
     float increment = 0.05f;
@@ -306,7 +255,7 @@ int main() {
         GLDebug(glUniform4f(location, r, 0.3f, 0.8f, 1.0f));
 
         GLDebug(glBindVertexArray(vao)); // Cuando creamos nosotros el Vertex Array, no necesitamos bindear 
-        GLDebug(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBufferObj));
+        ibo.Bind();
 
 
         // glDrawArrays(GL_TRIANGLES, 0, 3);
