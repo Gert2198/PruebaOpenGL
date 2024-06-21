@@ -7,9 +7,11 @@
 #include <sstream>
 
 #include "linmath.h"
+
 #include "Renderer.h"
 #include "VertexBuffer.h"
 #include "IndexBuffer.h"
+#include "VertexArray.h"
 
 using std::cout; 
 using std::cerr; 
@@ -202,6 +204,7 @@ int main() {
     //      0.5f, -0.5f
     // };
 
+    {
     // Cuadrado con Index Buffer
     float positions[] = {
         -0.5f, -0.5f, // 0
@@ -216,16 +219,17 @@ int main() {
         2, 3, 0  // triangulo 2
     };
 
-    unsigned int vao; // vertex array object
-    GLDebug(glGenVertexArrays(1, &vao));
-    GLDebug(glBindVertexArray(vao));
+    VertexArray vao;
+    vao.bind();
 
-    VertexBuffer* vbo = new VertexBuffer(positions, 4 * 2 * sizeof(float));
+    VertexBuffer vbo(positions, 4 * 2 * sizeof(float));
 
-    GLDebug(glEnableVertexAttribArray(0));
-    GLDebug(glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), 0));
+    VertexBufferLayout layout;
+    layout.push<float>(2);
 
-    IndexBuffer* ibo = new IndexBuffer(indices, 6);
+    vao.addBuffer(vbo, layout);
+
+    IndexBuffer ibo(indices, 6);
     
     // const string vertexShader = getShaderContent(vertexShaderPath);
     // const string fragmentShader = getShaderContent(fragmentShaderPath);
@@ -238,10 +242,10 @@ int main() {
     GLDebug(int location = glGetUniformLocation(shader, "u_Color"));
     ASSERT(location != -1); // Puede que no exista el uniform en el programa especificado
 
-    GLDebug(glBindVertexArray(0));
+    vao.unbind();
     GLDebug(glUseProgram(0));
-    vbo->Unbind();
-    ibo->Unbind();
+    vbo.unbind();
+    ibo.unbind();
 
     float r = 0.0f;
     float increment = 0.05f;
@@ -254,8 +258,8 @@ int main() {
         GLDebug(glUseProgram(shader));
         GLDebug(glUniform4f(location, r, 0.3f, 0.8f, 1.0f));
 
-        GLDebug(glBindVertexArray(vao)); // Cuando creamos nosotros el Vertex Array, no necesitamos bindear 
-        ibo->Bind();
+        vao.bind(); // Cuando creamos nosotros el Vertex Array, no necesitamos bindear 
+        ibo.bind();
 
 
         // glDrawArrays(GL_TRIANGLES, 0, 3);
@@ -276,10 +280,7 @@ int main() {
     }
 
     GLDebug(glDeleteProgram(shader));
-    
-    delete vbo;
-    delete ibo;
-
+    }
     glfwTerminate();
     return 0;
 }
