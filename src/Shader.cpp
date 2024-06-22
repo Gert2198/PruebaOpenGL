@@ -25,9 +25,14 @@ void Shader::setUniform4f(const string name, float v1, float v2, float v3, float
 }
 
 int Shader::getUniformLocation(const string name) {
+    if (m_UniformLocationCache.find(name) != m_UniformLocationCache.end())
+        return m_UniformLocationCache[name];
+
     GLDebug(int location = glGetUniformLocation(m_RendererID, name.c_str()));
     if (location == -1)  // Puede que no exista el uniform en el programa especificado
         std::cerr << "Warning: uniform '" << name << "' does not exist." << std::endl;
+    
+    m_UniformLocationCache[name] = location;
     return location;
 }
 

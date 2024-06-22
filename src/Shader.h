@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <unordered_map>
 
 #include "Renderer.h"
 
@@ -15,7 +16,7 @@ class Shader {
 private:
     unsigned int m_RendererID;
     string m_Filepath;
-    // caching for uniforms
+    std::unordered_map<string, unsigned int> m_UniformLocationCache;
 public:
     Shader(const string &filepath);
     ~Shader();
