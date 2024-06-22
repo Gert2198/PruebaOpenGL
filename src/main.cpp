@@ -2,24 +2,17 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-#include <string>
-#include <fstream>
-#include <sstream>
-
 #include "linmath.h"
 
 #include "Renderer.h"
 #include "VertexBuffer.h"
 #include "IndexBuffer.h"
 #include "VertexArray.h"
+#include "Shader.h"
 
 using std::cout; 
-using std::cerr; 
 using std::endl; 
 using std::string;
-using std::getline;
-using std::ifstream;
-using std::stringstream;
 
 #define DEFAULT_WIDTH 800
 #define DEFAULT_HEIGHT 600
@@ -29,45 +22,6 @@ bool fullscreen = false;
 // string vertexShaderPath = "res/shaders/vertexShader.glsl";
 // string fragmentShaderPath = "res/shaders/fragmentShader.glsl";
 string basicShaderPath = "res/shaders/basic.glsl";
-
-struct ShaderProgramSource {
-    string vertexSource;
-    string fragmentSource;
-};
-
-static ShaderProgramSource getShaderContentSingleFile(const string &path) {
-    ifstream stream(path);
-
-    enum class ShaderType {
-        NONE = -1, VERTEX = 0, FRAGMENT = 1
-    };
-
-    string line;
-    stringstream ss[2];
-    ShaderType type = ShaderType::NONE;
-    while (getline(stream, line)) {
-        if (line.find("#shader") != string::npos) {
-            if (line.find("vertex") != string::npos) {
-                type = ShaderType::VERTEX;
-            } else if (line.find("fragment") != string::npos) {
-                type = ShaderType::FRAGMENT;
-            }
-        } else {
-            ss[(int)type] << line << '\n';
-        }
-    }
-
-    return { ss[0].str(), ss[1].str() };
-}
-// static string getShaderContent(string &path) {
-//     ifstream file(path);
-//     string str;
-//     string content;
-//     while (getline(file, str)) {
-//         content.append(str + "\n");
-//     }
-//     return content;
-// }
 
 static void key_callback(GLFWwindow*, int, int, int, int);
 void framebuffer_size_callback(GLFWwindow*, int, int);
@@ -124,44 +78,6 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     glViewport(0, 0, width, height);
 }
 
-// Shader functions
-static unsigned int CompileShader(unsigned int type, const string &source) {
-    GLDebug(unsigned int id = glCreateShader(type));
-    const char* src = source.c_str();
-    GLDebug(glShaderSource(id, 1, &src, nullptr));
-    GLDebug(glCompileShader(id));
-
-    // Manejo de errores
-    int result;
-    GLDebug(glGetShaderiv(id, GL_COMPILE_STATUS, &result));
-    if (result == GL_FALSE) {
-        int length;
-        GLDebug(glGetShaderiv(id, GL_INFO_LOG_LENGTH, &length));
-        char* message = (char*) alloca(length * sizeof(char)); // En vez de usar new y que no esté en la pila, de esta forma el mensaje se mantiene en la pila
-        GLDebug(glGetShaderInfoLog(id, length, &length, message));
-        cerr << "Failed to compile " << (type == GL_VERTEX_SHADER ? "vertex" : "fragment")  << " shader.\nError: " << message << endl;
-        GLDebug(glDeleteShader(id));
-        return 0;
-    }
-
-    return id;
-}
-static unsigned int CreateShader(const string &vertexShader, const string &fragmentShader) {
-    GLDebug(unsigned int program = glCreateProgram());
-    unsigned int vs = CompileShader(GL_VERTEX_SHADER, vertexShader);
-    unsigned int fs = CompileShader(GL_FRAGMENT_SHADER, fragmentShader);
-    
-    GLDebug(glAttachShader(program, vs));
-    GLDebug(glAttachShader(program, fs));
-    GLDebug(glLinkProgram(program));
-    GLDebug(glValidateProgram(program));
-
-    GLDebug(glDeleteShader(vs));
-    GLDebug(glDeleteShader(fs));
-
-    return program;
-}
-
 int main() {
     glfwSetErrorCallback(error_callback);
 
@@ -197,89 +113,69 @@ int main() {
 
     cout << glGetString(GL_VERSION) << endl;
 
-    // Triangulo con Array Buffer
-    // float positions[6] = { 
-    //     -0.5f, -0.5f,
-    //      0.0f,  0.5f, 
-    //      0.5f, -0.5f
-    // };
-
     {
-    // Cuadrado con Index Buffer
-    float positions[] = {
-        -0.5f, -0.5f, // 0
-         0.5f, -0.5f, // 1
-         0.5f,  0.5f, // 2
-        -0.5f,  0.5f  // 3
-    };
+        float positions[] = {
+            -0.5f, -0.5f, // 0
+            0.5f, -0.5f, // 1
+            0.5f,  0.5f, // 2
+            -0.5f,  0.5f  // 3
+        };
 
-    // TIENE QUE SER UNSIGNED, glDrawElements solo trata con datos sin signo
-    unsigned int indices[] = {
-        0, 1, 2, // triangulo 1
-        2, 3, 0  // triangulo 2
-    };
+        unsigned int indices[] = {
+            0, 1, 2, 
+            2, 3, 0
+        };
 
-    VertexArray vao;
-    vao.bind();
+        VertexArray vao;
+        vao.bind();
 
-    VertexBuffer vbo(positions, 4 * 2 * sizeof(float));
+        VertexBuffer vbo(positions, 4 * 2 * sizeof(float));
 
-    VertexBufferLayout layout;
-    layout.push<float>(2);
+        VertexBufferLayout layout;
+        layout.push<float>(2);
 
-    vao.addBuffer(vbo, layout);
+        vao.addBuffer(vbo, layout);
 
-    IndexBuffer ibo(indices, 6);
-    
-    // const string vertexShader = getShaderContent(vertexShaderPath);
-    // const string fragmentShader = getShaderContent(fragmentShaderPath);
-    const ShaderProgramSource basicShader = getShaderContentSingleFile(basicShaderPath);
+        IndexBuffer ibo(indices, 6);
 
-    
-    unsigned int shader = CreateShader(basicShader.vertexSource, basicShader.fragmentSource);
-    GLDebug(glUseProgram(shader));
+        Shader basicShader(basicShaderPath);
+        basicShader.bind();
+        basicShader.setUniform4f("u_Color", 0.2f, 0.3f, 0.8f, 1.0f);
 
-    GLDebug(int location = glGetUniformLocation(shader, "u_Color"));
-    ASSERT(location != -1); // Puede que no exista el uniform en el programa especificado
+        vao.unbind();
+        basicShader.unbind();
+        vbo.unbind();
+        ibo.unbind();
 
-    vao.unbind();
-    GLDebug(glUseProgram(0));
-    vbo.unbind();
-    ibo.unbind();
+        float r = 0.0f;
+        float increment = 0.05f;
+        double currentTime = glfwGetTime();
+        double lastTime;
 
-    float r = 0.0f;
-    float increment = 0.05f;
-    double currentTime = glfwGetTime();
-    double lastTime;
+        while(!glfwWindowShouldClose(window)) {
+            GLDebug(glClear(GL_COLOR_BUFFER_BIT));
 
-    while(!glfwWindowShouldClose(window)) {
-        GLDebug(glClear(GL_COLOR_BUFFER_BIT));
+            basicShader.bind();
+            basicShader.setUniform4f("u_Color", r, 0.3f, 0.8f, 1.0f);
 
-        GLDebug(glUseProgram(shader));
-        GLDebug(glUniform4f(location, r, 0.3f, 0.8f, 1.0f));
+            vao.bind();
+            ibo.bind();
 
-        vao.bind(); // Cuando creamos nosotros el Vertex Array, no necesitamos bindear 
-        ibo.bind();
+            GLDebug(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr));
+
+            lastTime = glfwGetTime();
+            if (lastTime - currentTime > 0.05) {
+                if (r > 1.0f) increment = -0.05f;
+                else if (r < 0.0f) increment = 0.05f;
+
+                r += increment;
+                currentTime = lastTime;        
+            }
 
 
-        // glDrawArrays(GL_TRIANGLES, 0, 3);
-        GLDebug(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr)); // Lo que dibujamos, numero de indices, tipo en el buffer, puntero a los indices (como está bindeado se pone null)
-
-        lastTime = glfwGetTime();
-        if (lastTime - currentTime > 0.05) {
-            if (r > 1.0f) increment = -0.05f;
-            else if (r < 0.0f) increment = 0.05f;
-
-            r += increment;
-            currentTime = lastTime;        
+            glfwSwapBuffers(window);
+            glfwPollEvents();    
         }
-
-
-        glfwSwapBuffers(window);
-        glfwPollEvents();    
-    }
-
-    GLDebug(glDeleteProgram(shader));
     }
     glfwTerminate();
     return 0;

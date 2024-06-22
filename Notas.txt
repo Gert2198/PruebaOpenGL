@@ -71,6 +71,7 @@ Permite reutilizar vertices existentes, por ejemplo, para dibujar un rectangulo.
 Cosas importantes que estoy leyendo: 
     ¿Como sabe OpenGL qué posiciones tiene que leer si no se las he pasado? Primero bindeamos el ArrayBuffer y luego el ElementArrayBuffer, por eso el ArrayBuffer "sigue bindeado", es como que el ArrayBuffer y el ElementArrayBuffer no se afectan entre ellos al bindear.
     IMPORTANTE: los indices tienen que ir en sentido antihorario para que se dibuje todo en el mismo sentido. Esto no importa mucho ahora, pero luego cuando rendericemos texturas y eso sí que hará falta para que la imagen no salga invertida!!
+    TIENE QUE SER UNSIGNED, glDrawElements solo trata con datos sin signo
 
 https://www.youtube.com/watch?v=FBbPWSOQ0-w&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2&index=10&ab_channel=TheCherno
 Errores
