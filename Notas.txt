@@ -94,3 +94,18 @@ Realmente ya estamos usando un VertexArray, cuando llamamos a GLDebug(glEnableVe
 ¿Pero qué tiene de bueno bindearlo nosotros? QUE EL PROBLEMA DESAPARECE, el VertexArray guadra el estado del buffer y de sus atributos, y por eso no hay que especificarlos, ni siquiera hace falta volver a bindear el ArrayBuffer. 
 Pero pero, ¿cual es el codigo que linkea el ArrayBuffer con el VertexArray?? Es la funcion glVertexAttribPointer, si tenemos bindeado el VertexArray y el ArrayBuffer, cuando llamamos a esa funcion, ambos se linkean. 
 De momento no hablamos de linkear varios ArrayBuffers al mismo VertexArray, pero llegaremos. Pequeña preview: cuando bindeas otro ArrayBuffer, si llamas a la funcion glVertexAttribPointer con otro índice en el primer parámetro, este segundo ArrayBuffer tambien se linkea con el VertexArray. Los dos buffers estan linkeados al mismo VertexArray.
+
+https://www.youtube.com/watch?v=n4k7ANAFsIQ&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2&index=18&ab_channel=TheCherno
+Textures
+TODO 
+
+https://www.youtube.com/watch?v=o1_yJ60UIxs&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2&index=18&ab_channel=TheCherno
+Blending
+Basicamente es la forma en la que OpenGL determina cómo se fusionan dos colores que se superponen. 
+Tenemos un color RGBA source (fuente) y un color RGBA destino (el que ya estaba). Si activamos blending (glEnable(GL_BLEND)), OpenGL va a realizar algun tipo de cálculo para mezclar esos dos colores fuente y destino. Por defecto, solo superpone la fuente en el destino, pero eso no nos interesa si nuestro color, por ejemplo, es transparente o translucido. Querriamos que se mezclaran bien los colores. Por ejemplo, si el destino es rojo y la fuente es un azul translucido, nos esperaríamos obtener como resultado un color morado. Por eso tenemos que definir la funcion de mezclado (glBlendFunc()). En el video, la funcion que usa es muy sencillita:
+    Se coge el alpha (lo que determina como de transparente es el color) de la fuente, y multiplica cada valor RGBA de la fuente por ese alpha
+    Multiplica tambien cada valor del destino por (1 - alpha)
+    Finalmente, el color resultante del pixel es la suma de ambos colores 
+Esto se consigue con la linea de codigo glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA). Cada parametro que le pongamos aqui multiplicará a cada color fuente y destino, respectivamente. Despues, sumar es la forma predeterminada que tiene OpenGL para mezclar ambos colores, pero podemos cambiarla usando la funcion glBlendEquation(modo), siendo el modo la operacion que queremos que se haga entre los colores (by default esta en GL_FUNC_ADD). 
+Recordatorio: si queremos ver que otras opciones podemos usar en la funcion glBlendEquation, la podemos buscar en https://docs.gl/. Ahí aparecen todas las posibles funciones de mezclado que soporta glBlendEquation
+Si queremos desactivar el blending usamos glDisable(GL_BLEND)
