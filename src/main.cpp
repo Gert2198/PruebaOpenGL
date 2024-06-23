@@ -10,6 +10,7 @@
 #include "IndexBuffer.h"
 #include "VertexArray.h"
 #include "Shader.h"
+#include "Texture.h"
 
 using std::cout; 
 using std::endl; 
@@ -114,10 +115,10 @@ int main() {
 
     {
         float positions[] = {
-            -0.5f, -0.5f, // 0
-            0.5f, -0.5f, // 1
-            0.5f,  0.5f, // 2
-            -0.5f,  0.5f  // 3
+            -0.5f, -0.5f, 0.0f, 0.0f, // 0
+             0.5f, -0.5f, 1.0f, 0.0f, // 1
+             0.5f,  0.5f, 1.0f, 1.0f, // 2
+            -0.5f,  0.5f, 0.0f, 1.0f  // 3
         };
 
         unsigned int indices[] = {
@@ -125,12 +126,16 @@ int main() {
             2, 3, 0
         };
 
+        GLDebug(glEnable(GL_BLEND));
+        GLDebug(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
+
         VertexArray vao;
         vao.bind();
 
-        VertexBuffer vbo(positions, 4 * 2 * sizeof(float));
+        VertexBuffer vbo(positions, 4 * 4 * sizeof(float));
 
         VertexBufferLayout layout;
+        layout.push<float>(2);
         layout.push<float>(2);
 
         vao.addBuffer(vbo, layout);
@@ -141,24 +146,22 @@ int main() {
         basicShader.bind();
         basicShader.setUniform4f("u_Color", 0.2f, 0.3f, 0.8f, 1.0f);
 
-        vao.unbind();
-        basicShader.unbind();
-        vbo.unbind();
-        ibo.unbind();
+        Texture texture("res/textures/atomo.png");
+        texture.bind();
+        basicShader.setUniform1i("u_Texture", 0);
 
         Renderer renderer;
 
-        float r;
-        double currentTime;
+        // float r;
+        // double currentTime;
 
         while(!glfwWindowShouldClose(window)) {
             renderer.clear();
 
-            currentTime = glfwGetTime();
-            r = (sin(currentTime) + 1) / 2;
+            // currentTime = glfwGetTime();
+            // r = (sin(currentTime) + 1) / 2;
 
-            basicShader.bind();
-            basicShader.setUniform4f("u_Color", r, 0.3f, 0.8f, 1.0f);
+            // basicShader.setUniform4f("u_Color", r, 0.3f, 0.8f, 1.0f);
 
             renderer.draw(vao, ibo, basicShader);
 

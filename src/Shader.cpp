@@ -22,6 +22,14 @@ void Shader::unbind() const {
     GLDebug(glUseProgram(0));
 }
 
+void Shader::setUniform1i(const string name, int value) {
+    GLDebug(glUniform1i(getUniformLocation(name), value));
+}
+
+void Shader::setUniform1f(const string name, float value) {
+    GLDebug(glUniform1f(getUniformLocation(name), value));
+}
+
 void Shader::setUniform4f(const string name, float v1, float v2, float v3, float v4) {
     GLDebug(glUniform4f(getUniformLocation(name), v1, v2, v3, v4));
 }
