@@ -4,6 +4,8 @@
 #include <fstream>
 #include <sstream>
 
+#include "Renderer.h"
+
 Shader::Shader(const string &filepath) : m_RendererID(0), m_Filepath(filepath) {
     ShaderProgramSource source = getShaderContentSingleFile(filepath);
     m_RendererID = createShader(source.vertexSource, source.fragmentSource);

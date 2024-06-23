@@ -6,6 +6,7 @@
 
 #include "Renderer.h"
 #include "VertexBuffer.h"
+#include "VertexBufferLayout.h"
 #include "IndexBuffer.h"
 #include "VertexArray.h"
 #include "Shader.h"
@@ -104,8 +105,6 @@ int main() {
 
     glfwMakeContextCurrent(window);
 
-    glfwSwapInterval(1);
-
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
         cout << "Failed to initialize GLAD" << endl;
         return -1;
@@ -147,31 +146,21 @@ int main() {
         vbo.unbind();
         ibo.unbind();
 
-        float r = 0.0f;
-        float increment = 0.05f;
-        double currentTime = glfwGetTime();
-        double lastTime;
+        Renderer renderer;
+
+        float r;
+        double currentTime;
 
         while(!glfwWindowShouldClose(window)) {
-            GLDebug(glClear(GL_COLOR_BUFFER_BIT));
+            renderer.clear();
+
+            currentTime = glfwGetTime();
+            r = (sin(currentTime) + 1) / 2;
 
             basicShader.bind();
             basicShader.setUniform4f("u_Color", r, 0.3f, 0.8f, 1.0f);
 
-            vao.bind();
-            ibo.bind();
-
-            GLDebug(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr));
-
-            lastTime = glfwGetTime();
-            if (lastTime - currentTime > 0.05) {
-                if (r > 1.0f) increment = -0.05f;
-                else if (r < 0.0f) increment = 0.05f;
-
-                r += increment;
-                currentTime = lastTime;        
-            }
-
+            renderer.draw(vao, ibo, basicShader);
 
             glfwSwapBuffers(window);
             glfwPollEvents();    

@@ -37,3 +37,15 @@ bool GLCheckErrors(const char* function, const char* file, int line) {
     }
     return true;
 }
+
+void Renderer::clear() const {
+    GLDebug(glClear(GL_COLOR_BUFFER_BIT));
+}
+
+void Renderer::draw(const VertexArray &vao, const IndexBuffer &ibo, const Shader &shader) const {
+    shader.bind();
+    vao.bind();
+    ibo.bind();
+
+    glDrawElements(GL_TRIANGLES, ibo.getCount(), GL_UNSIGNED_INT, nullptr);
+}

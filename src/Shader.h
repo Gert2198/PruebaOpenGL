@@ -3,8 +3,6 @@
 #include <string>
 #include <unordered_map>
 
-#include "Renderer.h"
-
 using std::string;
 
 struct ShaderProgramSource {

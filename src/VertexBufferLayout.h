@@ -14,7 +14,7 @@ struct VertexBufferElement {
             case GL_UNSIGNED_INT:   return sizeof(GLuint);
             case GL_UNSIGNED_BYTE:  return sizeof(GLubyte);
         }
-        ASSERT(false);
+        // ASSERT(false);
         return 0;
     }
 };
