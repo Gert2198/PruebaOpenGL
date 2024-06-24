@@ -22,16 +22,22 @@ void Shader::unbind() const {
     GLDebug(glUseProgram(0));
 }
 
-void Shader::setUniform1i(const string name, int value) {
+void Shader::setUniform1i(const string &name, int value) {
     GLDebug(glUniform1i(getUniformLocation(name), value));
 }
 
-void Shader::setUniform1f(const string name, float value) {
+void Shader::setUniform1f(const string &name, float value) {
     GLDebug(glUniform1f(getUniformLocation(name), value));
 }
 
-void Shader::setUniform4f(const string name, float v1, float v2, float v3, float v4) {
+void Shader::setUniform4f(const string &name, float v1, float v2, float v3, float v4) {
     GLDebug(glUniform4f(getUniformLocation(name), v1, v2, v3, v4));
+}
+
+void Shader::setUniformMat4f(const string &name, glm::mat4 &projMatrix) {
+    GLDebug(glUniformMatrix4fv(getUniformLocation(name), 1, GL_FALSE, &projMatrix[0][0]));
+    // CUIDAO: si la forma en la que nuestra libreria de matemáticas implementa las matrices es con vectores POR FILAS, tenemos que transponerla
+    // En nuestro caso, glm crea las matrices por columnas, que es justo como las lee OpenGL, por lo que ponemos a FALSE el campo transpose
 }
 
 int Shader::getUniformLocation(const string name) {
