@@ -55,6 +55,8 @@ int Shader::getUniformLocation(const string name) {
 
 ShaderProgramSource Shader::getShaderContentSingleFile(const string &path) {
     std::ifstream stream(path);
+    if (!stream.is_open())
+        std::cerr << "Failed to open file in path " << path << std::endl;
 
     enum class ShaderType {
         NONE = -1, VERTEX = 0, FRAGMENT = 1

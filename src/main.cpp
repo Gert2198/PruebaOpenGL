@@ -2,6 +2,9 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#include "Utils.h"
+#include "figures/Square.h"
+
 #include "Renderer.h"
 #include "VertexBuffer.h"
 #include "VertexBufferLayout.h"
@@ -17,76 +20,8 @@ using std::cout;
 using std::endl; 
 using std::string;
 
-#define DEFAULT_WIDTH 800
-#define DEFAULT_HEIGHT 600
-bool fullscreen = false;
-
 // Create shaders with files
-// string vertexShaderPath = "res/shaders/vertexShader.glsl";
-// string fragmentShaderPath = "res/shaders/fragmentShader.glsl";
 string basicShaderPath = "res/shaders/basic.glsl";
-
-static void key_callback(GLFWwindow*, int, int, int, int);
-void framebuffer_size_callback(GLFWwindow*, int, int);
-
-// Refactoring functions
-void SLM_toggleFullscreen(GLFWwindow* window) {
-    GLFWmonitor* monitor = glfwGetPrimaryMonitor();
-    const GLFWvidmode* mode = glfwGetVideoMode(monitor);
-    if (!fullscreen) {
-        glfwSetWindowMonitor(window, monitor, 0, 0, mode->width, mode->height, mode->refreshRate);
-        fullscreen = true;
-    } else {
-        int x = (mode->width - DEFAULT_WIDTH)/2;
-        int y = (mode->height - DEFAULT_HEIGHT)/2;
-        glfwSetWindowMonitor(window, NULL, x, y, DEFAULT_WIDTH, DEFAULT_HEIGHT, mode->refreshRate);
-        fullscreen = false;
-    }
-}
-void SLM_centerWindow(GLFWwindow* window, int width, int height) {
-    GLFWmonitor* monitor = glfwGetPrimaryMonitor();
-    const GLFWvidmode* mode = glfwGetVideoMode(monitor);
-    int x = (mode->width - width)/2;
-    int y = (mode->height - height)/2;
-    glfwSetWindowPos(window, x, y);
-}
-void SLM_setWindowCallbacks(GLFWwindow* window) {
-    glfwSetKeyCallback(window, key_callback);
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-}
-int SLM_gcd(int a, int b) { 
-    if (a == 0) return b; 
-    if (b == 0) return a; 
-    if (a == b) return a; 
-  
-    if (a > b) return SLM_gcd(a - b, b); 
-    return SLM_gcd(a, b - a); 
-} 
-
-// Callback functions
-void error_callback(int error, const char* description) {
-    fprintf(stderr, "GLFW Error: %s\n", description);
-}
-static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
-    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, GLFW_TRUE);
-    if (key == GLFW_KEY_ENTER && action == GLFW_PRESS) 
-        if (!fullscreen) {
-            glfwSetWindowSize(window, 600, 450);
-            SLM_centerWindow(window, 600, 450);
-        }
-    if (key == GLFW_KEY_ENTER && action == GLFW_RELEASE) 
-        if (!fullscreen) {
-            glfwSetWindowSize(window, 800, 600);
-            SLM_centerWindow(window, 800, 600);
-        }
-    if (key == GLFW_KEY_F11 && action == GLFW_PRESS) {
-        SLM_toggleFullscreen(window);
-    }
-}
-void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
-    glViewport(0, 0, width, height);
-}
 
 int main() {
     glfwSetErrorCallback(error_callback);
@@ -122,51 +57,69 @@ int main() {
     cout << glGetString(GL_VERSION) << endl;
 
     {
-        float positions[] = {
-            -0.5f, -0.5f, 0.0f, 0.0f, // 0
-             0.5f, -0.5f, 1.0f, 0.0f, // 1
-             0.5f,  0.5f, 1.0f, 1.0f, // 2
-            -0.5f,  0.5f, 0.0f, 1.0f  // 3
-        };
-
-        unsigned int indices[] = {
-            0, 1, 2, 
-            2, 3, 0
-        };
-
-        GLDebug(glEnable(GL_BLEND));
-        GLDebug(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
+        Texture texture("res/textures/atomo.png");
+        texture.bind();
+        
+        glm::vec2 center = SLM_getCenterCoords(DEFAULT_WIDTH, DEFAULT_HEIGHT);
+        glm::vec2 offset(texture.getWidth() / 2 , texture.getHeight() / 2);
 
         VertexArray vao;
         vao.bind();
-
-        VertexBuffer vbo(positions, 4 * 4 * sizeof(float));
 
         VertexBufferLayout layout;
         layout.push<float>(2);
         layout.push<float>(2);
 
-        vao.addBuffer(vbo, layout);
 
-        IndexBuffer ibo(indices, 6);
+        Square square(center, texture.getWidth(), texture.getHeight(), vao, layout);
+
+        // float positions[] = {
+        //     square.getVertex(0).x,    square.getVertex(0).y,    0.0f, 0.0f, // 0
+        //     square.getVertex(1).x,    square.getVertex(1).y,    1.0f, 0.0f, // 1
+        //     square.getVertex(2).x,    square.getVertex(2).y,    1.0f, 1.0f, // 2
+        //     square.getVertex(3).x,    square.getVertex(3).y,    0.0f, 1.0f  // 3
+        // };
+
+        // unsigned int indices[] = {
+        //     0, 1, 2, 
+        //     2, 3, 0
+        // };
+
+        GLDebug(glEnable(GL_BLEND));
+        GLDebug(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
+
+        // VertexBuffer vbo(positions, 4 * 4 * sizeof(float));
+
+        
+        // vao.addBuffer(vbo, layout);
+
+        // IndexBuffer ibo(indices, 6);
+
 
         // OJO: la matrix ortho es como un plano, sin perspectiva. No hay lejos ni cerca, los puntos no se intersecan en el plano del infinito. 
         // NO HAY PLANO DEL INFINITO, los puntos proyectivos son paralelos entre si
-        int gcd = SLM_gcd(DEFAULT_WIDTH, DEFAULT_HEIGHT);
-        float xRatio = DEFAULT_WIDTH / (float) gcd;
-        float yRatio = DEFAULT_HEIGHT / (float) gcd;
-        float divisor = xRatio / 2;
+        glm::mat4 projMatrix = glm::ortho(0.0f, DEFAULT_WIDTH_F, 0.0f, DEFAULT_HEIGHT_F, -1.0f, 1.0f);
 
-        glm::mat4 projMatrix = glm::ortho(-xRatio / divisor, xRatio / divisor, -yRatio / divisor, yRatio / divisor, -1.0f, 1.0f);
+        // La view matrix hace de "camara", es decir, si quieres que la escena se mueva para la derecha, tendras que mover la camara para la izquierda
+        // Basicamente todo va invertido
+        // Puedes hacer traslaciones, rotaciones, zoom-in y zoom-out (escalar) y todas las cosas tipicas que se pueden hacer con matrices
+        // En este caso, como la traslacion es para la izquierda, nuestra escena se moverá a la derecha
+        // MENTIRA, EMOSIDO ENGAÑADO!!!! La direccion hacia donde lo mueves es EXACTAMENTE hacia donde se mueve la escena
+        // En este caso, como la traslacion es para la izquierda, LA ESCENA SE MUEVE A LA IZQUIERDA
+        // Lo que está invertido es el movimiento DE LA CAMARA!! (nuestra view matrix)
+        // glm::mat4 viewMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(-100, 0, 0));
+
+        glm::mat4 modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(center.x, center.y, 0)) 
+                                * glm::rotate(glm::mat4(1.0f), glm::quarter_pi<float>(), glm::vec3(0.0f, 0.0f, 1.0f))
+                                * glm::translate(glm::mat4(1.0f), glm::vec3(-center.x, -center.y, 0));
+
+        glm::mat4 mvp = projMatrix * modelMatrix;
 
         Shader basicShader(basicShaderPath);
         basicShader.bind();
         basicShader.setUniform4f("u_Color", 0.2f, 0.3f, 0.8f, 1.0f);
-        basicShader.setUniformMat4f("u_MVP", projMatrix);
-
-        Texture texture("res/textures/atomo.png");
-        texture.bind();
         basicShader.setUniform1i("u_Texture", 0);
+        basicShader.setUniformMat4f("u_MVP", mvp);
 
         Renderer renderer;
 
@@ -181,7 +134,7 @@ int main() {
 
             // basicShader.setUniform4f("u_Color", r, 0.3f, 0.8f, 1.0f);
 
-            renderer.draw(vao, ibo, basicShader);
+            renderer.draw(vao, square.getIbo(), basicShader);
 
             glfwSwapBuffers(window);
             glfwPollEvents();    

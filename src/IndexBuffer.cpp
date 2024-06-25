@@ -9,6 +9,10 @@ IndexBuffer::IndexBuffer(const unsigned int* data, unsigned int count) : m_Count
     GLDebug(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_RendererID));
     GLDebug(glBufferData(GL_ELEMENT_ARRAY_BUFFER, count * sizeof(unsigned int), data, GL_STATIC_DRAW));
 }
+IndexBuffer::IndexBuffer(const IndexBuffer& ibo) {
+    this->m_RendererID = ibo.m_RendererID;
+    this->m_Count = ibo.m_Count;
+}
 IndexBuffer::~IndexBuffer() {
     GLDebug(glDeleteBuffers(1, &m_RendererID));
 }

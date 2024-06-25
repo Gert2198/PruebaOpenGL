@@ -104,6 +104,10 @@
     "cinttypes": "cpp",
     "typeinfo": "cpp",
     "sstream": "cpp",
-    "fstream": "cpp"
-  }
+    "fstream": "cpp",
+    "cstring": "cpp",
+    "ctime": "cpp",
+    "iomanip": "cpp"
+  },
+  "cmake.sourceDirectory": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm"
 }

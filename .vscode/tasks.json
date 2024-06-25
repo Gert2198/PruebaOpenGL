@@ -11,10 +11,12 @@
                 "-std=c++17",
                 "-I${workspaceFolder}/include",
                 "-I${workspaceFolder}/src/vendor",
+                "-I${workspaceFolder}/src/figures",
                 "-L${workspaceFolder}/lib",
                 "${workspaceFolder}/src/*.cpp",
                 "${workspaceFolder}/src/glad.c",
                 "${workspaceFolder}/src/vendor/stb/stb_image.cpp",
+                "${workspaceFolder}/src/figures/Square.cpp",
                 "-lglfw3",
                 "-lgdi32",
                 "-o",
@@ -33,6 +35,22 @@
             "detail": "compiler: C:/TDM-GCC-64/bin/g++.exe"
         },
         {
+            "label": "Compilar y ejecutar proyecto",
+            "type": "shell",
+            "command": "${workspaceFolder}\\glfw.exe",
+            "group": {
+                "kind": "test",
+                "isDefault": false
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "dependsOn": "Compilar proyecto"
+        },
+        {
             "label": "Ejecutar proyecto",
             "type": "shell",
             "command": "${workspaceFolder}\\glfw.exe",
@@ -45,8 +63,7 @@
                 "reveal": "always",
                 "focus": false,
                 "panel": "shared"
-            },
-            "dependsOn": "Compilar proyecto"
+            }
         },
         {
             "type": "cppbuild",
