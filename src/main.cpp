@@ -134,7 +134,7 @@ int main() {
 
             // basicShader.setUniform4f("u_Color", r, 0.3f, 0.8f, 1.0f);
 
-            renderer.draw(vao, square.getIbo(), basicShader);
+            renderer.drawSquare(square, vao, basicShader);
 
             glfwSwapBuffers(window);
             glfwPollEvents();    
