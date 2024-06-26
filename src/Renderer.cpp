@@ -50,7 +50,7 @@ void Renderer::draw(const VertexArray &vao, const IndexBuffer &ibo, const Shader
     glDrawElements(GL_TRIANGLES, ibo.getCount(), GL_UNSIGNED_INT, nullptr);
 }
 
-void Renderer::drawSquare(Square& square, const VertexArray &vao, const Shader &shader) const {
+void Renderer::drawSquare(const Square& square, const VertexArray &vao, const Shader &shader) const {
     shader.bind();
     vao.bind();
 

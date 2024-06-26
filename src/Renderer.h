@@ -24,5 +24,5 @@ private:
 public:
     void clear() const;
     void draw(const VertexArray &vao, const IndexBuffer &ibo, const Shader &shader) const;
-    // void drawSquare(Square& square, const VertexArray &vao, const Shader &shader) const;
+    void drawSquare(const Square& square, const VertexArray &vao, const Shader &shader) const;
 };
