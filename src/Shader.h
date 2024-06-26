@@ -14,11 +14,13 @@ struct ShaderProgramSource {
 
 class Shader {
 private:
+    inline static std::unordered_map<unsigned int, int> m_repetitions = {};
     unsigned int m_RendererID;
     string m_Filepath;
     std::unordered_map<string, int> m_UniformLocationCache;
 public:
     Shader(const string &filepath);
+    Shader(const Shader& shader);
     ~Shader();
 
     void bind() const;

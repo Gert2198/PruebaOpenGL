@@ -1,14 +1,17 @@
 #pragma once
 
 #include "VertexBuffer.h"
+#include <unordered_map>
 
 class VertexBufferLayout;
 
 class VertexArray {
 private:
+    inline static std::unordered_map<unsigned int, int> m_repetitions = {};
     unsigned int m_RendererID;
 public:
     VertexArray();
+    VertexArray(const VertexArray& vao);
     ~VertexArray();
 
     void addBuffer(const VertexBuffer &vb, const VertexBufferLayout &layout);

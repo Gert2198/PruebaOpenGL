@@ -54,7 +54,7 @@ void Renderer::drawSquare(const Square& square, const VertexArray &vao, const Sh
     shader.bind();
     vao.bind();
 
-    IndexBuffer const &ibo(square.getIbo());
+    IndexBuffer ibo(square.getIbo());
 
     ibo.bind();
 

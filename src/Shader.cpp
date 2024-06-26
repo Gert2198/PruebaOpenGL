@@ -9,10 +9,24 @@
 Shader::Shader(const string &filepath) : m_RendererID(0), m_Filepath(filepath) {
     ShaderProgramSource source = getShaderContentSingleFile(filepath);
     m_RendererID = createShader(source.vertexSource, source.fragmentSource);
+    if (m_repetitions.find(m_RendererID) == m_repetitions.end())
+        m_repetitions[m_RendererID] = 1;
+    else 
+        m_repetitions[m_RendererID]++;
+}
+
+Shader::Shader(const Shader& shader){
+    m_RendererID = shader.m_RendererID;
+    m_Filepath = shader.m_Filepath;
+    m_UniformLocationCache = shader.m_UniformLocationCache;
+    m_repetitions[m_RendererID]++;
 }
 
 Shader::~Shader(){
-    GLDebug(glDeleteProgram(m_RendererID));
+    m_repetitions[m_RendererID]--;
+    if (m_repetitions[m_RendererID] == 0) {
+        GLDebug(glDeleteProgram(m_RendererID));
+    }
 }
 
 void Shader::bind() const {

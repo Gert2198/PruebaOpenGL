@@ -5,9 +5,20 @@
 
 VertexArray::VertexArray() {
     GLDebug(glGenVertexArrays(1, &m_RendererID));
+    if (m_repetitions.find(m_RendererID) == m_repetitions.end())
+        m_repetitions[m_RendererID] = 1;
+    else 
+        m_repetitions[m_RendererID]++;
+}
+VertexArray::VertexArray(const VertexArray& vao) {
+    m_RendererID = vao.m_RendererID;
+    m_repetitions[m_RendererID]++;
 }
 VertexArray::~VertexArray() {
-    GLDebug(glDeleteVertexArrays(1, &m_RendererID));
+    m_repetitions[m_RendererID]--;
+    if (m_repetitions[m_RendererID] == 0) {
+        GLDebug(glDeleteVertexArrays(1, &m_RendererID));
+    }
 }
 
 void VertexArray::addBuffer(const VertexBuffer &vb, const VertexBufferLayout &layout) {

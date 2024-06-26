@@ -13,6 +13,10 @@ Texture::Texture(const std::string &path) : m_RendererID(0), m_Path(path), m_Loc
     // En nuestro caso queremos RGBA, por lo que el numero de canales tiene que ser 4
 
     GLDebug(glGenTextures(1, &m_RendererID));
+    if (m_repetitions.find(m_RendererID) == m_repetitions.end())
+        m_repetitions[m_RendererID] = 1;
+    else 
+        m_repetitions[m_RendererID]++;
     GLDebug(glBindTexture(GL_TEXTURE_2D, m_RendererID));
 
     GLDebug(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR)); // El filtro que le aplicamos cuando minimizamos la imagen
@@ -22,18 +26,25 @@ Texture::Texture(const std::string &path) : m_RendererID(0), m_Path(path), m_Loc
 
     GLDebug(glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, m_Width, m_Height, 0, GL_RGBA, GL_UNSIGNED_BYTE, m_LocalBuffer));
     GLDebug(glBindTexture(GL_TEXTURE_2D, 0));
-
-    if (m_LocalBuffer) stbi_image_free(m_LocalBuffer); 
-    // Aqui liberamos el buffer con los datos de la imagen, pero puede que en otro momento los necesitemos. 
-    // Para futuras implementaciones, no vendria mal tener una flag que te dijera si quieres guardar la imagen por si acaso, y si es así, no
-    // liberar el buffer. Esto lo podriamos querer si necesitamos utilizar esa info de la imagen en algun momento
-    // Sería tan sencillo como ponerla como default a 0, y antes de hacer esto comprobar si es 0 o no. Si es 0 liberamos, y si no es 0 nos 
-    // quedamos la info en el buffer. CUIDADO, si nos la quedamos, luego en el destructor tenemos que liberarla
+    
+    // Libero la imagen en el destructor
     
 }
+Texture::Texture(const Texture& texture) {
+    m_RendererID = texture.m_RendererID;
+    m_Width = texture.m_Width;
+    m_Height = texture.m_Height;
+    m_BPP = texture.m_BPP;
+    m_LocalBuffer = texture.m_LocalBuffer;
+    m_Path = texture.m_Path;
+    m_repetitions[m_RendererID]++;
+}
 Texture::~Texture() {
-    GLDebug(glDeleteTextures(1, &m_RendererID));
-    // Aqui iria la comprobacion de la flag y la consecuente liberacion del buffer
+    m_repetitions[m_RendererID]--;
+    if (m_repetitions[m_RendererID] == 0) {
+        if (m_LocalBuffer) stbi_image_free(m_LocalBuffer); // Puede dar lugar a errores, CUIDAO
+        GLDebug(glDeleteTextures(1, &m_RendererID));
+    }
 }
 
 void Texture::bind(unsigned int slot) const {

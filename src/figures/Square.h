@@ -34,6 +34,6 @@ public:
     inline int getWidth() const { return m_width; }
     inline int getHeight() const { return m_height; }
 
-    inline VertexBuffer const &getVbo() const { return m_vbo; }
-    inline IndexBuffer const &getIbo() const { return m_ibo; }
+    inline VertexBuffer getVbo() const { return m_vbo; }
+    inline IndexBuffer getIbo() const { return m_ibo; }
 };
