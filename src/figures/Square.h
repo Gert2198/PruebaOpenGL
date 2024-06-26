@@ -15,17 +15,17 @@ private:
     int m_width, m_height;
     vec2 m_vertices[4];
 
-    vec2 m_data[8];
+    float m_data[16];
     VertexBuffer m_vbo;
 
     unsigned int m_indices[6];
     IndexBuffer m_ibo;
 
-    const float* initData();
-    const unsigned int* initIndices();
+    float* initData();
+    unsigned int* initIndices();
 
 public:
-    Square(const vec2& center, const int width, const int height, VertexArray& vao, VertexBufferLayout& layout);
+    Square(const vec2& center, const int width, const int height);
     ~Square();
 
     inline vec2 getVertex(int index) const { return m_vertices[index]; }

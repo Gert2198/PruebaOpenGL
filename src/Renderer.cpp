@@ -50,9 +50,10 @@ void Renderer::draw(const VertexArray &vao, const IndexBuffer &ibo, const Shader
     glDrawElements(GL_TRIANGLES, ibo.getCount(), GL_UNSIGNED_INT, nullptr);
 }
 
-void Renderer::drawSquare(const Square& square, const VertexArray &vao, const Shader &shader) const {
+void Renderer::drawSquare(const Square& square, VertexArray &vao, const Shader &shader, const VertexBufferLayout& layout) const {
     shader.bind();
     vao.bind();
+    vao.addBuffer(square.getVbo(), layout);
 
     IndexBuffer ibo(square.getIbo());
 

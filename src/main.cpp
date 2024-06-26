@@ -63,7 +63,6 @@ int main() {
         texture.bind();
         
         glm::vec2 center = SLM_getCenterCoords(DEFAULT_WIDTH, DEFAULT_HEIGHT);
-        glm::vec2 offset(texture.getWidth() / 2 , texture.getHeight() / 2);
 
         VertexArray vao;
         vao.bind();
@@ -73,7 +72,8 @@ int main() {
         layout.push<float>(2);
 
 
-        Square square(center, texture.getWidth(), texture.getHeight(), vao, layout);
+        Square square1(center, 200, 200);
+        Square square2(center + vec2(100, 100), 100, 100);
 
         GLDebug(glEnable(GL_BLEND));
         GLDebug(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
@@ -89,28 +89,39 @@ int main() {
 
         Shader basicShader(basicShaderPath);
         basicShader.bind();
-        basicShader.setUniform4f("u_Color", 0.2f, 0.3f, 0.8f, 1.0f);
         basicShader.setUniform1i("u_Texture", 0);
         
 
         Renderer renderer;
 
         double currentTime;
+        glm::mat4 modelMatrix, mvp;
 
         while(!glfwWindowShouldClose(window)) {
             renderer.clear();
 
             currentTime = glfwGetTime();
 
-            glm::mat4 modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(center.x, center.y, 0)) 
-                                    * glm::rotate(glm::mat4(1.0f), (float)currentTime, glm::vec3(0.0f, 0.0f, 1.0f))
-                                    * glm::translate(glm::mat4(1.0f), glm::vec3(-center.x, -center.y, 0));
+            modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(square1.getCenter(), 0)) 
+                        * glm::rotate(glm::mat4(1.0f), (float)currentTime, glm::vec3(0.0f, 0.0f, 1.0f))
+                        * glm::translate(glm::mat4(1.0f), glm::vec3(-square1.getCenter(), 0));
 
-            glm::mat4 mvp = projMatrix * modelMatrix;
+            mvp = projMatrix * modelMatrix;
+
 
             basicShader.setUniformMat4f("u_MVP", mvp);
+            basicShader.setUniform4f("u_Color", 0.2f, 0.3f, 0.8f, 1.0f);
+            renderer.drawSquare(square1, vao, basicShader, layout);
 
-            renderer.drawSquare(square, vao, basicShader);
+            modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(square2.getCenter(), 0)) 
+                        * glm::rotate(glm::mat4(1.0f), (float)-currentTime*4/3, glm::vec3(0.0f, 0.0f, 1.0f))
+                        * glm::translate(glm::mat4(1.0f), glm::vec3(-square2.getCenter(), 0));
+
+            mvp = projMatrix * modelMatrix;
+
+            basicShader.setUniformMat4f("u_MVP", mvp);
+            basicShader.setUniform4f("u_Color", 0.8f, 0.3f, 0.2f, 0.75f);
+            renderer.drawSquare(square2, vao, basicShader, layout);
 
             glfwSwapBuffers(window);
             glfwPollEvents();    
