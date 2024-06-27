@@ -1,0 +1,98 @@
+[
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\main.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\main.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/main.cpp",
+  "output": "CMakeFiles/main.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\gcc.exe  @CMakeFiles/main.dir/includes_C.rsp -g -o CMakeFiles\\main.dir\\src\\glad.c.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\glad.c",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/glad.c",
+  "output": "CMakeFiles/main.dir/src/glad.c.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\IndexBuffer.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\IndexBuffer.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/IndexBuffer.cpp",
+  "output": "CMakeFiles/main.dir/src/IndexBuffer.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\Renderer.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\Renderer.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/Renderer.cpp",
+  "output": "CMakeFiles/main.dir/src/Renderer.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\Shader.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\Shader.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/Shader.cpp",
+  "output": "CMakeFiles/main.dir/src/Shader.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\Texture.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\Texture.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/Texture.cpp",
+  "output": "CMakeFiles/main.dir/src/Texture.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\Utils.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\Utils.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/Utils.cpp",
+  "output": "CMakeFiles/main.dir/src/Utils.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\VertexArray.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\VertexArray.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexArray.cpp",
+  "output": "CMakeFiles/main.dir/src/VertexArray.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\VertexBuffer.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\VertexBuffer.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBuffer.cpp",
+  "output": "CMakeFiles/main.dir/src/VertexBuffer.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\VertexBufferLayout.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\VertexBufferLayout.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBufferLayout.cpp",
+  "output": "CMakeFiles/main.dir/src/VertexBufferLayout.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\vendor\\stb\\stb_image.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\vendor\\stb\\stb_image.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/stb/stb_image.cpp",
+  "output": "CMakeFiles/main.dir/src/vendor/stb/stb_image.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\figures\\Square.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\figures\\Square.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Square.cpp",
+  "output": "CMakeFiles/main.dir/src/figures/Square.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\vendor\\imgui\\imgui_demo.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\vendor\\imgui\\imgui_demo.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui_demo.cpp",
+  "output": "CMakeFiles/main.dir/src/vendor/imgui/imgui_demo.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\vendor\\imgui\\imgui_draw.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\vendor\\imgui\\imgui_draw.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui_draw.cpp",
+  "output": "CMakeFiles/main.dir/src/vendor/imgui/imgui_draw.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\vendor\\imgui\\imgui_impl_glfw_gl3.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\vendor\\imgui\\imgui_impl_glfw_gl3.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui_impl_glfw_gl3.cpp",
+  "output": "CMakeFiles/main.dir/src/vendor/imgui/imgui_impl_glfw_gl3.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\vendor\\imgui\\imgui.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\vendor\\imgui\\imgui.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui.cpp",
+  "output": "CMakeFiles/main.dir/src/vendor/imgui/imgui.cpp.obj"
+}
+]

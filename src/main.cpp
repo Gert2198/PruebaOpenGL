@@ -25,7 +25,7 @@ using std::endl;
 using std::string;
 
 // Create shaders with files
-string basicShaderPath = "res/shaders/basic.glsl";
+string basicShaderPath = "../res/shaders/basic.glsl";
 
 int main() {
     // glfwSetErrorCallback(error_callback);
@@ -102,10 +102,10 @@ int main() {
         ImGui_ImplGlfwGL3_Init(window, true);
         ImGui::StyleColorsDark();
 
-        double currentTime;
+        float currentTime;
         float angleX = 0.0f;
         float angleY = 0.0f;
-        float angleZ = 0.0f;
+        float angleZ = glm::quarter_pi<float>();
         glm::mat4 modelMatrix, mvp;
         ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
@@ -125,7 +125,7 @@ int main() {
             ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 
             modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(square1.getCenter(), 0)) 
-                        * glm::rotate(glm::mat4(1.0f), (float)currentTime, glm::vec3(0.0f, 0.0f, 1.0f))
+                        * glm::rotate(glm::mat4(1.0f), currentTime, glm::vec3(0.0f, 0.0f, 1.0f))
                         * glm::translate(glm::mat4(1.0f), glm::vec3(-square1.getCenter(), 0));
 
             mvp = projMatrix * modelMatrix;
@@ -138,7 +138,7 @@ int main() {
             modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(square2.getCenter(), 0)) 
                         * glm::rotate(glm::mat4(1.0f), angleZ, glm::vec3(0.0f, 0.0f, 1.0f))
                         * glm::rotate(glm::mat4(1.0f), angleY, glm::vec3(0.0f, 1.0f, 0.0f))
-                        * glm::rotate(glm::mat4(1.0f), angleX, glm::vec3(1.0f, 0.0f, 0.0f))
+                        * glm::rotate(glm::mat4(1.0f), angleX * currentTime, glm::vec3(1.0f, 0.0f, 0.0f))
                         * glm::translate(glm::mat4(1.0f), glm::vec3(-square2.getCenter(), 0));
 
             mvp = projMatrix * modelMatrix;
