@@ -14,6 +14,7 @@ struct ShaderProgramSource {
 
 class Shader {
 private:
+    inline static unsigned int m_boundShader = 0;
     inline static std::unordered_map<unsigned int, int> m_repetitions = {};
     unsigned int m_RendererID;
     string m_Filepath;

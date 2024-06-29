@@ -5,6 +5,9 @@
 
 class Texture {
 private:
+    inline static unsigned int m_boundTexture = 0;
+    inline static unsigned int m_activeSlot = 0;
+
     inline static std::unordered_map<unsigned int, int> m_repetitions = {};
     unsigned int m_RendererID;
     std::string m_Path;

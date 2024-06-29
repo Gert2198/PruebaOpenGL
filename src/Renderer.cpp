@@ -39,6 +39,7 @@ bool GLCheckErrors(const char* function, const char* file, int line) {
 }
 
 void Renderer::clear() const {
+    GLDebug(glClearColor(60/(float)255, 150/(float)255, 200/(float)255, 1));
     GLDebug(glClear(GL_COLOR_BUFFER_BIT));
 }
 

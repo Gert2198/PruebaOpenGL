@@ -30,10 +30,16 @@ Shader::~Shader(){
 }
 
 void Shader::bind() const {
-    GLDebug(glUseProgram(m_RendererID));
+    if (m_boundShader != m_RendererID) {
+        GLDebug(glUseProgram(m_RendererID));
+        m_boundShader = m_RendererID;
+    }
 }
 void Shader::unbind() const {
-    GLDebug(glUseProgram(0));
+    if (m_boundShader != 0) {
+        GLDebug(glUseProgram(0));
+        m_boundShader = 0;    
+    }
 }
 
 void Shader::setUniform1i(const string &name, int value) {

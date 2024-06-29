@@ -14,10 +14,10 @@ float* Square::initData() {
     m_vertices[2] = vec2(m_center.x + m_width/2, m_center.y + m_height/2);
     m_vertices[3] = vec2(m_center.x - m_width/2, m_center.y + m_height/2);
     float data[] = {
-        m_vertices[0].x, m_vertices[0].y, 0.0f, 0.0f,
-        m_vertices[1].x, m_vertices[1].y, 1.0f, 0.0f,
-        m_vertices[2].x, m_vertices[2].y, 1.0f, 1.0f,
-        m_vertices[3].x, m_vertices[3].y, 0.0f, 1.0f
+        m_vertices[0].x, m_vertices[0].y, 0.0f, 0.0f, // 0
+        m_vertices[1].x, m_vertices[1].y, 1.0f, 0.0f, // 1
+        m_vertices[2].x, m_vertices[2].y, 1.0f, 1.0f, // 2
+        m_vertices[3].x, m_vertices[3].y, 0.0f, 1.0f  // 3
     };
     for (int i = 0; i < 16; i++) m_data[i] = data[i];
     return m_data;

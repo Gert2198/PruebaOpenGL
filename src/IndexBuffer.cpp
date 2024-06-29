@@ -10,7 +10,7 @@ IndexBuffer::IndexBuffer(const unsigned int* data, unsigned int count) : m_Count
         m_repetitions[m_RendererID] = 1;
     else 
         m_repetitions[m_RendererID]++;
-    GLDebug(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_RendererID));
+    this->bind();
     GLDebug(glBufferData(GL_ELEMENT_ARRAY_BUFFER, count * sizeof(unsigned int), data, GL_STATIC_DRAW));
 }
 IndexBuffer::IndexBuffer(const IndexBuffer& ibo) {
@@ -26,8 +26,14 @@ IndexBuffer::~IndexBuffer() {
 }
 
 void IndexBuffer::bind() const {
-    GLDebug(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_RendererID));
+    if(m_boundIBO != m_RendererID) {
+        GLDebug(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_RendererID));
+        m_boundIBO = m_RendererID;
+    }
 }
 void IndexBuffer::unbind() const {
-    GLDebug(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0));
+    if(m_boundIBO != 0) {
+        GLDebug(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0));
+        m_boundIBO = 0;
+    }
 }

@@ -4,6 +4,7 @@
 
 class VertexBuffer {
 private:
+    inline static unsigned int m_boundVBO = 0;
     inline static std::unordered_map<unsigned int, int> m_repetitions = {};
     unsigned int m_RendererID;
 public:

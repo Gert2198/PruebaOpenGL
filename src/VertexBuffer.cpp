@@ -8,7 +8,7 @@ VertexBuffer::VertexBuffer(const void* data, unsigned int size) {
         m_repetitions[m_RendererID] = 1;
     else 
         m_repetitions[m_RendererID]++;
-    GLDebug(glBindBuffer(GL_ARRAY_BUFFER, m_RendererID));
+    this->bind();
     GLDebug(glBufferData(GL_ARRAY_BUFFER, size, data, GL_STATIC_DRAW));
 }
 VertexBuffer::VertexBuffer(const VertexBuffer& vbo) {
@@ -23,8 +23,14 @@ VertexBuffer::~VertexBuffer() {
 }
 
 void VertexBuffer::bind() const {
-    GLDebug(glBindBuffer(GL_ARRAY_BUFFER, m_RendererID));
+    if (m_boundVBO != m_RendererID) {
+        GLDebug(glBindBuffer(GL_ARRAY_BUFFER, m_RendererID));
+        m_boundVBO = m_RendererID;
+    }
 }
 void VertexBuffer::unbind() const {
-    GLDebug(glBindBuffer(GL_ARRAY_BUFFER, 0));
+    if (m_boundVBO != 0) {
+        GLDebug(glBindBuffer(GL_ARRAY_BUFFER, 0));
+        m_boundVBO = 0;
+    }
 }

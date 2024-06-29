@@ -17,7 +17,8 @@ Texture::Texture(const std::string &path) : m_RendererID(0), m_Path(path), m_Loc
         m_repetitions[m_RendererID] = 1;
     else 
         m_repetitions[m_RendererID]++;
-    GLDebug(glBindTexture(GL_TEXTURE_2D, m_RendererID));
+    
+    this->bind();
 
     GLDebug(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR)); // El filtro que le aplicamos cuando minimizamos la imagen
     GLDebug(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR)); // Lo mismo pero cuando ampliamos
@@ -48,9 +49,18 @@ Texture::~Texture() {
 }
 
 void Texture::bind(unsigned int slot) const {
-    GLDebug(glActiveTexture(GL_TEXTURE0 + slot));
-    GLDebug(glBindTexture(GL_TEXTURE_2D, m_RendererID));
+    if (m_boundTexture != m_RendererID) {
+        if (m_activeSlot != slot) {
+            GLDebug(glActiveTexture(GL_TEXTURE0 + slot));
+            m_activeSlot = slot;
+        }
+        GLDebug(glBindTexture(GL_TEXTURE_2D, m_RendererID));
+        m_boundTexture = m_RendererID;
+    }
 }
 void Texture::unbind() const {
-    GLDebug(glBindTexture(GL_TEXTURE_2D, 0));
+    if (m_boundTexture != 0) {
+        GLDebug(glBindTexture(GL_TEXTURE_2D, 0));
+        m_boundTexture = 0;
+    }
 }

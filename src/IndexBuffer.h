@@ -4,6 +4,7 @@
 
 class IndexBuffer {
 private:
+    inline static unsigned int m_boundIBO = 0;
     inline static std::unordered_map<unsigned int, int> m_repetitions = {};
     unsigned int m_RendererID;
     unsigned int m_Count;
