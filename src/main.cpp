@@ -20,6 +20,9 @@
 #include "imgui/imgui.h"
 #include "imgui/imgui_impl_glfw_gl3.h"
 
+#include "tests/TestClearColor.h"
+#include "tests/TestTexture.h"
+
 using std::cout; 
 using std::endl; 
 using std::string;
@@ -128,7 +131,7 @@ int main() {
 
     glfwMakeContextCurrent(window);
 
-    glfwSwapInterval(3);
+    glfwSwapInterval(0);
 
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
         cout << "Failed to initialize GLAD" << endl;
@@ -138,28 +141,28 @@ int main() {
     cout << glGetString(GL_VERSION) << endl;
 
     {
-        Texture texture("res/textures/atomo.png");
-        texture.bind();
+        // Texture texture("res/textures/atomo.png");
+        // texture.bind();
         
-        glm::vec2 center = SLM_getCenterCoords(DEFAULT_WIDTH, DEFAULT_HEIGHT);
+        // glm::vec2 center = SLM_getCenterCoords(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 
-        VertexArray vao;
-        vao.bind();
+        // VertexArray vao;
+        // vao.bind();
 
-        VertexBufferLayout layout;
-        layout.push<float>(2);
-        layout.push<float>(2);
+        // VertexBufferLayout layout;
+        // layout.push<float>(2);
+        // layout.push<float>(2);
 
 
-        Square square1(glm::vec2(0.0f), 200, 200);
-        Square square2(glm::vec2(0.0f), 100, 100);
+        // Square square1(glm::vec2(0.0f), 200, 200);
+        // Square square2(glm::vec2(0.0f), 100, 100);
 
         GLDebug(glEnable(GL_BLEND));
         GLDebug(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
 
-        Shader basicShader(basicShaderPath);
-        basicShader.bind();
-        basicShader.setUniform1i("u_Texture", 0);
+        // Shader basicShader(basicShaderPath);
+        // basicShader.bind();
+        // basicShader.setUniform1i("u_Texture", 0);
 
 
         Renderer renderer;
@@ -168,70 +171,94 @@ int main() {
         ImGui_ImplGlfwGL3_Init(window, true);
         ImGui::StyleColorsDark();
 
-        glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-        glfwSetCursorPosCallback(window, mouse_callback);
-        glfwSetScrollCallback(window, scroll_callback);
+        // glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+        // glfwSetCursorPosCallback(window, mouse_callback);
+        // glfwSetScrollCallback(window, scroll_callback);
 
-        glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+        // glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
-        glm::vec3 transform1(0.0f, 0.0f, 0.0f);     // Square 1 transform
-        glm::vec4 color1(0.2f, 0.3f, 0.8f, 1.0f);   // Square 1 color
-        float angle1 = 0.0f;                        // Angle of rotation in z axis of square 1
+        // glm::vec3 transform1(0.0f, 0.0f, 0.0f);     // Square 1 transform
+        // glm::vec4 color1(0.2f, 0.3f, 0.8f, 1.0f);   // Square 1 color
+        // float angle1 = 0.0f;                        // Angle of rotation in z axis of square 1
 
-        glm::vec3 transform2(0.0f, 0.0f, 0.0f);     // Square 2 transform
-        glm::vec4 color2(0.45f, 0.55f, 0.6f, 1.0f); // Square 2 color
-        float angleX = 0.0f;
-        float angleY = 0.0f;                        // Angles of rotation in every axis of square 2
-        float angleZ = glm::quarter_pi<float>();
+        // glm::vec3 transform2(0.0f, 0.0f, 0.0f);     // Square 2 transform
+        // glm::vec4 color2(0.45f, 0.55f, 0.6f, 1.0f); // Square 2 color
+        // float angleX = 0.0f;
+        // float angleY = 0.0f;                        // Angles of rotation in every axis of square 2
+        // float angleZ = glm::quarter_pi<float>();
 
-        glm::mat4 projMatrix = glm::perspective(glm::radians<float>(fov), DEFAULT_WIDTH_F/DEFAULT_HEIGHT_F, 0.1f, 1000.0f);
-        glm::mat4 viewMatrix, modelMatrix, mvp;
+        // glm::mat4 projMatrix = glm::perspective(glm::radians<float>(fov), DEFAULT_WIDTH_F/DEFAULT_HEIGHT_F, 0.1f, 1000.0f);
+        // glm::mat4 viewMatrix, modelMatrix, mvp;
+
+        test::Test* currentTest = nullptr;
+        test::TestMenu* testMenu = new test::TestMenu(currentTest);
+        currentTest = testMenu;
+
+        testMenu->registerTest<test::TestClearColor>("Clear color");
+
+        // test::TestTexture testTex(glm::vec2(0.0f, 0.0f), 200.0f, 200.0f, "../res/textures/atomo.png", "../res/shaders/testTexture.glsl");
 
         while(!glfwWindowShouldClose(window)) {
-            float currentFrame = static_cast<float>(glfwGetTime());
-            deltaTime = currentFrame - lastFrame;
-            lastFrame = currentFrame;
+        //     float currentFrame = static_cast<float>(glfwGetTime());
+        //     deltaTime = currentFrame - lastFrame;
+        //     lastFrame = currentFrame;
 
-            processInput(window);
-
+        //     processInput(window);
+            renderer.setClearColor(0.0f, 0.0f, 0.0f, 1.0f);
             renderer.clear();
 
             ImGui_ImplGlfwGL3_NewFrame();
 
-            ImGui::Text("Hello, world!");
-            ImGui::SliderFloat("Horizontal angle", &horizontalAngle, -glm::pi<float>(), glm::pi<float>());
-            ImGui::SliderFloat("Vertical angle", &verticalAngle, -glm::half_pi<float>() + 0.0001f, glm::half_pi<float>() - 0.0001f);
-            ImGui::SliderFloat3("Square 1 transform", &transform1.x, -300, 300);
-            ImGui::SliderFloat("Square 1 angle", &angle1, -glm::pi<float>(), glm::pi<float>());
-            ImGui::SliderFloat3("Square 2 transform", &transform2.x, -300, 300); 
-            ImGui::SliderFloat("Square 2 angle", &angleZ, -glm::pi<float>(), glm::pi<float>());
-            ImGui::InputFloat3("Camera transform", &cameraPos.x); 
-            ImGui::ColorEdit4("Square 1 color", &color1.x);
-            ImGui::ColorEdit4("Square 2 color", &color2.x);
+            if (currentTest) {
+                currentTest->onUpdate(0.0f);
+                currentTest->onRender();
+                ImGui::Begin("Test");
+                if (currentTest != testMenu && ImGui::Button("<-")) {
+                    delete currentTest;
+                    currentTest = testMenu;
+                }
+                currentTest->onImGuiRender();
+                ImGui::End();
+            }
 
-            ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 
-            viewMatrix = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
 
-            modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(transform1.x, transform1.y, transform1.z))
-                        * glm::rotate(glm::mat4(1.0f), angle1, glm::vec3(0.0f, 0.0f, 1.0f));
 
-            mvp = projMatrix * viewMatrix * modelMatrix;
 
-            basicShader.setUniformMat4f("u_MVP", mvp);
-            basicShader.setUniform4f("u_Color", color1.r, color1.g, color1.b, color1.a);
-            renderer.drawSquare(square1, vao, basicShader, layout);
+        //     ImGui::Text("Hello, world!");
+        //     ImGui::SliderFloat("Horizontal angle", &horizontalAngle, -glm::pi<float>(), glm::pi<float>());
+        //     ImGui::SliderFloat("Vertical angle", &verticalAngle, -glm::half_pi<float>() + 0.0001f, glm::half_pi<float>() - 0.0001f);
+        //     ImGui::SliderFloat3("Square 1 transform", &transform1.x, -300, 300);
+        //     ImGui::SliderFloat("Square 1 angle", &angle1, -glm::pi<float>(), glm::pi<float>());
+        //     ImGui::SliderFloat3("Square 2 transform", &transform2.x, -300, 300); 
+        //     ImGui::SliderFloat("Square 2 angle", &angleZ, -glm::pi<float>(), glm::pi<float>());
+        //     ImGui::InputFloat3("Camera transform", &cameraPos.x); 
+        //     ImGui::ColorEdit4("Square 1 color", &color1.x);
+        //     ImGui::ColorEdit4("Square 2 color", &color2.x);
 
-            modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(transform2.x, transform2.y, transform2.z))
-                        * glm::rotate(glm::mat4(1.0f), angleZ, glm::vec3(0.0f, 0.0f, 1.0f))
-                        * glm::rotate(glm::mat4(1.0f), angleY, glm::vec3(0.0f, 1.0f, 0.0f))
-                        * glm::rotate(glm::mat4(1.0f), angleX, glm::vec3(1.0f, 0.0f, 0.0f));
+        //     ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 
-            mvp = projMatrix * viewMatrix * modelMatrix;
+        //     viewMatrix = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
 
-            basicShader.setUniformMat4f("u_MVP", mvp);
-            basicShader.setUniform4f("u_Color", color2.r, color2.g, color2.b, color2.a);
-            renderer.drawSquare(square2, vao, basicShader, layout);
+        //     modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(transform1.x, transform1.y, transform1.z))
+        //                 * glm::rotate(glm::mat4(1.0f), angle1, glm::vec3(0.0f, 0.0f, 1.0f));
+
+        //     mvp = projMatrix * viewMatrix * modelMatrix;
+
+        //     basicShader.setUniformMat4f("u_MVP", mvp);
+        //     basicShader.setUniform4f("u_Color", color1.r, color1.g, color1.b, color1.a);
+        //     renderer.drawSquare(square1, vao, basicShader, layout);
+
+        //     modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(transform2.x, transform2.y, transform2.z))
+        //                 * glm::rotate(glm::mat4(1.0f), angleZ, glm::vec3(0.0f, 0.0f, 1.0f))
+        //                 * glm::rotate(glm::mat4(1.0f), angleY, glm::vec3(0.0f, 1.0f, 0.0f))
+        //                 * glm::rotate(glm::mat4(1.0f), angleX, glm::vec3(1.0f, 0.0f, 0.0f));
+
+        //     mvp = projMatrix * viewMatrix * modelMatrix;
+
+        //     basicShader.setUniformMat4f("u_MVP", mvp);
+        //     basicShader.setUniform4f("u_Color", color2.r, color2.g, color2.b, color2.a);
+        //     renderer.drawSquare(square2, vao, basicShader, layout);
 
 
             ImGui::Render();
@@ -240,6 +267,9 @@ int main() {
             glfwSwapBuffers(window);
             glfwPollEvents();    
         }
+        delete currentTest; 
+        if (currentTest != testMenu) 
+            delete testMenu;
     }
 
     ImGui_ImplGlfwGL3_Shutdown();

@@ -39,8 +39,10 @@ bool GLCheckErrors(const char* function, const char* file, int line) {
 }
 
 void Renderer::clear() const {
-    GLDebug(glClearColor(60/(float)255, 150/(float)255, 200/(float)255, 1));
     GLDebug(glClear(GL_COLOR_BUFFER_BIT));
+}
+void Renderer::setClearColor(float r, float g, float b, float a) const {
+    GLDebug(glClearColor(r, g, b, a));
 }
 
 void Renderer::draw(const VertexArray &vao, const IndexBuffer &ibo, const Shader &shader) const {
@@ -57,7 +59,6 @@ void Renderer::drawSquare(const Square& square, VertexArray &vao, const Shader &
     vao.addBuffer(square.getVbo(), layout);
 
     IndexBuffer ibo(square.getIbo());
-
     ibo.bind();
 
     glDrawElements(GL_TRIANGLES, ibo.getCount(), GL_UNSIGNED_INT, nullptr);

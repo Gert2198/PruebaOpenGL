@@ -26,14 +26,10 @@ IndexBuffer::~IndexBuffer() {
 }
 
 void IndexBuffer::bind() const {
-    if(m_boundIBO != m_RendererID) {
-        GLDebug(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_RendererID));
-        m_boundIBO = m_RendererID;
-    }
+    GLDebug(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_RendererID));
+    m_boundIBO = m_RendererID;
 }
 void IndexBuffer::unbind() const {
-    if(m_boundIBO != 0) {
-        GLDebug(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0));
-        m_boundIBO = 0;
-    }
+    GLDebug(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0));
+    m_boundIBO = 0;
 }

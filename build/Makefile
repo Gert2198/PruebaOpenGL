@@ -392,6 +392,78 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/tests/Test.obj: src/tests/Test.cpp.obj
+.PHONY : src/tests/Test.obj
+
+# target to build an object file
+src/tests/Test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/Test.cpp.obj
+.PHONY : src/tests/Test.cpp.obj
+
+src/tests/Test.i: src/tests/Test.cpp.i
+.PHONY : src/tests/Test.i
+
+# target to preprocess a source file
+src/tests/Test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/Test.cpp.i
+.PHONY : src/tests/Test.cpp.i
+
+src/tests/Test.s: src/tests/Test.cpp.s
+.PHONY : src/tests/Test.s
+
+# target to generate assembly for a file
+src/tests/Test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/Test.cpp.s
+.PHONY : src/tests/Test.cpp.s
+
+src/tests/TestClearColor.obj: src/tests/TestClearColor.cpp.obj
+.PHONY : src/tests/TestClearColor.obj
+
+# target to build an object file
+src/tests/TestClearColor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestClearColor.cpp.obj
+.PHONY : src/tests/TestClearColor.cpp.obj
+
+src/tests/TestClearColor.i: src/tests/TestClearColor.cpp.i
+.PHONY : src/tests/TestClearColor.i
+
+# target to preprocess a source file
+src/tests/TestClearColor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestClearColor.cpp.i
+.PHONY : src/tests/TestClearColor.cpp.i
+
+src/tests/TestClearColor.s: src/tests/TestClearColor.cpp.s
+.PHONY : src/tests/TestClearColor.s
+
+# target to generate assembly for a file
+src/tests/TestClearColor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestClearColor.cpp.s
+.PHONY : src/tests/TestClearColor.cpp.s
+
+src/tests/TestTexture.obj: src/tests/TestTexture.cpp.obj
+.PHONY : src/tests/TestTexture.obj
+
+# target to build an object file
+src/tests/TestTexture.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestTexture.cpp.obj
+.PHONY : src/tests/TestTexture.cpp.obj
+
+src/tests/TestTexture.i: src/tests/TestTexture.cpp.i
+.PHONY : src/tests/TestTexture.i
+
+# target to preprocess a source file
+src/tests/TestTexture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestTexture.cpp.i
+.PHONY : src/tests/TestTexture.cpp.i
+
+src/tests/TestTexture.s: src/tests/TestTexture.cpp.s
+.PHONY : src/tests/TestTexture.s
+
+# target to generate assembly for a file
+src/tests/TestTexture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestTexture.cpp.s
+.PHONY : src/tests/TestTexture.cpp.s
+
 src/vendor/imgui/imgui.obj: src/vendor/imgui/imgui.cpp.obj
 .PHONY : src/vendor/imgui/imgui.obj
 
@@ -554,6 +626,15 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/tests/Test.obj
+	@echo ... src/tests/Test.i
+	@echo ... src/tests/Test.s
+	@echo ... src/tests/TestClearColor.obj
+	@echo ... src/tests/TestClearColor.i
+	@echo ... src/tests/TestClearColor.s
+	@echo ... src/tests/TestTexture.obj
+	@echo ... src/tests/TestTexture.i
+	@echo ... src/tests/TestTexture.s
 	@echo ... src/vendor/imgui/imgui.obj
 	@echo ... src/vendor/imgui/imgui.i
 	@echo ... src/vendor/imgui/imgui.s

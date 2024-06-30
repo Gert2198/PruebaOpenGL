@@ -45,3 +45,9 @@ void VertexArray::unbind() const {
         m_boundVAO = 0;
     }
 }
+
+int VertexArray::getIboBound() const { 
+    int elementBuffer;
+    GLDebug(glGetIntegerv(GL_ELEMENT_ARRAY_BUFFER_BINDING, &elementBuffer));
+    return elementBuffer;
+}

@@ -18,8 +18,12 @@ add_executable(main
 "src/vendor/imgui/imgui_draw.cpp"
 "src/vendor/imgui/imgui_impl_glfw_gl3.cpp"
 "src/vendor/imgui/imgui.cpp"
+"src/tests/Test.cpp"
+"src/tests/TestClearColor.cpp"
+"src/tests/TestTexture.cpp"
 )
 target_include_directories(main PRIVATE include)
+target_include_directories(main PRIVATE src)
 target_include_directories(main PRIVATE src/vendor)
 target_include_directories(main PRIVATE src/figures)
 

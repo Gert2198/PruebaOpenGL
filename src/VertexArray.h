@@ -19,4 +19,6 @@ public:
     
     void bind() const;
     void unbind() const;
+
+    int getIboBound() const;
 };

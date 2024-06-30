@@ -94,5 +94,23 @@
   "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\vendor\\imgui\\imgui.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\vendor\\imgui\\imgui.cpp",
   "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui.cpp",
   "output": "CMakeFiles/main.dir/src/vendor/imgui/imgui.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\Test.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\tests\\Test.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/Test.cpp",
+  "output": "CMakeFiles/main.dir/src/tests/Test.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestClearColor.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\tests\\TestClearColor.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestClearColor.cpp",
+  "output": "CMakeFiles/main.dir/src/tests/TestClearColor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestTexture.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\tests\\TestTexture.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestTexture.cpp",
+  "output": "CMakeFiles/main.dir/src/tests/TestTexture.cpp.obj"
 }
 ]
