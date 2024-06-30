@@ -195,6 +195,7 @@ int main() {
         currentTest = testMenu;
 
         testMenu->registerTest<test::TestClearColor>("Clear color");
+        testMenu->registerTest<test::TestTexture>("Texture test");
 
         // test::TestTexture testTex(glm::vec2(0.0f, 0.0f), 200.0f, 200.0f, "../res/textures/atomo.png", "../res/shaders/testTexture.glsl");
 

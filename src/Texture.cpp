@@ -49,18 +49,12 @@ Texture::~Texture() {
 }
 
 void Texture::bind(unsigned int slot) const {
-    if (m_boundTexture != m_RendererID) {
-        if (m_activeSlot != slot) {
-            GLDebug(glActiveTexture(GL_TEXTURE0 + slot));
-            m_activeSlot = slot;
-        }
-        GLDebug(glBindTexture(GL_TEXTURE_2D, m_RendererID));
-        m_boundTexture = m_RendererID;
-    }
+    GLDebug(glActiveTexture(GL_TEXTURE0 + slot));
+    m_activeSlot = slot;
+    GLDebug(glBindTexture(GL_TEXTURE_2D, m_RendererID));
+    m_boundTexture = m_RendererID;
 }
 void Texture::unbind() const {
-    if (m_boundTexture != 0) {
-        GLDebug(glBindTexture(GL_TEXTURE_2D, 0));
-        m_boundTexture = 0;
-    }
+    GLDebug(glBindTexture(GL_TEXTURE_2D, 0));
+    m_boundTexture = 0;
 }

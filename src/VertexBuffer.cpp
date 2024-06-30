@@ -23,14 +23,10 @@ VertexBuffer::~VertexBuffer() {
 }
 
 void VertexBuffer::bind() const {
-    if (m_boundVBO != m_RendererID) {
-        GLDebug(glBindBuffer(GL_ARRAY_BUFFER, m_RendererID));
-        m_boundVBO = m_RendererID;
-    }
+    GLDebug(glBindBuffer(GL_ARRAY_BUFFER, m_RendererID));
+    m_boundVBO = m_RendererID;
 }
 void VertexBuffer::unbind() const {
-    if (m_boundVBO != 0) {
-        GLDebug(glBindBuffer(GL_ARRAY_BUFFER, 0));
-        m_boundVBO = 0;
-    }
+    GLDebug(glBindBuffer(GL_ARRAY_BUFFER, 0));
+    m_boundVBO = 0;
 }

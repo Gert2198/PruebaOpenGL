@@ -34,16 +34,12 @@ void VertexArray::addBuffer(const VertexBuffer &vb, const VertexBufferLayout &la
 }
 
 void VertexArray::bind() const {
-    if (m_boundVAO != m_RendererID) {
-        GLDebug(glBindVertexArray(m_RendererID));
-        m_boundVAO = m_RendererID;
-    }
+    GLDebug(glBindVertexArray(m_RendererID));
+    m_boundVAO = m_RendererID;
 }
 void VertexArray::unbind() const {
-    if (m_boundVAO != 0) {
-        GLDebug(glBindVertexArray(0));
-        m_boundVAO = 0;
-    }
+    GLDebug(glBindVertexArray(0));
+    m_boundVAO = 0;
 }
 
 int VertexArray::getIboBound() const { 

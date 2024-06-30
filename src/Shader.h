@@ -30,8 +30,18 @@ public:
     // Set uniforms
     void setUniform1i(const string &name, int value);
     void setUniform1f(const string &name, float value);
+    
+    void setUniform2f(const string &name, float v1, float v2);
+    void setUniform2f(const string &name, const glm::vec2& value);
+
+    void setUniform3f(const string &name, float v1, float v2, float v3);
+    void setUniform3f(const string &name, const glm::vec3& value);
+    
     void setUniform4f(const string &name, float v1, float v2, float v3, float v4);
-    void setUniformMat4f(const string &name, glm::mat4 &projMatrix);
+    void setUniform4f(const string &name, const glm::vec4& value);
+
+    void setUniformMat3f(const string &name, const glm::mat3& matrix);
+    void setUniformMat4f(const string &name, const glm::mat4& matrix);
 private:
     int getUniformLocation(const string name);
     unsigned int compileShader(unsigned int type, const string &source);

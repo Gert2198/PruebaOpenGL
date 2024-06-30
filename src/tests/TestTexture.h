@@ -3,20 +3,25 @@
 #include "Test.h"
 // #include "VertexArray.h"
 #include "Texture.h"
+#include "VertexBufferLayout.h"
+
+#include <memory>
 
 namespace test
 {
     class TestTexture : public Test {
     private: 
-        Renderer m_renderer;
-        Square m_square;
-        VertexArray m_vao;
-        Texture m_texture;
-        Shader m_shader;
-        VertexBufferLayout m_layout;
-        glm::vec3 m_translation;
+        std::unique_ptr<VertexArray> m_vao;
+        std::unique_ptr<VertexBuffer> m_vbo;
+        std::unique_ptr<IndexBuffer> m_ibo;
+        std::unique_ptr<Texture> m_texture;
+        std::unique_ptr<Shader> m_shader;
+
+        glm::vec3 m_translation1, m_translation2;
+        glm::mat4 m_projMatrix, m_viewMatrix;
+        float m_scale1, m_scale2;
     public: 
-        TestTexture(glm::vec2 squareCenter, float squareWidth, float squareHeight, std::string texturePath, std::string shaderPath);
+        TestTexture();
         ~TestTexture();
 
         void onUpdate(float deltaTime) override;

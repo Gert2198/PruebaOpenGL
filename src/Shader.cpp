@@ -30,35 +30,49 @@ Shader::~Shader(){
 }
 
 void Shader::bind() const {
-    if (m_boundShader != m_RendererID) {
-        GLDebug(glUseProgram(m_RendererID));
-        m_boundShader = m_RendererID;
-    }
+    GLDebug(glUseProgram(m_RendererID));
+    m_boundShader = m_RendererID;
 }
 void Shader::unbind() const {
-    if (m_boundShader != 0) {
-        GLDebug(glUseProgram(0));
-        m_boundShader = 0;    
-    }
+    GLDebug(glUseProgram(0));
+    m_boundShader = 0;    
 }
 
 void Shader::setUniform1i(const string &name, int value) {
     GLDebug(glUniform1i(getUniformLocation(name), value));
 }
-
 void Shader::setUniform1f(const string &name, float value) {
     GLDebug(glUniform1f(getUniformLocation(name), value));
+}
+
+void Shader::setUniform2f(const string &name, float v1, float v2) {
+    GLDebug(glUniform2f(getUniformLocation(name), v1, v2));
+}
+void Shader::setUniform2f(const string &name, const glm::vec2& value) {
+    setUniform2f(name, value.x, value.y);
+}
+
+void Shader::setUniform3f(const string &name, float v1, float v2, float v3) {
+    GLDebug(glUniform3f(getUniformLocation(name), v1, v2, v3));
+}
+void Shader::setUniform3f(const string &name, const glm::vec3& value) {
+    setUniform3f(name, value.x, value.y, value.z);
 }
 
 void Shader::setUniform4f(const string &name, float v1, float v2, float v3, float v4) {
     GLDebug(glUniform4f(getUniformLocation(name), v1, v2, v3, v4));
 }
-
-void Shader::setUniformMat4f(const string &name, glm::mat4 &projMatrix) {
-    GLDebug(glUniformMatrix4fv(getUniformLocation(name), 1, GL_FALSE, &projMatrix[0][0]));
-    // CUIDAO: si la forma en la que nuestra libreria de matemáticas implementa las matrices es con vectores POR FILAS, tenemos que transponerla
-    // En nuestro caso, glm crea las matrices por columnas, que es justo como las lee OpenGL, por lo que ponemos a FALSE el campo transpose
+void Shader::setUniform4f(const string &name, const glm::vec4& value) {
+    setUniform4f(name, value.x, value.y, value.z, value.w);
 }
+
+void Shader::setUniformMat3f(const string &name, const glm::mat3& matrix) {
+    GLDebug(glUniformMatrix4fv(getUniformLocation(name), 1, GL_FALSE, &matrix[0][0]));
+}
+void Shader::setUniformMat4f(const string &name, const glm::mat4& matrix) {
+    GLDebug(glUniformMatrix4fv(getUniformLocation(name), 1, GL_FALSE, &matrix[0][0]));
+}
+
 
 int Shader::getUniformLocation(const string name) {
     if (m_UniformLocationCache.find(name) != m_UniformLocationCache.end())
@@ -71,7 +85,6 @@ int Shader::getUniformLocation(const string name) {
     m_UniformLocationCache[name] = location;
     return location;
 }
-
 
 ShaderProgramSource Shader::getShaderContentSingleFile(const string &path) {
     std::ifstream stream(path);
