@@ -22,6 +22,7 @@
 
 #include "tests/TestClearColor.h"
 #include "tests/TestTexture.h"
+#include "tests/TestFPS.h"
 
 using std::cout; 
 using std::endl; 
@@ -30,84 +31,12 @@ using std::string;
 // Create shaders with files
 string basicShaderPath = "../res/shaders/basic.glsl";
 
-float fov = 90.0f;
-
-glm::vec3 cameraPos     = glm::vec3(0.0f, 0.0f,  300.0f);
-glm::vec3 cameraFront   = glm::vec3(0.0f, 0.0f, -1.0f);
-glm::vec3 cameraUp      = glm::vec3(0.0f, 1.0f,  0.0f);
-
-float horizontalAngle = -glm::half_pi<float>();               // Camera horizontal rotation
-float verticalAngle = 0.0f;                 // Camera vertical rotation
-glm::vec3 direction(0.0f);                  // Camera direction where it's looking at
-bool firstMouse = true;
-float lastX =  DEFAULT_WIDTH_F / 2.0;
-float lastY =  DEFAULT_HEIGHT_F / 2.0;
-
+// Timing
 float deltaTime = 0.0f;	// time between current frame and last frame
 float lastFrame = 0.0f;
 
-void processInput(GLFWwindow *window) {
-    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, true);
-
-    float cameraSpeed = static_cast<float>(100 * deltaTime);
-    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-        cameraPos += cameraSpeed * cameraFront;
-    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-        cameraPos -= cameraSpeed * cameraFront;
-    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-        cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
-    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-        cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
-}
-
-void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
-    glViewport(0, 0, width, height);
-}
-void mouse_callback(GLFWwindow* window, double xposIn, double yposIn) {
-    float xpos = static_cast<float>(xposIn);
-    float ypos = static_cast<float>(yposIn);
-
-    if (firstMouse) {
-        lastX = xpos;
-        lastY = ypos;
-        firstMouse = false;
-    }
-
-    float xoffset = xpos - lastX;
-    float yoffset = lastY - ypos; // reversed since y-coordinates go from bottom to top
-    lastX = xpos;
-    lastY = ypos;
-
-    float sensitivity = 0.005f; // change this value to your liking
-    xoffset *= sensitivity;
-    yoffset *= sensitivity;
-
-    horizontalAngle += xoffset;
-    verticalAngle += yoffset;
-
-    // make sure that when pitch is out of bounds, screen doesn't get flipped
-    if (verticalAngle > glm::half_pi<float>() - 0.001)
-        verticalAngle = glm::half_pi<float>() - 0.001;
-    if (verticalAngle < - glm::half_pi<float>() + 0.001)
-        verticalAngle = - glm::half_pi<float>() + 0.001;
-
-    glm::vec3 direction(cos(horizontalAngle) * cos(verticalAngle),
-                        sin(verticalAngle), 
-                        sin(horizontalAngle) * cos(verticalAngle));
-    cameraFront = glm::normalize(direction);
-}
-void scroll_callback(GLFWwindow* window, double xoffset, double yoffset) {
-    fov -= (float)yoffset;
-    if (fov < 30.0f)
-        fov = 30.0f;
-    if (fov > 90.0f)
-        fov = 90.0f;
-}
 
 int main() {
-    // glfwSetErrorCallback(error_callback);
-
     if (!glfwInit()) {
         cout << "Failed to initialize GLFW" << endl;
         return -1;
@@ -127,8 +56,6 @@ int main() {
 
     SLM_centerWindow(window, DEFAULT_WIDTH, DEFAULT_HEIGHT);
 
-    // SLM_setWindowCallbacks(window);
-
     glfwMakeContextCurrent(window);
 
     glfwSwapInterval(0);
@@ -141,29 +68,8 @@ int main() {
     cout << glGetString(GL_VERSION) << endl;
 
     {
-        // Texture texture("res/textures/atomo.png");
-        // texture.bind();
-        
-        // glm::vec2 center = SLM_getCenterCoords(DEFAULT_WIDTH, DEFAULT_HEIGHT);
-
-        // VertexArray vao;
-        // vao.bind();
-
-        // VertexBufferLayout layout;
-        // layout.push<float>(2);
-        // layout.push<float>(2);
-
-
-        // Square square1(glm::vec2(0.0f), 200, 200);
-        // Square square2(glm::vec2(0.0f), 100, 100);
-
         GLDebug(glEnable(GL_BLEND));
         GLDebug(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
-
-        // Shader basicShader(basicShaderPath);
-        // basicShader.bind();
-        // basicShader.setUniform1i("u_Texture", 0);
-
 
         Renderer renderer;
 
@@ -191,18 +97,19 @@ int main() {
         // glm::mat4 viewMatrix, modelMatrix, mvp;
 
         test::Test* currentTest = nullptr;
-        test::TestMenu* testMenu = new test::TestMenu(currentTest);
+        test::TestMenu* testMenu = new test::TestMenu(window, currentTest);
         currentTest = testMenu;
 
         testMenu->registerTest<test::TestClearColor>("Clear color");
         testMenu->registerTest<test::TestTexture>("Texture test");
+        testMenu->registerTest<test::TestFPS>("FPS test");
 
         // test::TestTexture testTex(glm::vec2(0.0f, 0.0f), 200.0f, 200.0f, "../res/textures/atomo.png", "../res/shaders/testTexture.glsl");
 
         while(!glfwWindowShouldClose(window)) {
-        //     float currentFrame = static_cast<float>(glfwGetTime());
-        //     deltaTime = currentFrame - lastFrame;
-        //     lastFrame = currentFrame;
+            float currentFrame = static_cast<float>(glfwGetTime());
+            deltaTime = currentFrame - lastFrame;
+            lastFrame = currentFrame;
 
         //     processInput(window);
             renderer.setClearColor(0.0f, 0.0f, 0.0f, 1.0f);
@@ -211,7 +118,7 @@ int main() {
             ImGui_ImplGlfwGL3_NewFrame();
 
             if (currentTest) {
-                currentTest->onUpdate(0.0f);
+                currentTest->onUpdate(deltaTime);
                 currentTest->onRender();
                 ImGui::Begin("Test");
                 if (currentTest != testMenu && ImGui::Button("<-")) {

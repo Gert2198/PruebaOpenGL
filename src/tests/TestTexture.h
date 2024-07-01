@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Test.h"
-// #include "VertexArray.h"
 #include "Texture.h"
 #include "VertexBufferLayout.h"
 
@@ -21,10 +20,8 @@ namespace test
         glm::mat4 m_projMatrix, m_viewMatrix;
         float m_scale1, m_scale2;
     public: 
-        TestTexture();
-        ~TestTexture();
-
-        void onUpdate(float deltaTime) override;
+        TestTexture(GLFWwindow* window);
+        
         void onRender() override;
         void onImGuiRender() override;
     };

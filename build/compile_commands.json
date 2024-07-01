@@ -112,5 +112,11 @@
   "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestTexture.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\tests\\TestTexture.cpp",
   "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestTexture.cpp",
   "output": "CMakeFiles/main.dir/src/tests/TestTexture.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestFPS.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\tests\\TestFPS.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestFPS.cpp",
+  "output": "CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj"
 }
 ]

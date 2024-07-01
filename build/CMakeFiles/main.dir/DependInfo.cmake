@@ -21,6 +21,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Usuario/Desktop/PruebaOpenGL/src/main.cpp" "CMakeFiles/main.dir/src/main.cpp.obj" "gcc" "CMakeFiles/main.dir/src/main.cpp.obj.d"
   "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/Test.cpp" "CMakeFiles/main.dir/src/tests/Test.cpp.obj" "gcc" "CMakeFiles/main.dir/src/tests/Test.cpp.obj.d"
   "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestClearColor.cpp" "CMakeFiles/main.dir/src/tests/TestClearColor.cpp.obj" "gcc" "CMakeFiles/main.dir/src/tests/TestClearColor.cpp.obj.d"
+  "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestFPS.cpp" "CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj" "gcc" "CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj.d"
   "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestTexture.cpp" "CMakeFiles/main.dir/src/tests/TestTexture.cpp.obj" "gcc" "CMakeFiles/main.dir/src/tests/TestTexture.cpp.obj.d"
   "C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui.cpp" "CMakeFiles/main.dir/src/vendor/imgui/imgui.cpp.obj" "gcc" "CMakeFiles/main.dir/src/vendor/imgui/imgui.cpp.obj.d"
   "C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui_demo.cpp" "CMakeFiles/main.dir/src/vendor/imgui/imgui_demo.cpp.obj" "gcc" "CMakeFiles/main.dir/src/vendor/imgui/imgui_demo.cpp.obj.d"

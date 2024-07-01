@@ -440,6 +440,30 @@ src/tests/TestClearColor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestClearColor.cpp.s
 .PHONY : src/tests/TestClearColor.cpp.s
 
+src/tests/TestFPS.obj: src/tests/TestFPS.cpp.obj
+.PHONY : src/tests/TestFPS.obj
+
+# target to build an object file
+src/tests/TestFPS.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj
+.PHONY : src/tests/TestFPS.cpp.obj
+
+src/tests/TestFPS.i: src/tests/TestFPS.cpp.i
+.PHONY : src/tests/TestFPS.i
+
+# target to preprocess a source file
+src/tests/TestFPS.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestFPS.cpp.i
+.PHONY : src/tests/TestFPS.cpp.i
+
+src/tests/TestFPS.s: src/tests/TestFPS.cpp.s
+.PHONY : src/tests/TestFPS.s
+
+# target to generate assembly for a file
+src/tests/TestFPS.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestFPS.cpp.s
+.PHONY : src/tests/TestFPS.cpp.s
+
 src/tests/TestTexture.obj: src/tests/TestTexture.cpp.obj
 .PHONY : src/tests/TestTexture.obj
 
@@ -632,6 +656,9 @@ help:
 	@echo ... src/tests/TestClearColor.obj
 	@echo ... src/tests/TestClearColor.i
 	@echo ... src/tests/TestClearColor.s
+	@echo ... src/tests/TestFPS.obj
+	@echo ... src/tests/TestFPS.i
+	@echo ... src/tests/TestFPS.s
 	@echo ... src/tests/TestTexture.obj
 	@echo ... src/tests/TestTexture.i
 	@echo ... src/tests/TestTexture.s

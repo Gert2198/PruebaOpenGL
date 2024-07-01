@@ -4,7 +4,8 @@
 
 namespace test
 {
-    TestMenu::TestMenu(Test*& currentTestPointer) : m_currentTest(currentTestPointer) {}
+    TestMenu::TestMenu(GLFWwindow* window, Test*& currentTestPointer) : 
+        m_currentTest(currentTestPointer), Test(window) {}
 
     void TestMenu::onImGuiRender() {
         for (auto& test : m_tests) {
