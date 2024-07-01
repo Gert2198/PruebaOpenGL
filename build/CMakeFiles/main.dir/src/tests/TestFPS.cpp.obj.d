@@ -347,6 +347,13 @@ CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj: \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/backward/auto_ptr.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/pstl/glue_memory_defs.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/pstl/execution_defs.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imconfig.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/stdarg.h \
+ c:/TDM-GCC-64/x86_64-w64-mingw32/include/stdarg.h \
+ c:/TDM-GCC-64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+ c:/TDM-GCC-64/x86_64-w64-mingw32/include/string.h \
+ c:/TDM-GCC-64/x86_64-w64-mingw32/include/sec_api/string_s.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/gtc/matrix_transform.hpp \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_projection.hpp \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/gtc/constants.hpp \

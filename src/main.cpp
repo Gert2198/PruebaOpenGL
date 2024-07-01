@@ -77,25 +77,6 @@ int main() {
         ImGui_ImplGlfwGL3_Init(window, true);
         ImGui::StyleColorsDark();
 
-        // glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-        // glfwSetCursorPosCallback(window, mouse_callback);
-        // glfwSetScrollCallback(window, scroll_callback);
-
-        // glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
-
-        // glm::vec3 transform1(0.0f, 0.0f, 0.0f);     // Square 1 transform
-        // glm::vec4 color1(0.2f, 0.3f, 0.8f, 1.0f);   // Square 1 color
-        // float angle1 = 0.0f;                        // Angle of rotation in z axis of square 1
-
-        // glm::vec3 transform2(0.0f, 0.0f, 0.0f);     // Square 2 transform
-        // glm::vec4 color2(0.45f, 0.55f, 0.6f, 1.0f); // Square 2 color
-        // float angleX = 0.0f;
-        // float angleY = 0.0f;                        // Angles of rotation in every axis of square 2
-        // float angleZ = glm::quarter_pi<float>();
-
-        // glm::mat4 projMatrix = glm::perspective(glm::radians<float>(fov), DEFAULT_WIDTH_F/DEFAULT_HEIGHT_F, 0.1f, 1000.0f);
-        // glm::mat4 viewMatrix, modelMatrix, mvp;
-
         test::Test* currentTest = nullptr;
         test::TestMenu* testMenu = new test::TestMenu(window, currentTest);
         currentTest = testMenu;
@@ -104,14 +85,11 @@ int main() {
         testMenu->registerTest<test::TestTexture>("Texture test");
         testMenu->registerTest<test::TestFPS>("FPS test");
 
-        // test::TestTexture testTex(glm::vec2(0.0f, 0.0f), 200.0f, 200.0f, "../res/textures/atomo.png", "../res/shaders/testTexture.glsl");
-
         while(!glfwWindowShouldClose(window)) {
             float currentFrame = static_cast<float>(glfwGetTime());
             deltaTime = currentFrame - lastFrame;
             lastFrame = currentFrame;
 
-        //     processInput(window);
             renderer.setClearColor(0.0f, 0.0f, 0.0f, 1.0f);
             renderer.clear();
 
@@ -128,46 +106,6 @@ int main() {
                 currentTest->onImGuiRender();
                 ImGui::End();
             }
-
-
-
-
-
-        //     ImGui::Text("Hello, world!");
-        //     ImGui::SliderFloat("Horizontal angle", &horizontalAngle, -glm::pi<float>(), glm::pi<float>());
-        //     ImGui::SliderFloat("Vertical angle", &verticalAngle, -glm::half_pi<float>() + 0.0001f, glm::half_pi<float>() - 0.0001f);
-        //     ImGui::SliderFloat3("Square 1 transform", &transform1.x, -300, 300);
-        //     ImGui::SliderFloat("Square 1 angle", &angle1, -glm::pi<float>(), glm::pi<float>());
-        //     ImGui::SliderFloat3("Square 2 transform", &transform2.x, -300, 300); 
-        //     ImGui::SliderFloat("Square 2 angle", &angleZ, -glm::pi<float>(), glm::pi<float>());
-        //     ImGui::InputFloat3("Camera transform", &cameraPos.x); 
-        //     ImGui::ColorEdit4("Square 1 color", &color1.x);
-        //     ImGui::ColorEdit4("Square 2 color", &color2.x);
-
-        //     ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
-
-        //     viewMatrix = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
-
-        //     modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(transform1.x, transform1.y, transform1.z))
-        //                 * glm::rotate(glm::mat4(1.0f), angle1, glm::vec3(0.0f, 0.0f, 1.0f));
-
-        //     mvp = projMatrix * viewMatrix * modelMatrix;
-
-        //     basicShader.setUniformMat4f("u_MVP", mvp);
-        //     basicShader.setUniform4f("u_Color", color1.r, color1.g, color1.b, color1.a);
-        //     renderer.drawSquare(square1, vao, basicShader, layout);
-
-        //     modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(transform2.x, transform2.y, transform2.z))
-        //                 * glm::rotate(glm::mat4(1.0f), angleZ, glm::vec3(0.0f, 0.0f, 1.0f))
-        //                 * glm::rotate(glm::mat4(1.0f), angleY, glm::vec3(0.0f, 1.0f, 0.0f))
-        //                 * glm::rotate(glm::mat4(1.0f), angleX, glm::vec3(1.0f, 0.0f, 0.0f));
-
-        //     mvp = projMatrix * viewMatrix * modelMatrix;
-
-        //     basicShader.setUniformMat4f("u_MVP", mvp);
-        //     basicShader.setUniform4f("u_Color", color2.r, color2.g, color2.b, color2.a);
-        //     renderer.drawSquare(square2, vao, basicShader, layout);
-
 
             ImGui::Render();
             ImGui_ImplGlfwGL3_RenderDrawData(ImGui::GetDrawData());

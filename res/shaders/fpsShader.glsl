@@ -7,7 +7,6 @@ uniform mat4 u_MVP; // Model view projection matrix
 
 void main() {
     gl_Position = u_MVP * vec4(position.xy, 0.0, 1.0);
-    v_texCoords = texCoords;
 }
 
 #shader fragment

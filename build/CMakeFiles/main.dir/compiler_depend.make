@@ -3171,6 +3171,7 @@ CMakeFiles/main.dir/src/main.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/
   C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Square.h \
   C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/Test.h \
   C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestClearColor.h \
+  C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestFPS.h \
   C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestTexture.h \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include-fixed/limits.h \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include-fixed/syslimits.h \
@@ -4053,6 +4054,8 @@ CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj: C:/Users/Usuario/Desktop/PruebaOp
   C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/vec3.hpp \
   C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/vec4.hpp \
   C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/vector_relational.hpp \
+  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imconfig.h \
+  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui.h \
   C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/Test.h \
   C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestFPS.h \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include-fixed/limits.h \
@@ -4213,6 +4216,7 @@ CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj: C:/Users/Usuario/Desktop/PruebaOp
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/float.h \
+  C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/stdarg.h \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/stddef.h \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/stdint.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/_mingw.h \
@@ -4220,6 +4224,7 @@ CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj: C:/Users/Usuario/Desktop/PruebaOp
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/_mingw_off_t.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/_mingw_secapi.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/_mingw_stat64.h \
+  C:/TDM-GCC-64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/assert.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/corecrt.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/corecrt_startup.h \
@@ -4241,13 +4246,16 @@ CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj: C:/Users/Usuario/Desktop/PruebaOp
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+  C:/TDM-GCC-64/x86_64-w64-mingw32/include/sec_api/string_s.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/signal.h \
+  C:/TDM-GCC-64/x86_64-w64-mingw32/include/stdarg.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/stddef.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/stdint.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/stdio.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/stdlib.h \
+  C:/TDM-GCC-64/x86_64-w64-mingw32/include/string.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/swprintf.inl \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/sys/timeb.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/sys/types.h \
@@ -6520,6 +6528,8 @@ C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/Test.h:
 
 C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestClearColor.h:
 
+C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestFPS.h:
+
 C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui_demo.cpp:
 
 C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/algorithmfwd.h:
@@ -6545,8 +6555,6 @@ C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/math.h:
 C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestClearColor.cpp:
 
 C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestFPS.cpp:
-
-C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestFPS.h:
 
 C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestTexture.cpp:
 
