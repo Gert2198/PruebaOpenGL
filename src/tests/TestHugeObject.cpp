@@ -16,7 +16,8 @@ namespace test
         m_objPosition(0.0f), m_objScale(1.0f),
         m_playMode(false), m_inputDelay(0.0f), 
         m_firstMouse(true), m_lastX(DEFAULT_WIDTH_F / 2.0), m_lastY(DEFAULT_HEIGHT_F / 2.0), 
-        m_perspMatrix(glm::perspective(glm::radians<float>(m_fov), DEFAULT_WIDTH_F/DEFAULT_HEIGHT_F, 0.1f, 5000.0f)) 
+        m_perspMatrix(glm::perspective(glm::radians<float>(m_fov), DEFAULT_WIDTH_F/DEFAULT_HEIGHT_F, 0.1f, 5000.0f)), 
+        m_renderObj(true), m_renderLines(true)
     {
         m_vao = std::make_unique<VertexArray>();
         m_vao->bind();
@@ -75,13 +76,14 @@ namespace test
         m_shaderLine->bind();
         m_shaderLine->setUniformMat4f("u_MVP", mvp);
 
-        renderer.draw(*m_vao, *m_objIbo, *m_shaderObj);
-        renderer.drawLines(*m_vao, *m_lineIbo, *m_shaderLine);
-        // drawLines();
+        if (m_renderObj)
+            renderer.draw(*m_vao, *m_objIbo, *m_shaderObj);
+        if (m_renderLines)
+            renderer.drawLines(*m_vao, *m_lineIbo, *m_shaderLine);
     }
     void TestHugeObject::onImGuiRender() {
         ImGui::Text("Press Mouse_Central_Button to change mode");
-        std::string mode = m_playMode ? "playMode" : "navigationMode";
+        std::string mode = m_playMode ? "Play Mode" : "Navigation Mode";
         std::string text = "Current mode: " + mode;
         ImGui::Text(text.c_str());
         ImGui::NewLine();
@@ -93,6 +95,8 @@ namespace test
         ImGui::NewLine();
         ImGui::SliderFloat3("Transform", &m_objPosition.x, -300, 300);
         ImGui::SliderFloat("Scale", &m_objScale, 0.0f, 10.0f);
+        ImGui::Checkbox("Enable object", &m_renderObj);
+        ImGui::Checkbox("Enable lines", &m_renderLines);
 
         ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
     }

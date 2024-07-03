@@ -40,6 +40,9 @@ namespace test
         bool m_firstMouse;
         float m_lastX;
         float m_lastY;
+
+        bool m_renderObj;
+        bool m_renderLines;
     public:
         TestHugeObject(GLFWwindow* window);
         ~TestHugeObject();
