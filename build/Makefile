@@ -128,6 +128,30 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+src/Camera.obj: src/Camera.cpp.obj
+.PHONY : src/Camera.obj
+
+# target to build an object file
+src/Camera.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/Camera.cpp.obj
+.PHONY : src/Camera.cpp.obj
+
+src/Camera.i: src/Camera.cpp.i
+.PHONY : src/Camera.i
+
+# target to preprocess a source file
+src/Camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/Camera.cpp.i
+.PHONY : src/Camera.cpp.i
+
+src/Camera.s: src/Camera.cpp.s
+.PHONY : src/Camera.s
+
+# target to generate assembly for a file
+src/Camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/Camera.cpp.s
+.PHONY : src/Camera.cpp.s
+
 src/IndexBuffer.obj: src/IndexBuffer.cpp.obj
 .PHONY : src/IndexBuffer.obj
 
@@ -464,6 +488,30 @@ src/tests/TestFPS.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestFPS.cpp.s
 .PHONY : src/tests/TestFPS.cpp.s
 
+src/tests/TestHugeObject.obj: src/tests/TestHugeObject.cpp.obj
+.PHONY : src/tests/TestHugeObject.obj
+
+# target to build an object file
+src/tests/TestHugeObject.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestHugeObject.cpp.obj
+.PHONY : src/tests/TestHugeObject.cpp.obj
+
+src/tests/TestHugeObject.i: src/tests/TestHugeObject.cpp.i
+.PHONY : src/tests/TestHugeObject.i
+
+# target to preprocess a source file
+src/tests/TestHugeObject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestHugeObject.cpp.i
+.PHONY : src/tests/TestHugeObject.cpp.i
+
+src/tests/TestHugeObject.s: src/tests/TestHugeObject.cpp.s
+.PHONY : src/tests/TestHugeObject.s
+
+# target to generate assembly for a file
+src/tests/TestHugeObject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestHugeObject.cpp.s
+.PHONY : src/tests/TestHugeObject.cpp.s
+
 src/tests/TestTexture.obj: src/tests/TestTexture.cpp.obj
 .PHONY : src/tests/TestTexture.obj
 
@@ -617,6 +665,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... main
+	@echo ... src/Camera.obj
+	@echo ... src/Camera.i
+	@echo ... src/Camera.s
 	@echo ... src/IndexBuffer.obj
 	@echo ... src/IndexBuffer.i
 	@echo ... src/IndexBuffer.s
@@ -659,6 +710,9 @@ help:
 	@echo ... src/tests/TestFPS.obj
 	@echo ... src/tests/TestFPS.i
 	@echo ... src/tests/TestFPS.s
+	@echo ... src/tests/TestHugeObject.obj
+	@echo ... src/tests/TestHugeObject.i
+	@echo ... src/tests/TestHugeObject.s
 	@echo ... src/tests/TestTexture.obj
 	@echo ... src/tests/TestTexture.i
 	@echo ... src/tests/TestTexture.s

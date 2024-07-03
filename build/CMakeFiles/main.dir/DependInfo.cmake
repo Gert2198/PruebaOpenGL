@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Usuario/Desktop/PruebaOpenGL/src/glad.c" "CMakeFiles/main.dir/src/glad.c.obj" "gcc" "CMakeFiles/main.dir/src/glad.c.obj.d"
+  "C:/Users/Usuario/Desktop/PruebaOpenGL/src/Camera.cpp" "CMakeFiles/main.dir/src/Camera.cpp.obj" "gcc" "CMakeFiles/main.dir/src/Camera.cpp.obj.d"
   "C:/Users/Usuario/Desktop/PruebaOpenGL/src/IndexBuffer.cpp" "CMakeFiles/main.dir/src/IndexBuffer.cpp.obj" "gcc" "CMakeFiles/main.dir/src/IndexBuffer.cpp.obj.d"
   "C:/Users/Usuario/Desktop/PruebaOpenGL/src/Renderer.cpp" "CMakeFiles/main.dir/src/Renderer.cpp.obj" "gcc" "CMakeFiles/main.dir/src/Renderer.cpp.obj.d"
   "C:/Users/Usuario/Desktop/PruebaOpenGL/src/Shader.cpp" "CMakeFiles/main.dir/src/Shader.cpp.obj" "gcc" "CMakeFiles/main.dir/src/Shader.cpp.obj.d"
@@ -22,6 +23,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/Test.cpp" "CMakeFiles/main.dir/src/tests/Test.cpp.obj" "gcc" "CMakeFiles/main.dir/src/tests/Test.cpp.obj.d"
   "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestClearColor.cpp" "CMakeFiles/main.dir/src/tests/TestClearColor.cpp.obj" "gcc" "CMakeFiles/main.dir/src/tests/TestClearColor.cpp.obj.d"
   "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestFPS.cpp" "CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj" "gcc" "CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj.d"
+  "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestHugeObject.cpp" "CMakeFiles/main.dir/src/tests/TestHugeObject.cpp.obj" "gcc" "CMakeFiles/main.dir/src/tests/TestHugeObject.cpp.obj.d"
   "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestTexture.cpp" "CMakeFiles/main.dir/src/tests/TestTexture.cpp.obj" "gcc" "CMakeFiles/main.dir/src/tests/TestTexture.cpp.obj.d"
   "C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui.cpp" "CMakeFiles/main.dir/src/vendor/imgui/imgui.cpp.obj" "gcc" "CMakeFiles/main.dir/src/vendor/imgui/imgui.cpp.obj.d"
   "C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui_demo.cpp" "CMakeFiles/main.dir/src/vendor/imgui/imgui_demo.cpp.obj" "gcc" "CMakeFiles/main.dir/src/vendor/imgui/imgui_demo.cpp.obj.d"

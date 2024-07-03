@@ -55,6 +55,12 @@
 },
 {
   "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\Camera.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\Camera.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/Camera.cpp",
+  "output": "CMakeFiles/main.dir/src/Camera.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
   "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\VertexBufferLayout.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\VertexBufferLayout.cpp",
   "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBufferLayout.cpp",
   "output": "CMakeFiles/main.dir/src/VertexBufferLayout.cpp.obj"
@@ -118,5 +124,11 @@
   "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestFPS.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\tests\\TestFPS.cpp",
   "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestFPS.cpp",
   "output": "CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestHugeObject.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\tests\\TestHugeObject.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestHugeObject.cpp",
+  "output": "CMakeFiles/main.dir/src/tests/TestHugeObject.cpp.obj"
 }
 ]

@@ -333,6 +333,19 @@ CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj: \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Square.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBufferLayout.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Texture.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/Camera.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/gtc/matrix_transform.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_projection.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/gtc/constants.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/scalar_constants.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/scalar_constants.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/gtc/constants.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_projection.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_clip_space.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_clip_space.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_transform.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_transform.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/gtc/matrix_transform.inl \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/memory \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_raw_storage_iter.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/ranges_uninitialized.h \
@@ -354,16 +367,4 @@ CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj: \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/string.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/sec_api/string_s.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/gtc/matrix_transform.hpp \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_projection.hpp \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/gtc/constants.hpp \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/scalar_constants.hpp \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/scalar_constants.inl \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/gtc/constants.inl \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_projection.inl \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_clip_space.hpp \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_clip_space.inl \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_transform.hpp \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_transform.inl \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/gtc/matrix_transform.inl \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Utils.h

@@ -50,7 +50,17 @@ void Renderer::draw(const VertexArray &vao, const IndexBuffer &ibo, const Shader
     vao.bind();
     ibo.bind();
 
-    glDrawElements(GL_TRIANGLES, ibo.getCount(), GL_UNSIGNED_INT, nullptr);
+    GLDebug(glDrawElements(GL_TRIANGLES, ibo.getCount(), GL_UNSIGNED_INT, nullptr));
+}
+
+void Renderer::drawLines(const VertexArray &vao, const IndexBuffer &ibo, const Shader &shader) const {
+    shader.bind();
+    vao.bind();
+    ibo.bind();
+
+    GLDebug(glLineWidth(1.5f));
+
+    GLDebug(glDrawElements(GL_LINES, ibo.getCount(), GL_UNSIGNED_INT, nullptr));
 }
 
 void Renderer::drawSquare(const Square& square, VertexArray &vao, const Shader &shader, const VertexBufferLayout& layout) const {
@@ -61,5 +71,5 @@ void Renderer::drawSquare(const Square& square, VertexArray &vao, const Shader &
     IndexBuffer ibo(square.getIbo());
     ibo.bind();
 
-    glDrawElements(GL_TRIANGLES, ibo.getCount(), GL_UNSIGNED_INT, nullptr);
+    GLDebug(glDrawElements(GL_TRIANGLES, ibo.getCount(), GL_UNSIGNED_INT, nullptr));
 }

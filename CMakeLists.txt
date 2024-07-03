@@ -11,6 +11,7 @@ add_executable(main
 "src/Utils.cpp" 
 "src/VertexArray.cpp" 
 "src/VertexBuffer.cpp" 
+"src/Camera.cpp"
 "src/VertexBufferLayout.cpp" 
 "src/vendor/stb/stb_image.cpp" 
 "src/figures/Square.cpp" 
@@ -22,6 +23,7 @@ add_executable(main
 "src/tests/TestClearColor.cpp"
 "src/tests/TestTexture.cpp"
 "src/tests/TestFPS.cpp"
+"src/tests/TestHugeObject.cpp"
 )
 target_include_directories(main PRIVATE include)
 target_include_directories(main PRIVATE src)

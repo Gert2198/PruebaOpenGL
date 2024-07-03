@@ -25,5 +25,6 @@ public:
     void clear() const;
     void setClearColor(float r, float g, float b, float a) const;
     void draw(const VertexArray &vao, const IndexBuffer &ibo, const Shader &shader) const;
+    void drawLines(const VertexArray &vao, const IndexBuffer &ibo, const Shader &shader) const;
     void drawSquare(const Square& square, VertexArray &vao, const Shader &shader, const VertexBufferLayout& layout) const;
 };
