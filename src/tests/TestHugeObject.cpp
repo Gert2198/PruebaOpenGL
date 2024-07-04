@@ -39,7 +39,11 @@ namespace test
         GLDebug(glEnable(GL_BLEND));
         GLDebug(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
 
-        GLDebug(glEnable(GL_DEPTH_TEST));
+        glEnable(GL_DEPTH_TEST);
+        glDepthFunc(GL_LESS);
+        glEnable(GL_CULL_FACE);
+        glCullFace(GL_BACK);
+        glFrontFace(GL_CCW);
 
         m_shaderObj = std::make_unique<Shader>("../res/shaders/3dObjShader.glsl");
         m_shaderLine = std::make_unique<Shader>("../res/shaders/3dOutlineShader.glsl");
