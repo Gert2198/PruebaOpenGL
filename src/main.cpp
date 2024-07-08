@@ -24,6 +24,7 @@
 #include "tests/TestTexture.h"
 #include "tests/TestFPS.h"
 #include "tests/TestHugeObject.h"
+#include "tests/TestLight.h"
 
 using std::cout; 
 using std::endl; 
@@ -86,6 +87,7 @@ int main() {
         testMenu->registerTest<test::TestTexture>("Texture test");
         testMenu->registerTest<test::TestFPS>("FPS test");
         testMenu->registerTest<test::TestHugeObject>("3D monkey test");
+        testMenu->registerTest<test::TestLight>("Light test");
 
         while(!glfwWindowShouldClose(window)) {
             float currentFrame = static_cast<float>(glfwGetTime());

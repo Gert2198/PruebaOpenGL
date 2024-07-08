@@ -1,0 +1,27 @@
+Estoy siguiendo el tutorial https://learnopengl.com/Lighting
+
+https://learnopengl.com/Lighting/Colors
+Explica cómo se refleja la luz en la vida real, y como se absorben y reflejan ciertas longitudes de onda para dar lugar a los colores de los objetos
+Basicamente, depende del color de la fuente de luz, y del color que refleje el objeto. Ambos colores se multiplican y queda un color resultante
+
+Para este apartado, he creado un Test, TestLight, que hace exactamente eso. Tengo dos objetos, un cubo de color asi rojizo, y otro cubo, que representa 
+la fuente de luz, que tiene color blanco. El color resultante del cubo será el color real del cubo multiplicado por el color de la fuente de luz. Para 
+conseguir eso, he creado dos shaders, uno para el cubo y otro para la fuente de luz. El primero hace la multiplicacion, mientras que el segundo solo pone
+el color a blanco. 
+
+De momento no hay vectores normales ni nada por el estilo, supongo que vendran más tarde en el tutorial
+
+
+https://learnopengl.com/Lighting/Basic-Lighting
+Aqui nos enseñan un tipo de iluminacion, Phong lighting model, que consta de 3 "fases": ambient, diffuse y specular
+
+- Ambient: es como la luz minima, por ejemplo la luz de la luna, o una luz muy lejana. Hace que el objeto no sea full negro. 
+- Diffuse: es lo que realmente da sombras al objeto. Cuanta más superficie del objeto esté en contacto con los rayos emitiros de la fuente de luz, más 
+claro se verá
+- Specular: es como el reflejo de la fuente de luz en el objeto. Depende de lo "pulido" o "brillante" que sea el objeto 
+
+AMBIENT: 
+Unicamente hacemos que la fuente de luz sea menos fuerte multiplicandola por un factor, por ejemplo 0.1. Luego hacemos el mismo calculo de antes 
+multiplicando el resultado de eso con el color del objeto. Asi, nos queda un objeto más tirando a negro, PERO sin ser negro. 
+
+DIFFUSE: 

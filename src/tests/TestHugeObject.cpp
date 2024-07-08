@@ -97,21 +97,12 @@ namespace test
         ImGui::SliderFloat("Camera sens", &camSens, 0.0f, 3.0f);
         m_camera->setSensitivity(camSens);
         ImGui::NewLine();
-        ImGui::SliderFloat3("Transform", &m_objPosition.x, -300, 300);
+        ImGui::SliderFloat3("Transform", &m_objPosition.x, -5, 5);
         ImGui::SliderFloat("Scale", &m_objScale, 0.0f, 10.0f);
         ImGui::Checkbox("Enable object", &m_renderObj);
         ImGui::Checkbox("Enable lines", &m_renderLines);
 
         ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
-    }
-
-    void TestHugeObject::drawLines() {
-        m_vao->bind();
-
-        VertexBufferLayout layout;
-        layout.push<float>(3);
-
-        
     }
 
     void TestHugeObject::processInput(GLFWwindow* window, float deltaTime) {

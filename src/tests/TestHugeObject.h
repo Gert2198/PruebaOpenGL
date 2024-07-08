@@ -14,15 +14,12 @@ namespace test
     class TestHugeObject : public Test {
     private:
         std::unique_ptr<VertexArray> m_vao;
-        std::unique_ptr<IndexBuffer> m_objIbo;
-        std::unique_ptr<IndexBuffer> m_lineIbo;
+        std::unique_ptr<IndexBuffer> m_objIbo, m_lineIbo;
         std::unique_ptr<VertexBuffer> m_vbo;
-        std::unique_ptr<Shader> m_shaderObj;
-        std::unique_ptr<Shader> m_shaderLine;
+        std::unique_ptr<Shader> m_shaderObj, m_shaderLine;
 
         std::vector<glm::vec3> m_vertices;
-        std::vector<unsigned int> m_indices;
-        std::vector<unsigned int> m_lineIndices;
+        std::vector<unsigned int> m_indices, m_lineIndices;
 
         glm::vec3 m_objPosition;
         float m_objScale;
@@ -51,7 +48,6 @@ namespace test
         void onRender() override;
         void onImGuiRender() override;
 
-        void drawLines();
         void processInput(GLFWwindow* window, float deltaTime);
 
         // Callbacks

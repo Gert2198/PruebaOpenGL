@@ -372,4 +372,5 @@ CMakeFiles/main.dir/src/main.cpp.obj: \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/pstl/execution_defs.h \
  C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestFPS.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Camera.h \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestHugeObject.h
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestHugeObject.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestLight.h

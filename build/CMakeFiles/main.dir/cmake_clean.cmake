@@ -31,6 +31,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj.d"
   "CMakeFiles/main.dir/src/tests/TestHugeObject.cpp.obj"
   "CMakeFiles/main.dir/src/tests/TestHugeObject.cpp.obj.d"
+  "CMakeFiles/main.dir/src/tests/TestLight.cpp.obj"
+  "CMakeFiles/main.dir/src/tests/TestLight.cpp.obj.d"
   "CMakeFiles/main.dir/src/tests/TestTexture.cpp.obj"
   "CMakeFiles/main.dir/src/tests/TestTexture.cpp.obj.d"
   "CMakeFiles/main.dir/src/vendor/imgui/imgui.cpp.obj"
