@@ -63,32 +63,32 @@ void Camera::processKeyboard(std::vector<Camera_Movement> directions, float delt
     switch (input) {
     case 0: case 3: case 12: case 15: break;
     case 1: case 13:    // forward
-        m_position += glm::vec3(m_front.x, 0.0f, m_front.z) * velocity;
+        m_position += glm::normalize(glm::vec3(m_front.x, 0.0f, m_front.z)) * velocity;
         break;
     case 2: case 14:    // backward
-        m_position -= glm::vec3(m_front.x, 0.0f, m_front.z) * velocity;
+        m_position -= glm::normalize(glm::vec3(m_front.x, 0.0f, m_front.z)) * velocity;
         break;
     case 4: case 7:     // left
-        m_position -= glm::vec3(m_right.x, 0.0f, m_right.z) * velocity;
+        m_position -= glm::normalize(glm::vec3(m_right.x, 0.0f, m_right.z)) * velocity;
         break;
     case 8: case 11:    // right
-        m_position += glm::vec3(m_right.x, 0.0f, m_right.z) * velocity;
+        m_position += glm::normalize(glm::vec3(m_right.x, 0.0f, m_right.z)) * velocity;
         break;
     case 5:             // Forward Left
         direction = glm::normalize(m_front - m_right);
-        m_position += glm::vec3(direction.x, 0.0f, direction.z) * velocity;
+        m_position += glm::normalize(glm::vec3(direction.x, 0.0f, direction.z)) * velocity;
         break;
     case 6:             // Backward Left
         direction = glm::normalize(- m_front - m_right);
-        m_position += glm::vec3(direction.x, 0.0f, direction.z) * velocity;
+        m_position += glm::normalize(glm::vec3(direction.x, 0.0f, direction.z)) * velocity;
         break;
     case 9:             // Forward right
         direction = glm::normalize(m_front + m_right);
-        m_position += glm::vec3(direction.x, 0.0f, direction.z) * velocity;
+        m_position += glm::normalize(glm::vec3(direction.x, 0.0f, direction.z)) * velocity;
         break;
     case 10:            // Backward right
         direction = glm::normalize(- m_front + m_right);
-        m_position += glm::vec3(direction.x, 0.0f, direction.z) * velocity;
+        m_position += glm::normalize(glm::vec3(direction.x, 0.0f, direction.z)) * velocity;
         break;
     }
 

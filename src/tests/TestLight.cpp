@@ -11,31 +11,16 @@
 namespace test
 {
     TestLight::TestLight(GLFWwindow* window) : Test(window), m_fov(70),
-        m_objPosition(0.0f), m_objScale(1.0f), m_objColor(1.0f),
+        m_objPosition(0.0f), m_objScale(1.0f),
         m_lightPosition(0.0f, 0.0f, 5.0f), 
         m_playMode(false), m_inputDelay(0.0f), 
         m_firstMouse(true), m_lastX(DEFAULT_WIDTH_F / 2.0), m_lastY(DEFAULT_HEIGHT_F / 2.0), 
-        m_perspMatrix(glm::perspective(glm::radians<float>(m_fov), DEFAULT_WIDTH_F/DEFAULT_HEIGHT_F, 0.1f, 5000.0f)), 
-        m_ambient(0.1), m_specular(0.2), m_exponent(4)
+        m_perspMatrix(glm::perspective(glm::radians<float>(m_fov), DEFAULT_WIDTH_F/DEFAULT_HEIGHT_F, 0.1f, 5000.0f))
     {
         m_objVAO = std::make_unique<VertexArray>();
         m_lightVAO = std::make_unique<VertexArray>();
 
-        // std::vector<Vertex> vertices;
-        // std::vector<unsigned int> indices;
-
         loadObj("../res/3dObjects/monkey.obj", m_vertices, m_indices);
-
-        // float objVertices[] = {
-        //     -1.0, -1.0,  1.0, -0.5773284435272217, -0.5773611664772034,  0.5773611664772034,
-        //     -1.0,  1.0,  1.0, -0.5773720741271973,  0.5773393511772156,  0.5773393511772156,
-        //     -1.0, -1.0, -1.0, -0.5773720741271973, -0.5773393511772156, -0.5773393511772156,
-        //     -1.0,  1.0, -1.0, -0.5773284435272217,  0.5773611664772034, -0.5773611664772034,
-        //      1.0, -1.0,  1.0,  0.5773720741271973, -0.5773393511772156,  0.5773393511772156,
-        //      1.0,  1.0,  1.0,  0.5773284435272217,  0.5773611664772034,  0.5773611664772034,
-        //      1.0, -1.0, -1.0,  0.5773284435272217, -0.5773611664772034, -0.5773611664772034,
-        //      1.0,  1.0, -1.0,  0.5773720741271973,  0.5773393511772156, -0.5773393511772156
-        // };
 
         float lightVertices[] = {
             -0.5, -0.5,  0.5,
@@ -92,6 +77,15 @@ namespace test
 
         m_camera = std::make_unique<Camera>(glm::vec3(0.0f, 0.0f,  3.0f));
 
+        m_material.ambient  = glm::vec3(1.0f, 0.5f, 0.31f);
+        m_material.diffuse  = glm::vec3(1.0f, 0.5f, 0.31f);
+        m_material.specular = glm::vec3(0.5f);
+        m_shininess         = 4.0f;
+
+        m_light.ambient     = glm::vec3(0.2f);
+        m_light.diffuse     = glm::vec3(0.5f);
+        m_light.specular    = glm::vec3(1.0f);
+
         glfwSetWindowUserPointer(window, reinterpret_cast<void *>(this));
 
         glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
@@ -120,13 +114,19 @@ namespace test
         m_objShader->bind();
         m_objShader->setUniformMat4f("u_MVP", mvp);
         m_objShader->setUniformMat4f("u_model", modelMatrix);
-        m_objShader->setUniform3f("u_objectColor", m_objColor);
-        m_objShader->setUniform3f("u_lightColor", 1.0f, 1.0f, 1.0f);
-        m_objShader->setUniform3f("u_lightPos", m_lightPosition);
+
         m_objShader->setUniform3f("u_cameraPos", m_camera->getCameraPos());
-        m_objShader->setUniform1f("u_ambientStrength", m_ambient);
-        m_objShader->setUniform1f("u_specularStrength", m_specular);
-        m_objShader->setUniform1i("u_exponent", m_exponent);
+
+        m_objShader->setUniform3f("u_material.ambient", m_material.ambient);
+        m_objShader->setUniform3f("u_material.diffuse", m_material.diffuse);
+        m_objShader->setUniform3f("u_material.specular", m_material.specular);
+        m_objShader->setUniform1f("u_material.shininess", m_shininess); 
+
+        m_objShader->setUniform3f("u_light.ambient", m_light.ambient);
+        m_objShader->setUniform3f("u_light.diffuse", m_light.diffuse);
+        m_objShader->setUniform3f("u_light.specular", m_light.specular);
+        m_objShader->setUniform3f("u_light.position", m_lightPosition);
+
         renderer.draw(*m_objVAO, *m_objIBO, *m_objShader);
 
         // Dibujamos la fuente de luz
@@ -153,13 +153,17 @@ namespace test
             ImGui::NewLine();
             ImGui::SliderFloat3("Obj Transform", &m_objPosition.x, -5, 5);
             ImGui::SliderFloat("Obj Scale", &m_objScale, 0.0f, 10.0f);
-            ImGui::ColorEdit3("Obj Color", &m_objColor.r);
+            ImGui::SliderFloat3("Obj Ambient Color", &m_material.ambient.x, 0, 1);
+            ImGui::SliderFloat3("Obj Diffuse Color", &m_material.diffuse.x, 0, 1);
+            ImGui::SliderFloat3("Obj Specular Color", &m_material.specular.x, 0, 1);
+            ImGui::SliderFloat("Obj Shininess", &m_shininess, 1, 128);
+            ImGui::NewLine();
 
             ImGui::SliderFloat3("Light Transform", &m_lightPosition.x, -5, 5);
+            ImGui::SliderFloat3("Light Ambient Color", &m_light.ambient.x, 0, 1);
+            ImGui::SliderFloat3("Light Diffuse Color", &m_light.diffuse.x, 0, 1);
+            ImGui::SliderFloat3("Light Specular Color", &m_light.specular.x, 0, 1);            
             ImGui::NewLine();
-            ImGui::SliderFloat("Ambient strength", &m_ambient, 0, 1);
-            ImGui::SliderFloat("Specular strength", &m_specular, 0, 1);
-            ImGui::SliderInt("Exponent", &m_exponent, 1, 64);
         }
 
         ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);

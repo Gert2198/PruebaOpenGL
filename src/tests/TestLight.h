@@ -15,6 +15,9 @@ namespace test
         float x, y, z;
         float nx, ny, nz;
     };
+    struct Material {
+        glm::vec3 ambient, diffuse, specular;
+    };
 
     class TestLight : public Test {
     private:
@@ -25,9 +28,11 @@ namespace test
 
         glm::vec3 m_objPosition;
         float m_objScale;
-        glm::vec3 m_objColor;
+        Material m_material;
+        float m_shininess;
 
         glm::vec3 m_lightPosition;
+        Material m_light;
 
         float m_fov;
         
@@ -42,9 +47,6 @@ namespace test
         bool m_firstMouse;
         float m_lastX;
         float m_lastY;
-
-        float m_ambient, m_specular;
-        int m_exponent;
 
         std::vector<Vertex> m_vertices;
         std::vector<unsigned int> m_indices;

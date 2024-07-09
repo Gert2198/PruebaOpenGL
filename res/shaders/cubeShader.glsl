@@ -24,30 +24,40 @@ layout(location = 0) out vec4 color;
 in vec3 normal;
 in vec3 fragPos;
 
-uniform vec3 u_objectColor;
-uniform vec3 u_lightColor;
-uniform vec3 u_lightPos;
 uniform vec3 u_cameraPos;
 
-uniform float u_ambientStrength;
-uniform float u_specularStrength;
-uniform int u_exponent;
+struct Material {
+    vec3 ambient;
+    vec3 diffuse;
+    vec3 specular;
+    float shininess;
+}; 
+  
+uniform Material u_material;
+
+struct Light {
+    vec3 position;
+  
+    vec3 ambient;
+    vec3 diffuse;
+    vec3 specular;
+};
+
+uniform Light u_light;  
 
 void main() {
-    vec3 ambient = u_ambientStrength * u_lightColor;
+    vec3 ambient = u_light.ambient * u_material.ambient;
 
     vec3 norm = normalize(normal);
-    vec3 lightDir = normalize(u_lightPos - fragPos);  
-
+    vec3 lightDir = normalize(u_light.position - fragPos);  
     float diff = max(dot(norm, lightDir), 0.0);
-    vec3 diffuse = diff * u_lightColor;
+    vec3 diffuse = u_light.diffuse * diff * u_material.diffuse;
 
     vec3 viewDir = normalize(u_cameraPos - fragPos);
     vec3 reflectDir = reflect(-lightDir, norm);  
+    float spec = pow(max(dot(viewDir, reflectDir), 0.0), u_material.shininess); // El exponente cambia la amplitud del reflejo
+    vec3 specular = u_light.specular * (u_material.specular * spec);  
 
-    float spec = pow(max(dot(viewDir, reflectDir), 0.0), u_exponent); // El exponente cambia la amplitud del reflejo
-    vec3 specular = u_specularStrength * spec * u_lightColor;  
-
-    vec3 result = (ambient + diffuse + specular) * u_objectColor;
+    vec3 result = ambient + diffuse + specular;
     color = vec4(result, 1.0);
 }
