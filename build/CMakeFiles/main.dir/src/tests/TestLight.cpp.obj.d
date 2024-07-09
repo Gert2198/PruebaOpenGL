@@ -342,6 +342,7 @@ CMakeFiles/main.dir/src/tests/TestLight.cpp.obj: \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_transform.hpp \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_transform.inl \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/gtc/matrix_transform.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/Material.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/memory \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_raw_storage_iter.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/ranges_uninitialized.h \

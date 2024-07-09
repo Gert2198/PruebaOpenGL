@@ -7,6 +7,8 @@
 
 #include "Camera.h"
 
+#include "Material.h"
+
 #include <memory>
 
 namespace test
@@ -28,8 +30,8 @@ namespace test
 
         glm::vec3 m_objPosition;
         float m_objScale;
-        Material m_material;
-        float m_shininess;
+        materials::ColorMaterial m_material;
+        int materialSelector;
 
         glm::vec3 m_lightPosition;
         Material m_light;
@@ -61,6 +63,7 @@ namespace test
         void onImGuiRender() override;
 
         void processInput(GLFWwindow* window, float deltaTime);
+        void selectMaterial();
 
         // Callbacks
         static void framebuffer_size_callback(GLFWwindow* window, int width, int height);

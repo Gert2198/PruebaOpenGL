@@ -3256,6 +3256,7 @@ CMakeFiles/main.dir/src/main.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/
   C:/Users/Usuario/Desktop/PruebaOpenGL/include/glad/glad.h \
   C:/Users/Usuario/Desktop/PruebaOpenGL/src/Camera.h \
   C:/Users/Usuario/Desktop/PruebaOpenGL/src/IndexBuffer.h \
+  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Material.h \
   C:/Users/Usuario/Desktop/PruebaOpenGL/src/Renderer.h \
   C:/Users/Usuario/Desktop/PruebaOpenGL/src/Shader.h \
   C:/Users/Usuario/Desktop/PruebaOpenGL/src/Texture.h \
@@ -4883,6 +4884,7 @@ CMakeFiles/main.dir/src/tests/TestLight.cpp.obj: C:/Users/Usuario/Desktop/Prueba
   C:/Users/Usuario/Desktop/PruebaOpenGL/include/glad/glad.h \
   C:/Users/Usuario/Desktop/PruebaOpenGL/src/Camera.h \
   C:/Users/Usuario/Desktop/PruebaOpenGL/src/IndexBuffer.h \
+  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Material.h \
   C:/Users/Usuario/Desktop/PruebaOpenGL/src/Renderer.h \
   C:/Users/Usuario/Desktop/PruebaOpenGL/src/Shader.h \
   C:/Users/Usuario/Desktop/PruebaOpenGL/src/Texture.h \
@@ -7514,6 +7516,10 @@ C:/TDM-GCC-64/x86_64-w64-mingw32/include/wow64apiset.h:
 
 C:/Users/Usuario/Desktop/PruebaOpenGL/src/main.cpp:
 
+C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/stb_truetype.h:
+
+C:/Users/Usuario/Desktop/PruebaOpenGL/src/Material.h:
+
 C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imconfig.h:
 
 C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui.h:
@@ -7557,7 +7563,5 @@ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui_internal.h:
 C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/stb_textedit.h:
 
 C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/stb_rect_pack.h:
-
-C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/stb_truetype.h:
 
 C:/Users/Usuario/Desktop/PruebaOpenGL/include/GLFW/glfw3native.h:

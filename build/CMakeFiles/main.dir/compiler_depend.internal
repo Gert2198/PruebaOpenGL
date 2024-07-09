@@ -3268,6 +3268,7 @@ CMakeFiles/main.dir/src/main.cpp.obj
  C:/Users/Usuario/Desktop/PruebaOpenGL/include/glad/glad.h
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Camera.h
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/IndexBuffer.h
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/Material.h
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Renderer.h
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Shader.h
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Texture.h
@@ -4900,6 +4901,7 @@ CMakeFiles/main.dir/src/tests/TestLight.cpp.obj
  C:/Users/Usuario/Desktop/PruebaOpenGL/include/glad/glad.h
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Camera.h
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/IndexBuffer.h
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/Material.h
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Renderer.h
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Shader.h
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Texture.h

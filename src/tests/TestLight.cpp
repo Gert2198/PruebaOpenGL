@@ -77,10 +77,7 @@ namespace test
 
         m_camera = std::make_unique<Camera>(glm::vec3(0.0f, 0.0f,  3.0f));
 
-        m_material.ambient  = glm::vec3(0.0215f, 	0.1745f, 	0.0215f);
-        m_material.diffuse  = glm::vec3(0.07568f, 	0.61424f, 	0.07568f);
-        m_material.specular = glm::vec3(0.633f, 	0.727811f,	0.633f);
-        m_shininess         = 0.6f * 128;
+        m_material = materials::JADE;
 
         m_light.ambient     = glm::vec3(1.0f);
         m_light.diffuse     = glm::vec3(1.0f);
@@ -120,7 +117,7 @@ namespace test
         m_objShader->setUniform3f("u_material.ambient", m_material.ambient);
         m_objShader->setUniform3f("u_material.diffuse", m_material.diffuse);
         m_objShader->setUniform3f("u_material.specular", m_material.specular);
-        m_objShader->setUniform1f("u_material.shininess", m_shininess); 
+        m_objShader->setUniform1f("u_material.shininess", m_material.shininess * 128); 
 
         m_objShader->setUniform3f("u_light.ambient", m_light.ambient);
         m_objShader->setUniform3f("u_light.diffuse", m_light.diffuse);
@@ -143,27 +140,38 @@ namespace test
         std::string mode = m_playMode ? "Play Mode" : "Navigation Mode";
         std::string text = "Current mode: " + mode;
         ImGui::Text(text.c_str());
-        if (!m_playMode) {
-            ImGui::NewLine();
-            glm::vec3 cameraPos = m_camera->getCameraPos();
-            float camSens = m_camera->getSensitivity();
-            ImGui::InputFloat3("Camera transform", &cameraPos.x); 
-            ImGui::SliderFloat("Camera sens", &camSens, 0.0f, 3.0f);
-            m_camera->setSensitivity(camSens);
-            ImGui::NewLine();
-            ImGui::SliderFloat3("Obj Transform", &m_objPosition.x, -5, 5);
-            ImGui::SliderFloat("Obj Scale", &m_objScale, 0.0f, 10.0f);
-            ImGui::SliderFloat3("Obj Ambient Color", &m_material.ambient.x, 0, 1);
-            ImGui::SliderFloat3("Obj Diffuse Color", &m_material.diffuse.x, 0, 1);
-            ImGui::SliderFloat3("Obj Specular Color", &m_material.specular.x, 0, 1);
-            ImGui::SliderFloat("Obj Shininess", &m_shininess, 1, 128);
-            ImGui::NewLine();
-
-            ImGui::SliderFloat3("Light Transform", &m_lightPosition.x, -5, 5);
-            ImGui::SliderFloat3("Light Ambient Color", &m_light.ambient.x, 0, 1);
-            ImGui::SliderFloat3("Light Diffuse Color", &m_light.diffuse.x, 0, 1);
-            ImGui::SliderFloat3("Light Specular Color", &m_light.specular.x, 0, 1);            
-            ImGui::NewLine();
+        if (!m_playMode) {  
+            if (ImGui::CollapsingHeader("Camera")) {
+                glm::vec3 cameraPos = m_camera->getCameraPos();
+                float camSens = m_camera->getSensitivity();
+                ImGui::InputFloat3("Camera transform", &cameraPos.x); 
+                ImGui::SliderFloat("Camera sens", &camSens, 0.0f, 3.0f);
+                m_camera->setSensitivity(camSens);
+            }
+            if (ImGui::CollapsingHeader("Object")) {
+                ImGui::SliderFloat3("Obj Transform", &m_objPosition.x, -5, 5);
+                ImGui::SliderFloat("Obj Scale", &m_objScale, 0.0f, 10.0f);
+                if (ImGui::CollapsingHeader("Materials")) {
+                    if (ImGui::Button("Emerald"))   m_material = materials::EMERALD;    ImGui::SameLine();
+                    if (ImGui::Button("Jade"))      m_material = materials::JADE;       ImGui::SameLine();
+                    if (ImGui::Button("Obsidian"))  m_material = materials::OBSIDIAN;   ImGui::SameLine();
+                    if (ImGui::Button("Pearl"))     m_material = materials::PEARL;
+                    if (ImGui::Button("Ruby"))      m_material = materials::RUBY;       ImGui::SameLine();
+                    if (ImGui::Button("Turquoise")) m_material = materials::TURQUOISE;  ImGui::SameLine();
+                    if (ImGui::Button("Brass"))     m_material = materials::BRASS;      ImGui::SameLine();
+                    if (ImGui::Button("Bronze"))    m_material = materials::BRONZE;
+                    if (ImGui::Button("Chrome"))    m_material = materials::CHROME;     ImGui::SameLine();
+                    if (ImGui::Button("Copper"))    m_material = materials::COPPER;     ImGui::SameLine();
+                    if (ImGui::Button("Gold"))      m_material = materials::GOLD;       ImGui::SameLine();
+                    if (ImGui::Button("Silver"))    m_material = materials::SILVER;
+                }
+            }
+            if (ImGui::CollapsingHeader("Light")) {
+                ImGui::SliderFloat3("Light Transform", &m_lightPosition.x, -5, 5);
+                ImGui::SliderFloat3("Light Ambient Color", &m_light.ambient.x, 0, 1);
+                ImGui::SliderFloat3("Light Diffuse Color", &m_light.diffuse.x, 0, 1);
+                ImGui::SliderFloat3("Light Specular Color", &m_light.specular.x, 0, 1);            
+            }
         }
 
         ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
