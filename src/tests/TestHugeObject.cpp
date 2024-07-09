@@ -90,17 +90,19 @@ namespace test
         std::string mode = m_playMode ? "Play Mode" : "Navigation Mode";
         std::string text = "Current mode: " + mode;
         ImGui::Text(text.c_str());
-        ImGui::NewLine();
-        glm::vec3 cameraPos = m_camera->getCameraPos();
-        float camSens = m_camera->getSensitivity();
-        ImGui::InputFloat3("Camera transform", &cameraPos.x); 
-        ImGui::SliderFloat("Camera sens", &camSens, 0.0f, 3.0f);
-        m_camera->setSensitivity(camSens);
-        ImGui::NewLine();
-        ImGui::SliderFloat3("Transform", &m_objPosition.x, -5, 5);
-        ImGui::SliderFloat("Scale", &m_objScale, 0.0f, 10.0f);
-        ImGui::Checkbox("Enable object", &m_renderObj);
-        ImGui::Checkbox("Enable lines", &m_renderLines);
+        if (!m_playMode) {
+            ImGui::NewLine();
+            glm::vec3 cameraPos = m_camera->getCameraPos();
+            float camSens = m_camera->getSensitivity();
+            ImGui::InputFloat3("Camera transform", &cameraPos.x); 
+            ImGui::SliderFloat("Camera sens", &camSens, 0.0f, 3.0f);
+            m_camera->setSensitivity(camSens);
+            ImGui::NewLine();
+            ImGui::SliderFloat3("Transform", &m_objPosition.x, -5, 5);
+            ImGui::SliderFloat("Scale", &m_objScale, 0.0f, 10.0f);
+            ImGui::Checkbox("Enable object", &m_renderObj);
+            ImGui::Checkbox("Enable lines", &m_renderLines);
+        }
 
         ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
     }

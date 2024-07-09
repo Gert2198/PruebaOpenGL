@@ -143,22 +143,24 @@ namespace test
         std::string mode = m_playMode ? "Play Mode" : "Navigation Mode";
         std::string text = "Current mode: " + mode;
         ImGui::Text(text.c_str());
-        ImGui::NewLine();
-        glm::vec3 cameraPos = m_camera->getCameraPos();
-        float camSens = m_camera->getSensitivity();
-        ImGui::InputFloat3("Camera transform", &cameraPos.x); 
-        ImGui::SliderFloat("Camera sens", &camSens, 0.0f, 3.0f);
-        m_camera->setSensitivity(camSens);
-        ImGui::NewLine();
-        ImGui::SliderFloat3("Obj Transform", &m_objPosition.x, -5, 5);
-        ImGui::SliderFloat("Obj Scale", &m_objScale, 0.0f, 10.0f);
-        ImGui::ColorEdit3("Obj Color", &m_objColor.r);
+        if (!m_playMode) {
+            ImGui::NewLine();
+            glm::vec3 cameraPos = m_camera->getCameraPos();
+            float camSens = m_camera->getSensitivity();
+            ImGui::InputFloat3("Camera transform", &cameraPos.x); 
+            ImGui::SliderFloat("Camera sens", &camSens, 0.0f, 3.0f);
+            m_camera->setSensitivity(camSens);
+            ImGui::NewLine();
+            ImGui::SliderFloat3("Obj Transform", &m_objPosition.x, -5, 5);
+            ImGui::SliderFloat("Obj Scale", &m_objScale, 0.0f, 10.0f);
+            ImGui::ColorEdit3("Obj Color", &m_objColor.r);
 
-        ImGui::SliderFloat3("Light Transform", &m_lightPosition.x, -5, 5);
-        ImGui::NewLine();
-        ImGui::SliderFloat("Ambient strength", &m_ambient, 0, 1);
-        ImGui::SliderFloat("Specular strength", &m_specular, 0, 1);
-        ImGui::SliderInt("Exponent", &m_exponent, 1, 64);
+            ImGui::SliderFloat3("Light Transform", &m_lightPosition.x, -5, 5);
+            ImGui::NewLine();
+            ImGui::SliderFloat("Ambient strength", &m_ambient, 0, 1);
+            ImGui::SliderFloat("Specular strength", &m_specular, 0, 1);
+            ImGui::SliderInt("Exponent", &m_exponent, 1, 64);
+        }
 
         ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
     }
@@ -177,7 +179,7 @@ namespace test
                 else {
                     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
                 }
-                m_inputDelay = 0.5;
+                m_inputDelay = 0.25;
                 m_playMode = !m_playMode;
             }
         }
