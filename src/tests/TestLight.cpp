@@ -77,13 +77,13 @@ namespace test
 
         m_camera = std::make_unique<Camera>(glm::vec3(0.0f, 0.0f,  3.0f));
 
-        m_material.ambient  = glm::vec3(1.0f, 0.5f, 0.31f);
-        m_material.diffuse  = glm::vec3(1.0f, 0.5f, 0.31f);
-        m_material.specular = glm::vec3(0.5f);
-        m_shininess         = 4.0f;
+        m_material.ambient  = glm::vec3(0.0215f, 	0.1745f, 	0.0215f);
+        m_material.diffuse  = glm::vec3(0.07568f, 	0.61424f, 	0.07568f);
+        m_material.specular = glm::vec3(0.633f, 	0.727811f,	0.633f);
+        m_shininess         = 0.6f * 128;
 
-        m_light.ambient     = glm::vec3(0.2f);
-        m_light.diffuse     = glm::vec3(0.5f);
+        m_light.ambient     = glm::vec3(1.0f);
+        m_light.diffuse     = glm::vec3(1.0f);
         m_light.specular    = glm::vec3(1.0f);
 
         glfwSetWindowUserPointer(window, reinterpret_cast<void *>(this));
