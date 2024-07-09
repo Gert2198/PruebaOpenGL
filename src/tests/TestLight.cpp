@@ -186,10 +186,12 @@ namespace test
 
         if (!m_playMode) return;
         std::vector<Camera_Movement> directions = {};
-        if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) directions.push_back(Camera_Movement::FORWARD);
-        if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) directions.push_back(Camera_Movement::BACKWARD);
-        if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) directions.push_back(Camera_Movement::LEFT);
-        if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) directions.push_back(Camera_Movement::RIGHT);
+        if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)           directions.push_back(Camera_Movement::FORWARD);
+        if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)           directions.push_back(Camera_Movement::BACKWARD);
+        if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)           directions.push_back(Camera_Movement::LEFT);
+        if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)           directions.push_back(Camera_Movement::RIGHT);
+        if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS)       directions.push_back(Camera_Movement::UP);
+        if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)  directions.push_back(Camera_Movement::DOWN);
         m_camera->processKeyboard(directions, deltaTime);
     }
     

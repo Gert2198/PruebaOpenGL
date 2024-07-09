@@ -28,13 +28,15 @@ glm::mat4 Camera::getViewMatrix() {
 void Camera::processKeyboard(std::vector<Camera_Movement> directions, float deltaTime) {
     float velocity = m_movementSpeed * deltaTime;
 
-    bool forward = false, backward = false, left = false, right = false;
+    bool forward = false, backward = false, left = false, right = false, up = false, down = false;
     for (auto dir : directions) 
         switch (dir) {
             case FORWARD:   forward  = true; break;
             case BACKWARD:  backward = true; break;
             case LEFT:      left     = true; break;
             case RIGHT:     right    = true; break;
+            case UP:        up       = true; break;
+            case DOWN:      down     = true; break;
         }
 
     int input = forward + (backward << 1) + (left << 2) + (right << 3);
@@ -89,6 +91,11 @@ void Camera::processKeyboard(std::vector<Camera_Movement> directions, float delt
         m_position += glm::vec3(direction.x, 0.0f, direction.z) * velocity;
         break;
     }
+
+    if (up && down) {}
+    else if (up) m_position += m_worldUp * velocity;
+    else if (down) m_position -= m_worldUp * velocity;
+
 }
 
 // processes input received from a mouse input system. Expects the offset value in both the x and y direction.
