@@ -44,8 +44,8 @@ namespace test
         m_shader = std::make_unique<Shader>("../res/shaders/testTexture.glsl");
         m_shader->bind();
 
-        m_texture = std::make_unique<Texture>("../res/textures/atomo.png");
-        m_shader->setUniform1i("u_Texture", 0);
+        m_texture1 = std::make_unique<Texture>("../res/textures/atomo.png");
+        m_texture2 = std::make_unique<Texture>("../res/textures/box.png");
     }
     
     void TestTexture::onRender() {
@@ -54,7 +54,8 @@ namespace test
 
         Renderer renderer;
 
-        m_texture->bind();
+        m_texture1->bind(0);
+        m_texture2->bind(1);
         
         {
             glm::mat4 modelMatrix = glm::translate(glm::mat4(1.0f), m_translation1) *
@@ -62,6 +63,7 @@ namespace test
             glm::mat4 mvp = m_projMatrix * m_viewMatrix * modelMatrix;
             m_shader->bind();
             m_shader->setUniformMat4f("u_MVP", mvp);
+            m_shader->setUniform1i("u_Texture", 0);
 
             renderer.draw(*m_vao, *m_ibo, *m_shader);
         }
@@ -72,6 +74,7 @@ namespace test
             glm::mat4 mvp = m_projMatrix * m_viewMatrix * modelMatrix;
             m_shader->bind();
             m_shader->setUniformMat4f("u_MVP", mvp);
+            m_shader->setUniform1i("u_Texture", 1);
 
             renderer.draw(*m_vao, *m_ibo, *m_shader);
         }

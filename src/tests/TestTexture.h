@@ -13,7 +13,7 @@ namespace test
         std::unique_ptr<VertexArray> m_vao;
         std::unique_ptr<VertexBuffer> m_vbo;
         std::unique_ptr<IndexBuffer> m_ibo;
-        std::unique_ptr<Texture> m_texture;
+        std::unique_ptr<Texture> m_texture1, m_texture2;
         std::unique_ptr<Shader> m_shader;
 
         glm::vec3 m_translation1, m_translation2;
