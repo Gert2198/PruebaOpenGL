@@ -536,6 +536,30 @@ src/tests/TestLight.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestLight.cpp.s
 .PHONY : src/tests/TestLight.cpp.s
 
+src/tests/TestLightTexture.obj: src/tests/TestLightTexture.cpp.obj
+.PHONY : src/tests/TestLightTexture.obj
+
+# target to build an object file
+src/tests/TestLightTexture.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestLightTexture.cpp.obj
+.PHONY : src/tests/TestLightTexture.cpp.obj
+
+src/tests/TestLightTexture.i: src/tests/TestLightTexture.cpp.i
+.PHONY : src/tests/TestLightTexture.i
+
+# target to preprocess a source file
+src/tests/TestLightTexture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestLightTexture.cpp.i
+.PHONY : src/tests/TestLightTexture.cpp.i
+
+src/tests/TestLightTexture.s: src/tests/TestLightTexture.cpp.s
+.PHONY : src/tests/TestLightTexture.s
+
+# target to generate assembly for a file
+src/tests/TestLightTexture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestLightTexture.cpp.s
+.PHONY : src/tests/TestLightTexture.cpp.s
+
 src/tests/TestTexture.obj: src/tests/TestTexture.cpp.obj
 .PHONY : src/tests/TestTexture.obj
 
@@ -740,6 +764,9 @@ help:
 	@echo ... src/tests/TestLight.obj
 	@echo ... src/tests/TestLight.i
 	@echo ... src/tests/TestLight.s
+	@echo ... src/tests/TestLightTexture.obj
+	@echo ... src/tests/TestLightTexture.i
+	@echo ... src/tests/TestLightTexture.s
 	@echo ... src/tests/TestTexture.obj
 	@echo ... src/tests/TestTexture.i
 	@echo ... src/tests/TestTexture.s

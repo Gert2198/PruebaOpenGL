@@ -25,6 +25,7 @@ add_executable(main
 "src/tests/TestFPS.cpp"
 "src/tests/TestHugeObject.cpp"
 "src/tests/TestLight.cpp"
+"src/tests/TestLightTexture.cpp"
 )
 target_include_directories(main PRIVATE include)
 target_include_directories(main PRIVATE src)

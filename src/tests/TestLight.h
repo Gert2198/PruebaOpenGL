@@ -13,16 +13,16 @@
 
 namespace test
 {
-    struct Vertex {
-        float x, y, z;
-        float nx, ny, nz;
-    };
-    struct Material {
-        glm::vec3 ambient, diffuse, specular;
-    };
-
     class TestLight : public Test {
     private:
+        struct Vertex {
+            float x, y, z;
+            float nx, ny, nz;
+        };
+        struct Material {
+            glm::vec3 ambient, diffuse, specular;
+        };
+
         std::unique_ptr<VertexArray> m_objVAO, m_lightVAO;
         std::unique_ptr<VertexBuffer> m_objVBO, m_lightVBO;
         std::unique_ptr<IndexBuffer> m_objIBO, m_lightIBO;
@@ -31,7 +31,6 @@ namespace test
         glm::vec3 m_objPosition;
         float m_objScale;
         materials::ColorMaterial m_material;
-        int materialSelector;
 
         glm::vec3 m_lightPosition;
         Material m_light;
@@ -63,7 +62,6 @@ namespace test
         void onImGuiRender() override;
 
         void processInput(GLFWwindow* window, float deltaTime);
-        void selectMaterial();
 
         // Callbacks
         static void framebuffer_size_callback(GLFWwindow* window, int width, int height);

@@ -18,7 +18,7 @@ Texture::Texture(const std::string &path) : m_RendererID(0), m_Path(path), m_Loc
     else 
         m_repetitions[m_RendererID]++;
     
-    GLDebug(glBindTexture(GL_TEXTURE_2D, m_RendererID));
+    this->bind();
 
     GLDebug(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR)); // El filtro que le aplicamos cuando minimizamos la imagen
     GLDebug(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR)); // Lo mismo pero cuando ampliamos

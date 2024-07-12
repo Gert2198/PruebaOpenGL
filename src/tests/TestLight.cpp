@@ -98,9 +98,6 @@ namespace test
 
         Renderer renderer;
 
-        VertexBufferLayout layout;
-        layout.push<float>(3);
-
         glm::mat4 viewMatrix = m_camera->getViewMatrix();
 
         // Dibujamos el cubo principal primero

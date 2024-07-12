@@ -136,5 +136,11 @@
   "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestLight.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\tests\\TestLight.cpp",
   "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestLight.cpp",
   "output": "CMakeFiles/main.dir/src/tests/TestLight.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestLightTexture.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\tests\\TestLightTexture.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestLightTexture.cpp",
+  "output": "CMakeFiles/main.dir/src/tests/TestLightTexture.cpp.obj"
 }
 ]

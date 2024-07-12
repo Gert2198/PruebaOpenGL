@@ -374,4 +374,5 @@ CMakeFiles/main.dir/src/main.cpp.obj: \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Camera.h \
  C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestHugeObject.h \
  C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestLight.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/Material.h
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/Material.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestLightTexture.h
