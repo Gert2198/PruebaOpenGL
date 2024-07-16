@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Usuario\Desktop\PruebaOpenGL
+CMAKE_SOURCE_DIR = "C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories Github\OpenGL\PruebaOpenGL"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Usuario\Desktop\PruebaOpenGL\build
+CMAKE_BINARY_DIR = "C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories Github\OpenGL\PruebaOpenGL\build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles C:\Users\Usuario\Desktop\PruebaOpenGL\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories Github\OpenGL\PruebaOpenGL\build\CMakeFiles" "C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories Github\OpenGL\PruebaOpenGL\build\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories Github\OpenGL\PruebaOpenGL\build\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -344,6 +344,30 @@ src/VertexBufferLayout.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/VertexBufferLayout.cpp.s
 .PHONY : src/VertexBufferLayout.cpp.s
 
+src/figures/Circle.obj: src/figures/Circle.cpp.obj
+.PHONY : src/figures/Circle.obj
+
+# target to build an object file
+src/figures/Circle.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/Circle.cpp.obj
+.PHONY : src/figures/Circle.cpp.obj
+
+src/figures/Circle.i: src/figures/Circle.cpp.i
+.PHONY : src/figures/Circle.i
+
+# target to preprocess a source file
+src/figures/Circle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/Circle.cpp.i
+.PHONY : src/figures/Circle.cpp.i
+
+src/figures/Circle.s: src/figures/Circle.cpp.s
+.PHONY : src/figures/Circle.s
+
+# target to generate assembly for a file
+src/figures/Circle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/Circle.cpp.s
+.PHONY : src/figures/Circle.cpp.s
+
 src/figures/Square.obj: src/figures/Square.cpp.obj
 .PHONY : src/figures/Square.obj
 
@@ -463,6 +487,30 @@ src/tests/TestClearColor.s: src/tests/TestClearColor.cpp.s
 src/tests/TestClearColor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestClearColor.cpp.s
 .PHONY : src/tests/TestClearColor.cpp.s
+
+src/tests/TestCollisions.obj: src/tests/TestCollisions.cpp.obj
+.PHONY : src/tests/TestCollisions.obj
+
+# target to build an object file
+src/tests/TestCollisions.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestCollisions.cpp.obj
+.PHONY : src/tests/TestCollisions.cpp.obj
+
+src/tests/TestCollisions.i: src/tests/TestCollisions.cpp.i
+.PHONY : src/tests/TestCollisions.i
+
+# target to preprocess a source file
+src/tests/TestCollisions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestCollisions.cpp.i
+.PHONY : src/tests/TestCollisions.cpp.i
+
+src/tests/TestCollisions.s: src/tests/TestCollisions.cpp.s
+.PHONY : src/tests/TestCollisions.s
+
+# target to generate assembly for a file
+src/tests/TestCollisions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestCollisions.cpp.s
+.PHONY : src/tests/TestCollisions.cpp.s
 
 src/tests/TestFPS.obj: src/tests/TestFPS.cpp.obj
 .PHONY : src/tests/TestFPS.obj
@@ -740,6 +788,9 @@ help:
 	@echo ... src/VertexBufferLayout.obj
 	@echo ... src/VertexBufferLayout.i
 	@echo ... src/VertexBufferLayout.s
+	@echo ... src/figures/Circle.obj
+	@echo ... src/figures/Circle.i
+	@echo ... src/figures/Circle.s
 	@echo ... src/figures/Square.obj
 	@echo ... src/figures/Square.i
 	@echo ... src/figures/Square.s
@@ -755,6 +806,9 @@ help:
 	@echo ... src/tests/TestClearColor.obj
 	@echo ... src/tests/TestClearColor.i
 	@echo ... src/tests/TestClearColor.s
+	@echo ... src/tests/TestCollisions.obj
+	@echo ... src/tests/TestCollisions.i
+	@echo ... src/tests/TestCollisions.s
 	@echo ... src/tests/TestFPS.obj
 	@echo ... src/tests/TestFPS.i
 	@echo ... src/tests/TestFPS.s

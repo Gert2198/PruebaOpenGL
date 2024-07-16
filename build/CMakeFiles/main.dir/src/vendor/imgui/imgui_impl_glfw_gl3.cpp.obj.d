@@ -1,7 +1,7 @@
 CMakeFiles/main.dir/src/vendor/imgui/imgui_impl_glfw_gl3.cpp.obj: \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\vendor\imgui\imgui_impl_glfw_gl3.cpp \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\vendor\imgui\imgui.h \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\vendor\imgui\imconfig.h \
+ C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\vendor\imgui\imgui_impl_glfw_gl3.cpp \
+ C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\vendor\imgui\imgui.h \
+ C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\vendor\imgui\imconfig.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/float.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/float.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/crtdefs.h \
@@ -33,13 +33,13 @@ CMakeFiles/main.dir/src/vendor/imgui/imgui_impl_glfw_gl3.cpp.obj: \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/malloc.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/std_abs.h \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\vendor\imgui\imgui_impl_glfw_gl3.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/include/glad/glad.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/include/KHR/khrplatform.h \
+ C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\vendor\imgui\imgui_impl_glfw_gl3.h \
+ C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/include/glad/glad.h \
+ C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/include/KHR/khrplatform.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/stdint.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/stdint.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/include/GLFW/glfw3.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/include/GLFW/glfw3native.h \
+ C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/include/GLFW/glfw3.h \
+ C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/include/GLFW/glfw3native.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/windows.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/sdkddkver.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/excpt.h \

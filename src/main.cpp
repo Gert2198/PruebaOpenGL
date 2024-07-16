@@ -26,6 +26,7 @@
 #include "tests/TestHugeObject.h"
 #include "tests/TestLight.h"
 #include "tests/TestLightTexture.h"
+#include "tests/TestCollisions.h"
 
 using std::cout; 
 using std::endl; 
@@ -90,6 +91,7 @@ int main() {
         testMenu->registerTest<test::TestHugeObject>("3D monkey test");
         testMenu->registerTest<test::TestLight>("Light test");
         testMenu->registerTest<test::TestLightTexture>("Light with textures test");
+        testMenu->registerTest<test::TestCollision>("Circle tests");
 
         while(!glfwWindowShouldClose(window)) {
             float currentFrame = static_cast<float>(glfwGetTime());

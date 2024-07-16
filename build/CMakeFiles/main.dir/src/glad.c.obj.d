@@ -1,5 +1,5 @@
 CMakeFiles/main.dir/src/glad.c.obj: \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\glad.c \
+ C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\glad.c \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/stdio.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/corecrt.h \
@@ -21,8 +21,8 @@ CMakeFiles/main.dir/src/glad.c.obj: \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/malloc.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/string.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/sec_api/string_s.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/include/glad/glad.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/include/KHR/khrplatform.h \
+ C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/include/glad/glad.h \
+ C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/include/KHR/khrplatform.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/stdint.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/stdint.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/stddef.h \

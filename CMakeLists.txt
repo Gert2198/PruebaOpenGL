@@ -15,6 +15,7 @@ add_executable(main
 "src/VertexBufferLayout.cpp" 
 "src/vendor/stb/stb_image.cpp" 
 "src/figures/Square.cpp" 
+"src/figures/Circle.cpp" 
 "src/vendor/imgui/imgui_demo.cpp"
 "src/vendor/imgui/imgui_draw.cpp"
 "src/vendor/imgui/imgui_impl_glfw_gl3.cpp"
@@ -26,6 +27,7 @@ add_executable(main
 "src/tests/TestHugeObject.cpp"
 "src/tests/TestLight.cpp"
 "src/tests/TestLightTexture.cpp"
+"src/tests/TestCollisions.cpp"
 )
 target_include_directories(main PRIVATE include)
 target_include_directories(main PRIVATE src)
