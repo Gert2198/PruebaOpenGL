@@ -2,8 +2,9 @@
 
 #include <iostream>
 
-Circle::Circle(const float radius, const float mass, const glm::vec3& position, const glm::vec3& velocity, const glm::vec3& acceleration)
-    : m_radius(radius), m_mass(mass), m_inverseMass(1.0f / mass), m_position(position), m_velocity(velocity), m_acceleration(acceleration)
+Circle::Circle(const float radius, const float mass, const float friction, const glm::vec3& color,
+                const glm::vec3& position, const glm::vec3& velocity, const glm::vec3& acceleration)
+    : m_radius(radius), m_mass(mass), m_friction(friction), m_color(color), m_position(position), m_velocity(velocity), m_acceleration(acceleration)
 {
     glm::vec2 vertices[VERTICES + 1];
     vertices[0] = glm::vec2(0.0f);
@@ -46,50 +47,79 @@ Circle::Circle(const float radius, const float mass, const glm::vec3& position, 
 }
 
 void Circle::update(float deltaTime) {
-    applyForces();
+    glm::vec3 f = netForce();
 
-    m_position = m_position + m_velocity * deltaTime;
+    m_acceleration = f / m_mass;
     m_velocity = m_velocity + m_acceleration * deltaTime;
+    m_position = m_position + m_velocity * deltaTime;
+
+    m_forces.clear();
 }
 
 void Circle::checkEdges(float left, float right, float down, float up) {
     if (m_position.x + m_radius > right) {
-        m_velocity.x = - m_velocity.x;
-        float offset = m_position.x + m_radius - right;
-        m_position.x -= offset;
+        m_position.x = right - m_radius;
+        m_velocity.x = - m_velocity.x * m_friction;
     }
     else if (m_position.x - m_radius < left) {
-        m_velocity.x = - m_velocity.x;
-        float offset = left - m_position.x + m_radius;
-        m_position.x += offset;
+        m_position.x = m_radius;
+        m_velocity.x = - m_velocity.x * m_friction;
     }
     if (m_position.y + m_radius > up) {
-        glm::vec3 force = 2 * m_mass * m_acceleration;
-        std::cout << "Force: (" << force.x << ", " << force.y << ", " << force.z << ")" << std::endl;
-        addForce(-force);
-        float offset = m_position.y + m_radius - up;
-        m_position.y -= offset;
+        m_position.y = up - m_radius;
+        m_velocity.y = - m_velocity.y * m_friction;
     }
     else if (m_position.y - m_radius < down) {
-        glm::vec3 force = 2 * m_mass * m_acceleration;
-        std::cout << "Force: (" << force.x << ", " << force.y << ", " << force.z << ")" << std::endl;
-        addForce(-force);
-        float offset = down - m_position.y + m_radius;
-        m_position.y += offset;
+        m_position.y = m_radius;
+        m_velocity.y = - m_velocity.y * m_friction;
     }
 }
 
-void Circle::addForce(const glm::vec3& force) {
+void Circle::addForce(const Force& force) {
     m_forces.push_back(force);
 }
 
-void Circle::applyForces() {
+glm::vec3 Circle::netForce() {
     glm::vec3 totalForce(0.0f);
-    for (auto force : m_forces) {
-        totalForce += force;
-    }
 
-    m_acceleration = m_inverseMass * totalForce;
+    for (auto force : m_forces) 
+        totalForce += force.direction * force.magnitude;
 
-    m_forces.clear();
+    return totalForce;
+}
+
+bool Circle::checkCollision(const Circle& other) const {
+    float distance = glm::length(other.m_position - m_position);
+    float radiusSum = m_radius + other.m_radius;
+    return distance < radiusSum;
+}
+
+void Circle::resolveCollision(Circle& other) {
+    float d = glm::length(other.m_position - m_position);
+    float radiusSum = m_radius + other.m_radius;
+    float overlap = d - radiusSum;
+    glm::vec3 direction = glm::normalize(other.m_position - m_position);
+
+    m_position = m_position + (overlap * 0.5f) * direction;
+    other.m_position = other.m_position - (overlap * 0.5f) * direction;
+
+    d = radiusSum;  // HAY QUE CORREGIR LA DISTANCIAAAA
+
+    float massSum = m_mass + other.m_mass;
+    glm::vec3 pDiff = other.m_position - m_position;
+
+    float dot = glm::dot((other.m_velocity - m_velocity), (pDiff));
+
+    float num1 = 2 * other.m_mass * dot;
+    float num2 = 2 * m_mass * dot;
+    float den = massSum * d * d;
+    
+    // Ajustar velocidades
+    glm::vec3 vel1 = (m_velocity + (num1 / den) * (pDiff)); // * m_friction;
+    glm::vec3 vel2 = (other.m_velocity - (num2 / den) * (pDiff)); // * other.m_friction;
+
+    glm::vec3 error = (vel1 + vel2) - (m_velocity + other.m_velocity);
+
+    m_velocity = vel1 - (0.5f * error);
+    other.m_velocity = vel2 - (0.5f * error);
 }
