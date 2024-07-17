@@ -93,6 +93,14 @@ namespace test
         glfwSetCursorPosCallback(window, mouse_callback);
     }
 
+    TestLightTexture::~TestLightTexture() {
+        GLDebug(glDisable(GL_BLEND));
+        GLDebug(glDisable(GL_DEPTH_TEST));
+        GLDebug(glDisable(GL_CULL_FACE));
+
+        glfwSetCursorPosCallback(m_window, nullptr);
+    }
+
     void TestLightTexture::onUpdate(float deltaTime) {
         processInput(m_window, deltaTime);
     }

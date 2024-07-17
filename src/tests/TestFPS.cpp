@@ -46,7 +46,12 @@ namespace test
         glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
         glfwSetCursorPosCallback(window, mouse_callback);
     }
-    TestFPS::~TestFPS() {}
+    TestFPS::~TestFPS() {
+        GLDebug(glDisable(GL_BLEND));
+        GLDebug(glDisable(GL_DEPTH_TEST));
+
+        glfwSetCursorPosCallback(m_window, nullptr);
+    }
 
     void TestFPS::onUpdate(float deltaTime) {
         processInput(m_window, deltaTime);

@@ -18,12 +18,12 @@ namespace test
         m_vao->bind();
 
         for (int i = 0; i < NUM_CIRCLES; i++) {
-            float radius = /*(sin(rand()) + 2) * */0.15f;
+            float radius = 0.15f;
             float mass = 1.0f;
             glm::vec2 position(radius + 0.2f * i + radius * i, 4.5f);
             glm::vec2 velocity(sin(rand()), cos(rand()));
             glm::vec3 color(rand() / (float)RAND_MAX, rand() / (float)RAND_MAX, rand() / (float)RAND_MAX);
-            m_circles.push_back({radius, mass, 0.6f, color, glm::vec3(position, 0.0f), glm::vec3(velocity, 0.0f)} );
+            m_circles.push_back(Circle(radius, mass, 0.6f, color, glm::vec3(position, 0.0f), glm::vec3(velocity, 0.0f)) );
             m_kineticEnergy += 0.5f * m_circles[i].m_mass * glm::length(m_circles[i].m_velocity) * glm::length(m_circles[i].m_velocity);
         }
 

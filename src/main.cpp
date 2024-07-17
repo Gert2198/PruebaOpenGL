@@ -71,6 +71,8 @@ int main() {
 
     cout << glGetString(GL_VERSION) << endl;
 
+    cout << glfwGetWindowUserPointer(window) << endl;
+
     {
         GLDebug(glEnable(GL_BLEND));
         GLDebug(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));

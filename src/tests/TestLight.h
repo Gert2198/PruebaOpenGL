@@ -56,6 +56,7 @@ namespace test
 
     public:
         TestLight(GLFWwindow* window);
+        ~TestLight();
 
         void onUpdate(float deltaTime) override;
         void onRender() override;

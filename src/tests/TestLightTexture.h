@@ -68,6 +68,7 @@ namespace test
 
     public:
         TestLightTexture(GLFWwindow* window);
+        ~TestLightTexture();
 
         void onUpdate(float deltaTime) override;
         void onRender() override;

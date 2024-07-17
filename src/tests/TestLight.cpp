@@ -88,6 +88,13 @@ namespace test
         glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
         glfwSetCursorPosCallback(window, mouse_callback);
     }
+    TestLight::~TestLight() {
+        GLDebug(glDisable(GL_BLEND));
+        GLDebug(glDisable(GL_DEPTH_TEST));
+        GLDebug(glDisable(GL_CULL_FACE));
+
+        glfwSetCursorPosCallback(m_window, nullptr);
+    }
 
     void TestLight::onUpdate(float deltaTime) {
         processInput(m_window, deltaTime);
