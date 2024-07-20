@@ -29,11 +29,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/CMake/share/cmake-3.30/Modules/Platform/Windows-windres.cmake"
   "C:/Program Files/CMake/share/cmake-3.30/Modules/Platform/Windows.cmake"
   "C:/Program Files/CMake/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake"
-  "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/CMakeLists.txt"
-  "CMakeFiles/3.30.0/CMakeCCompiler.cmake"
-  "CMakeFiles/3.30.0/CMakeCXXCompiler.cmake"
-  "CMakeFiles/3.30.0/CMakeRCCompiler.cmake"
-  "CMakeFiles/3.30.0/CMakeSystem.cmake"
+  "C:/Users/Usuario/Desktop/PruebaOpenGL/CMakeLists.txt"
+  "CMakeFiles/3.30.0-rc4/CMakeCCompiler.cmake"
+  "CMakeFiles/3.30.0-rc4/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.30.0-rc4/CMakeRCCompiler.cmake"
+  "CMakeFiles/3.30.0-rc4/CMakeSystem.cmake"
   )
 
 # The corresponding makefile is:

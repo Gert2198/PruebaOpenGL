@@ -12,7 +12,7 @@ namespace test
     const int NUM_CIRCLES = 20;
     class TestCollision : public Test {
     private: 
-        std::vector<Circle> m_circles;
+        std::vector<Figure*> m_circles;
 
         std::unique_ptr<VertexArray> m_vao;
         std::unique_ptr<Shader> m_shader;
@@ -22,6 +22,7 @@ namespace test
         float m_kineticEnergy;
     public:
         TestCollision(GLFWwindow* window);
+        ~TestCollision();
 
         void onUpdate(float deltaTime) override;
         void onRender() override;

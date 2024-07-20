@@ -11,7 +11,8 @@ struct Force {
 class ForceManager {
 private: 
     std::vector<Force> m_forces;
-    glm::vec3 netForce();
 public:
+    glm::vec3 netForce();
     void addForce(const Force& force);
+    void clearForces();
 };

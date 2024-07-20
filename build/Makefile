@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories Github\OpenGL\PruebaOpenGL"
+CMAKE_SOURCE_DIR = C:\Users\Usuario\Desktop\PruebaOpenGL
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories Github\OpenGL\PruebaOpenGL\build"
+CMAKE_BINARY_DIR = C:\Users\Usuario\Desktop\PruebaOpenGL\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories Github\OpenGL\PruebaOpenGL\build\CMakeFiles" "C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories Github\OpenGL\PruebaOpenGL\build\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles C:\Users\Usuario\Desktop\PruebaOpenGL\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories Github\OpenGL\PruebaOpenGL\build\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -344,6 +344,30 @@ src/VertexBufferLayout.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/VertexBufferLayout.cpp.s
 .PHONY : src/VertexBufferLayout.cpp.s
 
+src/figures/AABB.obj: src/figures/AABB.cpp.obj
+.PHONY : src/figures/AABB.obj
+
+# target to build an object file
+src/figures/AABB.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/AABB.cpp.obj
+.PHONY : src/figures/AABB.cpp.obj
+
+src/figures/AABB.i: src/figures/AABB.cpp.i
+.PHONY : src/figures/AABB.i
+
+# target to preprocess a source file
+src/figures/AABB.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/AABB.cpp.i
+.PHONY : src/figures/AABB.cpp.i
+
+src/figures/AABB.s: src/figures/AABB.cpp.s
+.PHONY : src/figures/AABB.s
+
+# target to generate assembly for a file
+src/figures/AABB.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/AABB.cpp.s
+.PHONY : src/figures/AABB.cpp.s
+
 src/figures/Circle.obj: src/figures/Circle.cpp.obj
 .PHONY : src/figures/Circle.obj
 
@@ -367,6 +391,54 @@ src/figures/Circle.s: src/figures/Circle.cpp.s
 src/figures/Circle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/Circle.cpp.s
 .PHONY : src/figures/Circle.cpp.s
+
+src/figures/Figure.obj: src/figures/Figure.cpp.obj
+.PHONY : src/figures/Figure.obj
+
+# target to build an object file
+src/figures/Figure.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/Figure.cpp.obj
+.PHONY : src/figures/Figure.cpp.obj
+
+src/figures/Figure.i: src/figures/Figure.cpp.i
+.PHONY : src/figures/Figure.i
+
+# target to preprocess a source file
+src/figures/Figure.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/Figure.cpp.i
+.PHONY : src/figures/Figure.cpp.i
+
+src/figures/Figure.s: src/figures/Figure.cpp.s
+.PHONY : src/figures/Figure.s
+
+# target to generate assembly for a file
+src/figures/Figure.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/Figure.cpp.s
+.PHONY : src/figures/Figure.cpp.s
+
+src/figures/ForceManager.obj: src/figures/ForceManager.cpp.obj
+.PHONY : src/figures/ForceManager.obj
+
+# target to build an object file
+src/figures/ForceManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/ForceManager.cpp.obj
+.PHONY : src/figures/ForceManager.cpp.obj
+
+src/figures/ForceManager.i: src/figures/ForceManager.cpp.i
+.PHONY : src/figures/ForceManager.i
+
+# target to preprocess a source file
+src/figures/ForceManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/ForceManager.cpp.i
+.PHONY : src/figures/ForceManager.cpp.i
+
+src/figures/ForceManager.s: src/figures/ForceManager.cpp.s
+.PHONY : src/figures/ForceManager.s
+
+# target to generate assembly for a file
+src/figures/ForceManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/ForceManager.cpp.s
+.PHONY : src/figures/ForceManager.cpp.s
 
 src/figures/Square.obj: src/figures/Square.cpp.obj
 .PHONY : src/figures/Square.obj
@@ -788,9 +860,18 @@ help:
 	@echo ... src/VertexBufferLayout.obj
 	@echo ... src/VertexBufferLayout.i
 	@echo ... src/VertexBufferLayout.s
+	@echo ... src/figures/AABB.obj
+	@echo ... src/figures/AABB.i
+	@echo ... src/figures/AABB.s
 	@echo ... src/figures/Circle.obj
 	@echo ... src/figures/Circle.i
 	@echo ... src/figures/Circle.s
+	@echo ... src/figures/Figure.obj
+	@echo ... src/figures/Figure.i
+	@echo ... src/figures/Figure.s
+	@echo ... src/figures/ForceManager.obj
+	@echo ... src/figures/ForceManager.i
+	@echo ... src/figures/ForceManager.s
 	@echo ... src/figures/Square.obj
 	@echo ... src/figures/Square.i
 	@echo ... src/figures/Square.s

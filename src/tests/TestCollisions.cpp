@@ -23,28 +23,40 @@ namespace test
             glm::vec2 position(radius + 0.2f * i + radius * i, 4.5f);
             glm::vec2 velocity(sin(rand()), cos(rand()));
             glm::vec3 color(rand() / (float)RAND_MAX, rand() / (float)RAND_MAX, rand() / (float)RAND_MAX);
-            m_circles.push_back(Circle(radius, mass, 0.6f, color, glm::vec3(position, 0.0f), glm::vec3(velocity, 0.0f)) );
-            m_kineticEnergy += 0.5f * m_circles[i].m_mass * glm::length(m_circles[i].m_velocity) * glm::length(m_circles[i].m_velocity);
+            m_circles.push_back(new Circle(radius, mass, 0.6f, color, glm::vec3(position, 0.0f), glm::vec3(velocity, 0.0f)) );
+            m_kineticEnergy += 0.5f * m_circles[i]->getMass() * glm::length(m_circles[i]->getVelocity()) * glm::length(m_circles[i]->getVelocity());
         }
 
-        std::sort(m_circles.begin(), m_circles.end(), [] (Circle const& a, Circle const& b) { return a.getRadius() > b.getRadius(); });
+        std::sort(m_circles.begin(), m_circles.end(), [] (Figure* const& a, Figure* const& b) { 
+            if (dynamic_cast<Circle*>(a) && dynamic_cast<Circle*>(b)) {
+                Circle* aCircle = static_cast<Circle*>(a);
+                Circle* bCircle = static_cast<Circle*>(b);
+                return aCircle->getRadius() > bCircle->getRadius(); 
+            }
+            return a->getMass() > b->getMass();
+        });
 
         m_shader = std::make_unique<Shader>("../res/shaders/circle.glsl");
         m_shader->bind();
+    }
+    TestCollision::~TestCollision() {
+        for (auto &m_circle : m_circles)
+            delete m_circle;
     }
 
     void TestCollision::onUpdate(float deltaTime) {
         m_kineticEnergy = 0.0f;
         for (int i = 0; i < NUM_CIRCLES; i++) {
-            float magnitude = 9.8f * m_circles[i].m_mass;
-            m_circles[i].addForce({ glm::vec3(0.0f, -1.0f, 0.0f), magnitude });
-            m_circles[i].update(deltaTime);
-            m_circles[i].checkEdges(0.0f, 16.0f, 0.0f, 9.0f);
+            Circle* circle = static_cast<Circle*>(m_circles[i]);
+            float magnitude = 9.8f * m_circles[i]->getMass();
+            circle->addForce({ glm::vec3(0.0f, -1.0f, 0.0f), magnitude });
+            circle->update(deltaTime);
+            circle->checkEdges(0.0f, 16.0f, 0.0f, 9.0f);
             for (int j = i + 1; j < NUM_CIRCLES; j++) {
-                if (m_circles[i].checkCollision(m_circles[j])) 
-                    m_circles[i].resolveCollision(m_circles[j]);
+                if (circle->checkCollision(m_circles[j])) 
+                    circle->resolveCollision(m_circles[j]);
             }
-            m_kineticEnergy += 0.5f * m_circles[i].m_mass * glm::length(m_circles[i].m_velocity) * glm::length(m_circles[i].m_velocity);
+            m_kineticEnergy += 0.5f * m_circles[i]->getMass() * glm::length(m_circles[i]->getVelocity()) * glm::length(m_circles[i]->getVelocity());
         }
     }
     void TestCollision::onRender() {
@@ -58,16 +70,16 @@ namespace test
 
         for (auto &m_circle : m_circles) {
             m_vao->bind();
-            m_vao->addBuffer(m_circle.getVertexBuffer(), layout);
+            m_vao->addBuffer(m_circle->getVertexBuffer(), layout);
 
-            glm::mat4 modelMatrix = glm::translate(glm::mat4(1.0f), m_circle.m_position);
+            glm::mat4 modelMatrix = glm::translate(glm::mat4(1.0f), m_circle->getPosition());
             glm::mat4 mvp = m_projMatrix * m_viewMatrix * modelMatrix;
 
             m_shader->bind();
             m_shader->setUniformMat4f("u_MVP", mvp);
-            m_shader->setUniform3f("u_color", m_circle.getColor());
+            m_shader->setUniform3f("u_color", m_circle->getColor());
             
-            renderer.draw(*m_vao, m_circle.getIndexBuffer(), *m_shader);
+            renderer.draw(*m_vao, m_circle->getIndexBuffer(), *m_shader);
         }
     }
     void TestCollision::onImGuiRender() {

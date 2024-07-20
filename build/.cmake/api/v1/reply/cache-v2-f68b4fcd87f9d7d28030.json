@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build"
+			"value" : "c:/Users/Usuario/Desktop/PruebaOpenGL/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -587,7 +587,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/Usuario/Desktop/PruebaOpenGL/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -659,7 +659,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL"
+			"value" : "C:/Users/Usuario/Desktop/PruebaOpenGL"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1295,7 +1295,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/lib/libglfw3.a"
+			"value" : "C:/Users/Usuario/Desktop/PruebaOpenGL/lib/libglfw3.a"
 		},
 		{
 			"name" : "PruebaOpenGL_BINARY_DIR",
@@ -1307,7 +1307,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build"
+			"value" : "C:/Users/Usuario/Desktop/PruebaOpenGL/build"
 		},
 		{
 			"name" : "PruebaOpenGL_IS_TOP_LEVEL",
@@ -1331,7 +1331,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL"
+			"value" : "C:/Users/Usuario/Desktop/PruebaOpenGL"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

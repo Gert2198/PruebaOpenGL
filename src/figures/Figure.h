@@ -18,10 +18,13 @@ protected:
     std::unique_ptr<VertexBuffer> m_vbo;
     std::unique_ptr<IndexBuffer> m_ibo;
 public:
-    virtual void update(float deltaTime);
+    Figure(const float mass, const float friction, const glm::vec3& color, const glm::vec3& position, const glm::vec3& velocity, const glm::vec3& acceleration = glm::vec3(0.0f));
 
-    virtual bool checkCollision(const Figure& other) const;
-    virtual void resolveCollision(Figure& other);
+    virtual void update(float deltaTime);
+    void addForce(const Force& force);
+
+    virtual bool checkCollision(const Figure* other) const = 0;
+    virtual void resolveCollision(Figure* other) = 0;
 
     inline glm::vec3 getPosition() const { return m_position; }
     inline glm::vec3 getVelocity() const { return m_velocity; }

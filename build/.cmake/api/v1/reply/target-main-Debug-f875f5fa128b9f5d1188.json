@@ -36,25 +36,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 41,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 32,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 33,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 34,
+				"line" : 44,
 				"parent" : 0
 			},
 			{
@@ -64,9 +46,27 @@
 				"parent" : 0
 			},
 			{
-				"command" : 3,
+				"command" : 2,
+				"file" : 0,
+				"line" : 36,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
 				"file" : 0,
 				"line" : 37,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 38,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 40,
 				"parent" : 0
 			}
 		]
@@ -84,19 +84,19 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/include"
+					"path" : "C:/Users/Usuario/Desktop/PruebaOpenGL/include"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src"
+					"path" : "C:/Users/Usuario/Desktop/PruebaOpenGL/src"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/vendor"
+					"path" : "C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/figures"
+					"path" : "C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures"
 				}
 			],
 			"language" : "CXX",
@@ -134,7 +134,10 @@
 				22,
 				23,
 				24,
-				25
+				25,
+				26,
+				27,
+				28
 			]
 		},
 		{
@@ -148,19 +151,19 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/include"
+					"path" : "C:/Users/Usuario/Desktop/PruebaOpenGL/include"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src"
+					"path" : "C:/Users/Usuario/Desktop/PruebaOpenGL/src"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/vendor"
+					"path" : "C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/figures"
+					"path" : "C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures"
 				}
 			],
 			"language" : "C",
@@ -185,7 +188,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "\"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\lib\\libglfw3.a\"",
+				"fragment" : "C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\lib\\libglfw3.a",
 				"role" : "libraries"
 			},
 			{
@@ -233,7 +236,10 @@
 				22,
 				23,
 				24,
-				25
+				25,
+				26,
+				27,
+				28
 			]
 		}
 	],
@@ -314,13 +320,31 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/figures/Square.cpp",
+			"path" : "src/figures/AABB.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/figures/Circle.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/figures/Figure.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/figures/ForceManager.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/figures/Square.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
