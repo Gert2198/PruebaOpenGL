@@ -65,25 +65,36 @@ void Circle::checkEdges(float left, float right, float down, float up) {
     }
 }
 
+bool Circle::checkPointInside(const glm::vec2& point) const {
+    float distance = glm::length(point - glm::vec2(m_position));
+    return distance <= m_radius;
+}
+
 bool Circle::checkCollision(const Figure* other) const {
     if (dynamic_cast<const Circle*>(other)) {
         Circle* circle = (Circle*) other;
         return checkCollision(circle);
+    } else if (dynamic_cast<const AABB*>(other)) {
+        AABB* aabb = (AABB*) other;
+        return checkCollision(aabb);
     }
     return false;
-}
-
-bool Circle::checkCollision(const Circle* other) const {
-    float distance = glm::length(other->m_position - m_position);
-    float radiusSum = m_radius + other->m_radius;
-    return distance < radiusSum;
 }
 
 void Circle::resolveCollision(Figure* other) {
     if (dynamic_cast<Circle*>(other)) {
         Circle* circle = (Circle*) other;
         resolveCollision(circle);
+    } else if (dynamic_cast<AABB*>(other)) {
+        AABB* aabb = (AABB*) other;
+        resolveCollision(aabb);
     }
+}
+
+bool Circle::checkCollision(const Circle* other) const {
+    float distance = glm::length(other->m_position - m_position);
+    float radiusSum = m_radius + other->m_radius;
+    return distance < radiusSum;
 }
 
 void Circle::resolveCollision(Circle* other) {
@@ -114,4 +125,34 @@ void Circle::resolveCollision(Circle* other) {
 
     m_velocity = vel1 - (0.5f * error);
     other->m_velocity = vel2 - (0.5f * error);
+}
+
+bool Circle::checkCollision(const AABB* other) const {
+    // temporary variables to set edges for testing
+    float testX = m_position.x;
+    float testY = m_position.y;
+
+    float rw = other->getWidth(),                   rh = other->getHeight();
+    float rx = other->getPosition().x - rw * 0.5f,  ry = other->getPosition().y - rh * 0.5f;
+
+    // which edge is closest?
+    if (m_position.x < rx)         testX = rx;      // test left edge
+    else if (m_position.x > rx+rw) testX = rx + rw;   // right edge
+
+    if (m_position.y < ry)         testY = ry;      // top edge
+    else if (m_position.y > ry+rh) testY = ry+rh;   // bottom edge
+
+    // get distance from closest edges
+    float distX = m_position.x-testX;
+    float distY = m_position.y-testY;
+    float distanceSqr = (distX*distX) + (distY*distY);
+
+    // if the distance is less than the radius, collision!
+    return distanceSqr <= m_radius * m_radius;
+}
+
+void Circle::resolveCollision(AABB* other) {
+    // Tendria que usar lo de colisionar con cada vertice?
+    // Tengo que saber por dónde ha colisionado el circulo con el rectangulo para saber en que dirección hay que rebotarlo
+    
 }

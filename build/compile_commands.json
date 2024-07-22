@@ -1,176 +1,176 @@
 [
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\main.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\main.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/main.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\main.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\main.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/main.cpp",
   "output": "CMakeFiles/main.dir/src/main.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\gcc.exe  @CMakeFiles/main.dir/includes_C.rsp -g -o CMakeFiles\\main.dir\\src\\glad.c.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\glad.c",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/glad.c",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\gcc.exe  @CMakeFiles/main.dir/includes_C.rsp -g -o CMakeFiles\\main.dir\\src\\glad.c.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\glad.c\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/glad.c",
   "output": "CMakeFiles/main.dir/src/glad.c.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\IndexBuffer.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\IndexBuffer.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/IndexBuffer.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\IndexBuffer.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\IndexBuffer.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/IndexBuffer.cpp",
   "output": "CMakeFiles/main.dir/src/IndexBuffer.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\Renderer.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\Renderer.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/Renderer.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\Renderer.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\Renderer.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/Renderer.cpp",
   "output": "CMakeFiles/main.dir/src/Renderer.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\Shader.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\Shader.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/Shader.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\Shader.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\Shader.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/Shader.cpp",
   "output": "CMakeFiles/main.dir/src/Shader.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\Texture.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\Texture.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/Texture.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\Texture.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\Texture.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/Texture.cpp",
   "output": "CMakeFiles/main.dir/src/Texture.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\Utils.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\Utils.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/Utils.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\Utils.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\Utils.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/Utils.cpp",
   "output": "CMakeFiles/main.dir/src/Utils.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\VertexArray.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\VertexArray.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexArray.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\VertexArray.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\VertexArray.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/VertexArray.cpp",
   "output": "CMakeFiles/main.dir/src/VertexArray.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\VertexBuffer.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\VertexBuffer.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBuffer.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\VertexBuffer.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\VertexBuffer.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/VertexBuffer.cpp",
   "output": "CMakeFiles/main.dir/src/VertexBuffer.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\Camera.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\Camera.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/Camera.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\Camera.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\Camera.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/Camera.cpp",
   "output": "CMakeFiles/main.dir/src/Camera.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\VertexBufferLayout.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\VertexBufferLayout.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBufferLayout.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\VertexBufferLayout.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\VertexBufferLayout.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/VertexBufferLayout.cpp",
   "output": "CMakeFiles/main.dir/src/VertexBufferLayout.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\vendor\\stb\\stb_image.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\vendor\\stb\\stb_image.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/stb/stb_image.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\vendor\\stb\\stb_image.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\vendor\\stb\\stb_image.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/vendor/stb/stb_image.cpp",
   "output": "CMakeFiles/main.dir/src/vendor/stb/stb_image.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\figures\\AABB.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\figures\\AABB.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/AABB.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\figures\\AABB.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\figures\\AABB.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/figures/AABB.cpp",
   "output": "CMakeFiles/main.dir/src/figures/AABB.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\figures\\Circle.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\figures\\Circle.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Circle.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\figures\\Circle.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\figures\\Circle.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/figures/Circle.cpp",
   "output": "CMakeFiles/main.dir/src/figures/Circle.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\figures\\Figure.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\figures\\Figure.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Figure.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\figures\\Figure.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\figures\\Figure.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/figures/Figure.cpp",
   "output": "CMakeFiles/main.dir/src/figures/Figure.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\figures\\ForceManager.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\figures\\ForceManager.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/ForceManager.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\figures\\ForceManager.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\figures\\ForceManager.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/figures/ForceManager.cpp",
   "output": "CMakeFiles/main.dir/src/figures/ForceManager.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\figures\\Square.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\figures\\Square.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Square.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\figures\\Square.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\figures\\Square.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/figures/Square.cpp",
   "output": "CMakeFiles/main.dir/src/figures/Square.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\vendor\\imgui\\imgui_demo.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\vendor\\imgui\\imgui_demo.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui_demo.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\vendor\\imgui\\imgui_demo.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\vendor\\imgui\\imgui_demo.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/vendor/imgui/imgui_demo.cpp",
   "output": "CMakeFiles/main.dir/src/vendor/imgui/imgui_demo.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\vendor\\imgui\\imgui_draw.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\vendor\\imgui\\imgui_draw.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui_draw.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\vendor\\imgui\\imgui_draw.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\vendor\\imgui\\imgui_draw.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/vendor/imgui/imgui_draw.cpp",
   "output": "CMakeFiles/main.dir/src/vendor/imgui/imgui_draw.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\vendor\\imgui\\imgui_impl_glfw_gl3.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\vendor\\imgui\\imgui_impl_glfw_gl3.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui_impl_glfw_gl3.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\vendor\\imgui\\imgui_impl_glfw_gl3.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\vendor\\imgui\\imgui_impl_glfw_gl3.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/vendor/imgui/imgui_impl_glfw_gl3.cpp",
   "output": "CMakeFiles/main.dir/src/vendor/imgui/imgui_impl_glfw_gl3.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\vendor\\imgui\\imgui.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\vendor\\imgui\\imgui.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\vendor\\imgui\\imgui.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\vendor\\imgui\\imgui.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/vendor/imgui/imgui.cpp",
   "output": "CMakeFiles/main.dir/src/vendor/imgui/imgui.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\Test.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\tests\\Test.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/Test.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\Test.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\tests\\Test.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/tests/Test.cpp",
   "output": "CMakeFiles/main.dir/src/tests/Test.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestClearColor.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\tests\\TestClearColor.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestClearColor.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestClearColor.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\tests\\TestClearColor.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/tests/TestClearColor.cpp",
   "output": "CMakeFiles/main.dir/src/tests/TestClearColor.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestTexture.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\tests\\TestTexture.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestTexture.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestTexture.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\tests\\TestTexture.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/tests/TestTexture.cpp",
   "output": "CMakeFiles/main.dir/src/tests/TestTexture.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestFPS.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\tests\\TestFPS.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestFPS.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestFPS.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\tests\\TestFPS.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/tests/TestFPS.cpp",
   "output": "CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestHugeObject.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\tests\\TestHugeObject.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestHugeObject.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestHugeObject.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\tests\\TestHugeObject.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/tests/TestHugeObject.cpp",
   "output": "CMakeFiles/main.dir/src/tests/TestHugeObject.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestLight.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\tests\\TestLight.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestLight.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestLight.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\tests\\TestLight.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/tests/TestLight.cpp",
   "output": "CMakeFiles/main.dir/src/tests/TestLight.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestLightTexture.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\tests\\TestLightTexture.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestLightTexture.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestLightTexture.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\tests\\TestLightTexture.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/tests/TestLightTexture.cpp",
   "output": "CMakeFiles/main.dir/src/tests/TestLightTexture.cpp.obj"
 },
 {
-  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestCollisions.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\tests\\TestCollisions.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestCollisions.cpp",
+  "directory": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\tests\\TestCollisions.cpp.obj -c \"C:\\Users\\sergi.SERGIO-LOZANO\\Desktop\\Repositories Github\\OpenGL\\PruebaOpenGL\\src\\tests\\TestCollisions.cpp\"",
+  "file": "C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories Github/OpenGL/PruebaOpenGL/src/tests/TestCollisions.cpp",
   "output": "CMakeFiles/main.dir/src/tests/TestCollisions.cpp.obj"
 }
 ]
