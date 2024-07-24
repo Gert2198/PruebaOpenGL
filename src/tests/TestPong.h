@@ -26,14 +26,18 @@ namespace test
 
         glm::mat4 m_projMatrix, m_viewMatrix;
 
-        float m_kineticEnergy;
-
         CollisionManager m_collisionManager;
+
+        bool m_playMode;
+        float m_paddleSpeed = 5.0f;
     public:
         TestPong(GLFWwindow* window);
 
         void onUpdate(float deltaTime) override;
         void onRender() override;
         void onImGuiRender() override;
+
+        void processInput(GLFWwindow* window, float deltaTime);
+        void resetBall();
     };
 } // namespace test 

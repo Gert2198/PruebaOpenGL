@@ -34,4 +34,7 @@ public:
     
     inline VertexBuffer getVertexBuffer() const { return *m_vbo.get(); }
     inline IndexBuffer getIndexBuffer() const { return *m_ibo.get(); }
+
+    virtual inline void setPosition(const glm::vec2& position) { m_position = position; }
+    inline void setVelocity(const glm::vec2& velocity) { m_velocity = velocity; }
 };

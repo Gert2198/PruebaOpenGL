@@ -25,7 +25,4 @@ public:
     inline float getRadius() const { return m_radius; }
     inline float getPerimeter() const { return 2 * PI * m_radius; }
     inline float getArea() const { return PI * m_radius * m_radius; }
-
-    inline void setPosition(const glm::vec2& position) { m_position = position; }
-    inline void setVelocity(const glm::vec2& velocity) { m_velocity = velocity; }
 };
