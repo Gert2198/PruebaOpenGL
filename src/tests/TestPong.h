@@ -4,6 +4,7 @@
 
 #include "Circle.h"
 #include "AABB.h"
+#include "CollisionManager.h"
 
 #include "VertexArray.h"
 #include "Shader.h"
@@ -15,9 +16,10 @@ namespace test
 {
     class TestPong : public Test {
     private:
-        std::vector<Circle> m_circles;
-        AABB m_rect;
+        Circle m_circle;
+        AABB m_paddle;
         std::vector<AABB> m_bricks;
+        std::vector<AABB> m_walls;
 
         std::unique_ptr<VertexArray> m_vao;
         std::unique_ptr<Shader> m_shader;
@@ -25,6 +27,8 @@ namespace test
         glm::mat4 m_projMatrix, m_viewMatrix;
 
         float m_kineticEnergy;
+
+        CollisionManager m_collisionManager;
     public:
         TestPong(GLFWwindow* window);
 

@@ -9,7 +9,8 @@
 
 class Figure {
 protected:
-    glm::vec3 m_position, m_velocity, m_acceleration, m_color;
+    glm::vec2 m_position, m_velocity, m_acceleration;
+    glm::vec3 m_color;
 
     float m_mass, m_friction;
 
@@ -17,18 +18,15 @@ protected:
 
     std::unique_ptr<VertexBuffer> m_vbo;
     std::unique_ptr<IndexBuffer> m_ibo;
+    Figure(const float mass, const float friction, const glm::vec3& color, const glm::vec2& position, const glm::vec2& velocity, const glm::vec2& acceleration = glm::vec2(0.0f));
 public:
-    Figure(const float mass, const float friction, const glm::vec3& color, const glm::vec3& position, const glm::vec3& velocity, const glm::vec3& acceleration = glm::vec3(0.0f));
 
     virtual void update(float deltaTime);
-    void addForce(const Force& force);
+    void addForce(const Force2D& force);
 
-    virtual bool checkCollision(const Figure* other) const = 0;
-    virtual void resolveCollision(Figure* other) = 0;
-
-    inline glm::vec3 getPosition() const { return m_position; }
-    inline glm::vec3 getVelocity() const { return m_velocity; }
-    inline glm::vec3 getAcceleration() const { return m_acceleration; }
+    inline glm::vec2 getPosition() const { return m_position; }
+    inline glm::vec2 getVelocity() const { return m_velocity; }
+    inline glm::vec2 getAcceleration() const { return m_acceleration; }
     inline glm::vec3 getColor() const { return m_color; }
 
     inline float getMass() const { return m_mass; }

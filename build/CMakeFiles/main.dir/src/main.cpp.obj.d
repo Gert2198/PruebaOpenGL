@@ -1,5 +1,5 @@
 CMakeFiles/main.dir/src/main.cpp.obj: \
- C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\main.cpp \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\main.cpp \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/iostream \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
@@ -151,154 +151,154 @@ CMakeFiles/main.dir/src/main.cpp.obj: \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/tr1/poly_hermite.tcc \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/tr1/poly_laguerre.tcc \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/tr1/riemann_zeta.tcc \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/include/glad/glad.h \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/include/KHR/khrplatform.h \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/include/GLFW/glfw3.h \
- C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\Utils.h \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/glm.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/_fixes.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/setup.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/include/glad/glad.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/include/KHR/khrplatform.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/include/GLFW/glfw3.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\Utils.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/glm.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/_fixes.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/setup.hpp \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/cassert \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/assert.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/cstddef \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/simd/platform.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/simd/platform.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/climits \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/cfloat \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/float.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/float.h \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/fwd.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/qualifier.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/setup.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/vec2.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_bool2.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_vec2.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_vec2.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/compute_vector_relational.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_bool2_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_float2.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_float2_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_double2.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_double2_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_int2.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_int2_sized.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/scalar_int_sized.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/setup.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_uint2.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_uint2_sized.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/scalar_uint_sized.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/vec3.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_bool3.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_vec3.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_vec3.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_bool3_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_float3.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_float3_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_double3.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_double3_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_int3.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_int3_sized.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_uint3.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_uint3_sized.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/vec4.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_bool4.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_vec4.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_vec4.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_bool4_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_float4.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_float4_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_double4.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_double4_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_int4.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_int4_sized.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_uint4.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/vector_uint4_sized.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/mat2x2.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_double2x2.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_mat2x2.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_mat2x2.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/matrix.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/mat2x3.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_double2x3.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_mat2x3.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_mat2x3.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_double2x3_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_float2x3.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_float2x3_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/mat2x4.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_double2x4.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_mat2x4.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_mat2x4.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_double2x4_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_float2x4.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_float2x4_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/mat3x2.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_double3x2.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_mat3x2.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_mat3x2.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_double3x2_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_float3x2.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_float3x2_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/mat3x3.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_double3x3.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_mat3x3.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_mat3x3.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_double3x3_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_float3x3.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_float3x3_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/mat3x4.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_double3x4.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_mat3x4.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_mat3x4.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_double3x4_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_float3x4.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_float3x4_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/mat4x2.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_double4x2.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_mat4x2.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_mat4x2.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_double4x2_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_float4x2.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_float4x2_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/mat4x3.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_double4x3.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_mat4x3.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_mat4x3.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_double4x3_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_float4x3.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_float4x3_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/mat4x4.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_double4x4.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_mat4x4.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_mat4x4.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_double4x4_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_float4x4.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_float4x4_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/func_matrix.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/geometric.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/func_geometric.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/exponential.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_vec1.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_vec1.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/func_exponential.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/vector_relational.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/func_vector_relational.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/_vectorize.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/common.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/func_common.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/compute_common.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_double2x2_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_float2x2.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_float2x2_precision.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/trigonometric.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/func_trigonometric.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/packing.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/func_packing.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_half.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/type_half.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/integer.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/detail/func_integer.inl \
- C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\figures/Square.h \
- C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories\ Github/OpenGL/PruebaOpenGL/src/VertexBuffer.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/fwd.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/qualifier.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/setup.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/vec2.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_bool2.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_vec2.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_vec2.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/compute_vector_relational.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_bool2_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_float2.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_float2_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_double2.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_double2_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_int2.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_int2_sized.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/scalar_int_sized.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/setup.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_uint2.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_uint2_sized.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/scalar_uint_sized.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/vec3.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_bool3.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_vec3.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_vec3.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_bool3_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_float3.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_float3_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_double3.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_double3_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_int3.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_int3_sized.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_uint3.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_uint3_sized.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/vec4.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_bool4.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_vec4.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_vec4.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_bool4_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_float4.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_float4_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_double4.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_double4_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_int4.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_int4_sized.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_uint4.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/vector_uint4_sized.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/mat2x2.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_double2x2.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_mat2x2.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_mat2x2.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/matrix.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/mat2x3.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_double2x3.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_mat2x3.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_mat2x3.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_double2x3_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_float2x3.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_float2x3_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/mat2x4.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_double2x4.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_mat2x4.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_mat2x4.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_double2x4_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_float2x4.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_float2x4_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/mat3x2.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_double3x2.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_mat3x2.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_mat3x2.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_double3x2_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_float3x2.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_float3x2_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/mat3x3.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_double3x3.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_mat3x3.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_mat3x3.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_double3x3_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_float3x3.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_float3x3_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/mat3x4.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_double3x4.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_mat3x4.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_mat3x4.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_double3x4_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_float3x4.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_float3x4_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/mat4x2.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_double4x2.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_mat4x2.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_mat4x2.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_double4x2_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_float4x2.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_float4x2_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/mat4x3.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_double4x3.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_mat4x3.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_mat4x3.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_double4x3_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_float4x3.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_float4x3_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/mat4x4.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_double4x4.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_mat4x4.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_mat4x4.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_double4x4_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_float4x4.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_float4x4_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/func_matrix.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/geometric.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/func_geometric.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/exponential.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_vec1.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_vec1.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/func_exponential.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/vector_relational.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/func_vector_relational.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/_vectorize.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/common.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/func_common.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/compute_common.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_double2x2_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_float2x2.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_float2x2_precision.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/trigonometric.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/func_trigonometric.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/packing.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/func_packing.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_half.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_half.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/integer.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/func_integer.inl \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\figures/Square.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBuffer.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/unordered_map \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/ext/aligned_buffer.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/hashtable.h \
@@ -314,39 +314,39 @@ CMakeFiles/main.dir/src/main.cpp.obj: \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/enable_special_members.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/unordered_map.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/erase_if.h \
- C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories\ Github/OpenGL/PruebaOpenGL/src/VertexBufferLayout.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBufferLayout.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/vector \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_uninitialized.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_vector.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_bvector.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/vector.tcc \
- C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories\ Github/OpenGL/PruebaOpenGL/src/Renderer.h \
- C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories\ Github/OpenGL/PruebaOpenGL/src/VertexArray.h \
- C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories\ Github/OpenGL/PruebaOpenGL/src/IndexBuffer.h \
- C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories\ Github/OpenGL/PruebaOpenGL/src/Shader.h \
- C:/Users/sergi.SERGIO-LOZANO/Desktop/Repositories\ Github/OpenGL/PruebaOpenGL/src/Texture.h \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/gtc/matrix_transform.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_projection.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/gtc/constants.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/scalar_constants.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/scalar_constants.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/gtc/constants.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_projection.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_clip_space.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_clip_space.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_transform.hpp \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/ext/matrix_transform.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/glm/gtc/matrix_transform.inl \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/imgui/imgui.h \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/imgui/imconfig.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/Renderer.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexArray.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/IndexBuffer.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/Shader.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/Texture.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/gtc/matrix_transform.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_projection.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/gtc/constants.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/scalar_constants.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/scalar_constants.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/gtc/constants.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_projection.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_clip_space.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_clip_space.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_transform.hpp \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_transform.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/gtc/matrix_transform.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imconfig.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/stdarg.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/stdarg.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/string.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/sec_api/string_s.h \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/imgui/imgui_impl_glfw_gl3.h \
- C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\tests/TestClearColor.h \
- C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\tests/Test.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui_impl_glfw_gl3.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestClearColor.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/Test.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/functional \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/refwrap.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/std_function.h \
@@ -355,7 +355,7 @@ CMakeFiles/main.dir/src/main.cpp.obj: \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_heap.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_tempbuf.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/uniform_int_dist.h \
- C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\tests/TestTexture.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestTexture.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/memory \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_raw_storage_iter.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/ranges_uninitialized.h \
@@ -370,13 +370,16 @@ CMakeFiles/main.dir/src/main.cpp.obj: \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/backward/auto_ptr.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/pstl/glue_memory_defs.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/pstl/execution_defs.h \
- C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\tests/TestFPS.h \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/Camera.h \
- C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\tests/TestHugeObject.h \
- C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\tests/TestLight.h \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/Material.h \
- C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\tests/TestLightTexture.h \
- C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\tests/TestCollisions.h \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/figures/Circle.h \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/figures/Figure.h \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/figures/ForceManager.h
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestFPS.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/Camera.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestHugeObject.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestLight.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/Material.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestLightTexture.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestCollisions.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Circle.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Figure.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/ForceManager.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/CollisionManager.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/AABB.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestPong.h

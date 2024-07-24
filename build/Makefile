@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories Github\OpenGL\PruebaOpenGL"
+CMAKE_SOURCE_DIR = C:\Users\Usuario\Desktop\PruebaOpenGL
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories Github\OpenGL\PruebaOpenGL\build"
+CMAKE_BINARY_DIR = C:\Users\Usuario\Desktop\PruebaOpenGL\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories Github\OpenGL\PruebaOpenGL\build\CMakeFiles" "C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories Github\OpenGL\PruebaOpenGL\build\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles C:\Users\Usuario\Desktop\PruebaOpenGL\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories Github\OpenGL\PruebaOpenGL\build\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -392,6 +392,30 @@ src/figures/Circle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/Circle.cpp.s
 .PHONY : src/figures/Circle.cpp.s
 
+src/figures/CollisionManager.obj: src/figures/CollisionManager.cpp.obj
+.PHONY : src/figures/CollisionManager.obj
+
+# target to build an object file
+src/figures/CollisionManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/CollisionManager.cpp.obj
+.PHONY : src/figures/CollisionManager.cpp.obj
+
+src/figures/CollisionManager.i: src/figures/CollisionManager.cpp.i
+.PHONY : src/figures/CollisionManager.i
+
+# target to preprocess a source file
+src/figures/CollisionManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/CollisionManager.cpp.i
+.PHONY : src/figures/CollisionManager.cpp.i
+
+src/figures/CollisionManager.s: src/figures/CollisionManager.cpp.s
+.PHONY : src/figures/CollisionManager.s
+
+# target to generate assembly for a file
+src/figures/CollisionManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/CollisionManager.cpp.s
+.PHONY : src/figures/CollisionManager.cpp.s
+
 src/figures/Figure.obj: src/figures/Figure.cpp.obj
 .PHONY : src/figures/Figure.obj
 
@@ -680,6 +704,30 @@ src/tests/TestLightTexture.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestLightTexture.cpp.s
 .PHONY : src/tests/TestLightTexture.cpp.s
 
+src/tests/TestPong.obj: src/tests/TestPong.cpp.obj
+.PHONY : src/tests/TestPong.obj
+
+# target to build an object file
+src/tests/TestPong.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestPong.cpp.obj
+.PHONY : src/tests/TestPong.cpp.obj
+
+src/tests/TestPong.i: src/tests/TestPong.cpp.i
+.PHONY : src/tests/TestPong.i
+
+# target to preprocess a source file
+src/tests/TestPong.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestPong.cpp.i
+.PHONY : src/tests/TestPong.cpp.i
+
+src/tests/TestPong.s: src/tests/TestPong.cpp.s
+.PHONY : src/tests/TestPong.s
+
+# target to generate assembly for a file
+src/tests/TestPong.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/tests/TestPong.cpp.s
+.PHONY : src/tests/TestPong.cpp.s
+
 src/tests/TestTexture.obj: src/tests/TestTexture.cpp.obj
 .PHONY : src/tests/TestTexture.obj
 
@@ -866,6 +914,9 @@ help:
 	@echo ... src/figures/Circle.obj
 	@echo ... src/figures/Circle.i
 	@echo ... src/figures/Circle.s
+	@echo ... src/figures/CollisionManager.obj
+	@echo ... src/figures/CollisionManager.i
+	@echo ... src/figures/CollisionManager.s
 	@echo ... src/figures/Figure.obj
 	@echo ... src/figures/Figure.i
 	@echo ... src/figures/Figure.s
@@ -902,6 +953,9 @@ help:
 	@echo ... src/tests/TestLightTexture.obj
 	@echo ... src/tests/TestLightTexture.i
 	@echo ... src/tests/TestLightTexture.s
+	@echo ... src/tests/TestPong.obj
+	@echo ... src/tests/TestPong.i
+	@echo ... src/tests/TestPong.s
 	@echo ... src/tests/TestTexture.obj
 	@echo ... src/tests/TestTexture.i
 	@echo ... src/tests/TestTexture.s

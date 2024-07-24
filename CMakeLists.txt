@@ -16,6 +16,7 @@ add_executable(main
 "src/vendor/stb/stb_image.cpp" 
 "src/figures/AABB.cpp" 
 "src/figures/Circle.cpp" 
+"src/figures/CollisionManager.cpp" 
 "src/figures/Figure.cpp" 
 "src/figures/ForceManager.cpp" 
 "src/figures/Square.cpp" 
@@ -31,6 +32,7 @@ add_executable(main
 "src/tests/TestLight.cpp"
 "src/tests/TestLightTexture.cpp"
 "src/tests/TestCollisions.cpp"
+"src/tests/TestPong.cpp"
 )
 target_include_directories(main PRIVATE include)
 target_include_directories(main PRIVATE src)

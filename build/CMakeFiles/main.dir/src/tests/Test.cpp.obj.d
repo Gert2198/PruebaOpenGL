@@ -1,6 +1,6 @@
 CMakeFiles/main.dir/src/tests/Test.cpp.obj: \
- C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\tests\Test.cpp \
- C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\tests\Test.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests\Test.cpp \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests\Test.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/iostream \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
@@ -164,9 +164,9 @@ CMakeFiles/main.dir/src/tests/Test.cpp.obj: \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_heap.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_tempbuf.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/uniform_int_dist.h \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/include/GLFW/glfw3.h \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/imgui/imgui.h \
- C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/imgui/imconfig.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/include/GLFW/glfw3.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imconfig.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/float.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/float.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/stdarg.h \

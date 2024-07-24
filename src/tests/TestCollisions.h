@@ -2,6 +2,7 @@
 
 #include "Test.h"
 #include "Circle.h"
+#include "CollisionManager.h"
 
 #include "VertexArray.h"
 #include "Shader.h"
@@ -12,7 +13,7 @@ namespace test
     const int NUM_CIRCLES = 20;
     class TestCollision : public Test {
     private: 
-        std::vector<Figure*> m_circles;
+        std::vector<Circle*> m_circles;
 
         std::unique_ptr<VertexArray> m_vao;
         std::unique_ptr<Shader> m_shader;
@@ -20,6 +21,8 @@ namespace test
         glm::mat4 m_projMatrix, m_viewMatrix;
 
         float m_kineticEnergy;
+
+        CollisionManager m_collisionManager;
     public:
         TestCollision(GLFWwindow* window);
         ~TestCollision();

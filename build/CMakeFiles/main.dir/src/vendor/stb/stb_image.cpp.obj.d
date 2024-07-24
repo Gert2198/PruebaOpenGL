@@ -1,6 +1,6 @@
 CMakeFiles/main.dir/src/vendor/stb/stb_image.cpp.obj: \
- C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\vendor\stb\stb_image.cpp \
- C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\vendor\stb\stb_image.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\vendor\stb\stb_image.cpp \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\vendor\stb\stb_image.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/stdio.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/corecrt.h \

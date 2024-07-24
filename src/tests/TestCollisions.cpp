@@ -27,13 +27,8 @@ namespace test
             m_kineticEnergy += 0.5f * m_circles[i]->getMass() * glm::length(m_circles[i]->getVelocity()) * glm::length(m_circles[i]->getVelocity());
         }
 
-        std::sort(m_circles.begin(), m_circles.end(), [] (Figure* const& a, Figure* const& b) { 
-            if (dynamic_cast<Circle*>(a) && dynamic_cast<Circle*>(b)) {
-                Circle* aCircle = static_cast<Circle*>(a);
-                Circle* bCircle = static_cast<Circle*>(b);
-                return aCircle->getRadius() > bCircle->getRadius(); 
-            }
-            return a->getMass() > b->getMass();
+        std::sort(m_circles.begin(), m_circles.end(), [] (Circle* const& a, Circle* const& b) { 
+            return a->getRadius() > b->getRadius(); 
         });
 
         m_shader = std::make_unique<Shader>("../res/shaders/circle.glsl");
@@ -53,8 +48,8 @@ namespace test
             circle->update(deltaTime);
             circle->checkEdges(0.0f, 16.0f, 0.0f, 9.0f);
             for (int j = i + 1; j < NUM_CIRCLES; j++) {
-                if (circle->checkCollision(m_circles[j])) 
-                    circle->resolveCollision(m_circles[j]);
+                if (m_collisionManager.checkCollision(*circle, *m_circles[j])) 
+                    m_collisionManager.resolveCollision(*circle, *m_circles[j]);
             }
             m_kineticEnergy += 0.5f * m_circles[i]->getMass() * glm::length(m_circles[i]->getVelocity()) * glm::length(m_circles[i]->getVelocity());
         }
@@ -72,7 +67,7 @@ namespace test
             m_vao->bind();
             m_vao->addBuffer(m_circle->getVertexBuffer(), layout);
 
-            glm::mat4 modelMatrix = glm::translate(glm::mat4(1.0f), m_circle->getPosition());
+            glm::mat4 modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(m_circle->getPosition(), 0.f));
             glm::mat4 mvp = m_projMatrix * m_viewMatrix * modelMatrix;
 
             m_shader->bind();
