@@ -7,7 +7,10 @@
 */
 Figure::Figure(const float mass, const float friction, const glm::vec3& color, 
                const glm::vec2& position, const glm::vec2& velocity, const glm::vec2& acceleration) 
-    : m_mass(mass), m_friction(friction), m_color(color), m_position(position), m_velocity(velocity), m_acceleration(acceleration)  {}
+    : m_mass(mass), m_friction(friction), m_color(color), m_position(position), m_velocity(velocity), m_acceleration(acceleration)  
+{
+    m_vao = std::make_unique<VertexArray>();
+}
 
 void Figure::update(float deltaTime) {
     glm::vec2 f = m_forceManager.netForce();

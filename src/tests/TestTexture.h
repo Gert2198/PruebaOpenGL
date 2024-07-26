@@ -1,8 +1,11 @@
 #pragma once
 
 #include "Test.h"
+
+#include "VertexArray.h"
+#include "Shader.h"
+#include "IndexBuffer.h"
 #include "Texture.h"
-#include "VertexBufferLayout.h"
 
 #include <memory>
 

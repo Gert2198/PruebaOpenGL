@@ -464,29 +464,53 @@ src/figures/ForceManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/ForceManager.cpp.s
 .PHONY : src/figures/ForceManager.cpp.s
 
-src/figures/Square.obj: src/figures/Square.cpp.obj
-.PHONY : src/figures/Square.obj
+src/figures/Ray2D.obj: src/figures/Ray2D.cpp.obj
+.PHONY : src/figures/Ray2D.obj
 
 # target to build an object file
-src/figures/Square.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/Square.cpp.obj
-.PHONY : src/figures/Square.cpp.obj
+src/figures/Ray2D.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/Ray2D.cpp.obj
+.PHONY : src/figures/Ray2D.cpp.obj
 
-src/figures/Square.i: src/figures/Square.cpp.i
-.PHONY : src/figures/Square.i
+src/figures/Ray2D.i: src/figures/Ray2D.cpp.i
+.PHONY : src/figures/Ray2D.i
 
 # target to preprocess a source file
-src/figures/Square.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/Square.cpp.i
-.PHONY : src/figures/Square.cpp.i
+src/figures/Ray2D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/Ray2D.cpp.i
+.PHONY : src/figures/Ray2D.cpp.i
 
-src/figures/Square.s: src/figures/Square.cpp.s
-.PHONY : src/figures/Square.s
+src/figures/Ray2D.s: src/figures/Ray2D.cpp.s
+.PHONY : src/figures/Ray2D.s
 
 # target to generate assembly for a file
-src/figures/Square.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/Square.cpp.s
-.PHONY : src/figures/Square.cpp.s
+src/figures/Ray2D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/Ray2D.cpp.s
+.PHONY : src/figures/Ray2D.cpp.s
+
+src/glMacros.obj: src/glMacros.cpp.obj
+.PHONY : src/glMacros.obj
+
+# target to build an object file
+src/glMacros.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/glMacros.cpp.obj
+.PHONY : src/glMacros.cpp.obj
+
+src/glMacros.i: src/glMacros.cpp.i
+.PHONY : src/glMacros.i
+
+# target to preprocess a source file
+src/glMacros.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/glMacros.cpp.i
+.PHONY : src/glMacros.cpp.i
+
+src/glMacros.s: src/glMacros.cpp.s
+.PHONY : src/glMacros.s
+
+# target to generate assembly for a file
+src/glMacros.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/glMacros.cpp.s
+.PHONY : src/glMacros.cpp.s
 
 src/glad.obj: src/glad.c.obj
 .PHONY : src/glad.obj
@@ -923,9 +947,12 @@ help:
 	@echo ... src/figures/ForceManager.obj
 	@echo ... src/figures/ForceManager.i
 	@echo ... src/figures/ForceManager.s
-	@echo ... src/figures/Square.obj
-	@echo ... src/figures/Square.i
-	@echo ... src/figures/Square.s
+	@echo ... src/figures/Ray2D.obj
+	@echo ... src/figures/Ray2D.i
+	@echo ... src/figures/Ray2D.s
+	@echo ... src/glMacros.obj
+	@echo ... src/glMacros.i
+	@echo ... src/glMacros.s
 	@echo ... src/glad.obj
 	@echo ... src/glad.i
 	@echo ... src/glad.s

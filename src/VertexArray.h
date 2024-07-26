@@ -1,9 +1,9 @@
 #pragma once
 
 #include "VertexBuffer.h"
-#include <unordered_map>
+#include "VertexBufferLayout.h"
 
-class VertexBufferLayout;
+#include <unordered_map>
 
 class VertexArray {
 private:

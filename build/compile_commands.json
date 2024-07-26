@@ -67,6 +67,12 @@
 },
 {
   "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\glMacros.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\glMacros.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/glMacros.cpp",
+  "output": "CMakeFiles/main.dir/src/glMacros.cpp.obj"
+},
+{
+  "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
   "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\vendor\\stb\\stb_image.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\vendor\\stb\\stb_image.cpp",
   "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/stb/stb_image.cpp",
   "output": "CMakeFiles/main.dir/src/vendor/stb/stb_image.cpp.obj"
@@ -103,9 +109,9 @@
 },
 {
   "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",
-  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\figures\\Square.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\figures\\Square.cpp",
-  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Square.cpp",
-  "output": "CMakeFiles/main.dir/src/figures/Square.cpp.obj"
+  "command": "c:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\figures\\Ray2D.cpp.obj -c C:\\Users\\Usuario\\Desktop\\PruebaOpenGL\\src\\figures\\Ray2D.cpp",
+  "file": "C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Ray2D.cpp",
+  "output": "CMakeFiles/main.dir/src/figures/Ray2D.cpp.obj"
 },
 {
   "directory": "C:/Users/Usuario/Desktop/PruebaOpenGL/build",

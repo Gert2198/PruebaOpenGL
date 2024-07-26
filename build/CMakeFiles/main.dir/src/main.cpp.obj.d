@@ -297,8 +297,10 @@ CMakeFiles/main.dir/src/main.cpp.obj: \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_half.inl \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/integer.hpp \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/func_integer.inl \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\figures/Square.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBuffer.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\Renderer.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\glMacros.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\VertexArray.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\VertexBuffer.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/unordered_map \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/ext/aligned_buffer.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/hashtable.h \
@@ -314,17 +316,36 @@ CMakeFiles/main.dir/src/main.cpp.obj: \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/enable_special_members.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/unordered_map.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/erase_if.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBufferLayout.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\VertexBufferLayout.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/vector \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_uninitialized.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_vector.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_bvector.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/vector.tcc \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/Renderer.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexArray.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/IndexBuffer.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/Shader.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/Texture.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\IndexBuffer.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\Shader.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Segment.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Circle.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Figure.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/ForceManager.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/memory \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_tempbuf.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_raw_storage_iter.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/ranges_uninitialized.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/ext/concurrence.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/unique_ptr.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/shared_ptr.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/shared_ptr_base.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/allocated_ptr.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/refwrap.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/shared_ptr_atomic.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/atomic_base.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/atomic_lockfree_defines.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/backward/auto_ptr.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/pstl/glue_memory_defs.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/pstl/execution_defs.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/AABB.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\Texture.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/gtc/matrix_transform.hpp \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_projection.hpp \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/gtc/constants.hpp \
@@ -348,28 +369,12 @@ CMakeFiles/main.dir/src/main.cpp.obj: \
  C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestClearColor.h \
  C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/Test.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/functional \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/refwrap.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/std_function.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_algo.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/algorithmfwd.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_heap.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_tempbuf.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/uniform_int_dist.h \
  C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestTexture.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/memory \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_raw_storage_iter.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/ranges_uninitialized.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/ext/concurrence.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/unique_ptr.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/shared_ptr.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/shared_ptr_base.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/allocated_ptr.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/shared_ptr_atomic.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/atomic_base.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/atomic_lockfree_defines.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/backward/auto_ptr.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/pstl/glue_memory_defs.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/pstl/execution_defs.h \
  C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestFPS.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Camera.h \
  C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestHugeObject.h \
@@ -377,9 +382,5 @@ CMakeFiles/main.dir/src/main.cpp.obj: \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Material.h \
  C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestLightTexture.h \
  C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestCollisions.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Circle.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Figure.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/ForceManager.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/CollisionManager.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/AABB.h \
  C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests/TestPong.h

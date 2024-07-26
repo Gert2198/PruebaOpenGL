@@ -30,6 +30,7 @@ namespace test
 
         bool m_playMode;
         float m_paddleSpeed = 5.0f;
+        float m_ballSpeed = 6.f;
     public:
         TestPong(GLFWwindow* window);
 

@@ -340,6 +340,7 @@ CMakeFiles/main.dir/src/tests/TestHugeObject.cpp.obj: \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/gtc/matrix_transform.inl \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexArray.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBuffer.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBufferLayout.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/IndexBuffer.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Shader.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/memory \
@@ -357,9 +358,12 @@ CMakeFiles/main.dir/src/tests/TestHugeObject.cpp.obj: \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/pstl/glue_memory_defs.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/pstl/execution_defs.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Renderer.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Square.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBufferLayout.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/Texture.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/glMacros.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Segment.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Circle.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Figure.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/ForceManager.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/AABB.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imconfig.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/stdarg.h \

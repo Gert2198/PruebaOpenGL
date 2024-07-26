@@ -6,6 +6,9 @@
 #include "glm/gtc/matrix_transform.hpp"
 #include "Utils.h"
 
+#include "glMacros.h"
+#include "Renderer.h"
+
 namespace test
 {
     TestFPS::TestFPS(GLFWwindow* window) : Test(window), m_fov(70),
@@ -20,16 +23,16 @@ namespace test
         m_vao = std::make_unique<VertexArray>();
         m_vao->bind();
 
-        m_square1       = std::make_unique<Square>(glm::vec3(0.0f), 2.0f, 2.0f);
-        m_square2       = std::make_unique<Square>(glm::vec3(0.0f), 1.0f, 1.0f);
-        m_centerDot     = std::make_unique<Square>(glm::vec3(DEFAULT_WIDTH_F/2, DEFAULT_HEIGHT_F/2, 0.0f), 4, 4);
+        m_square1       = std::make_unique<AABB>(2.f, 2.f, 0.f, 1.f, m_color1, glm::vec2(0.f));
+        m_square2       = std::make_unique<AABB>(1.f, 1.f, 0.f, 1.f, m_color2, glm::vec2(0.f));
+        m_centerDot     = std::make_unique<AABB>(4.f, 4.f, 0.f, 1.f, m_dotColor, glm::vec2(DEFAULT_WIDTH_F/2, DEFAULT_HEIGHT_F/2));
 
-        m_wallFar       = std::make_unique<Square>(glm::vec3(0.0f), 30.0f, 10.0f);
-        m_wallNear      = std::make_unique<Square>(glm::vec3(0.0f), 30.0f, 10.0f);
-        m_wallLeft      = std::make_unique<Square>(glm::vec3(0.0f), 50.0f, 10.0f);
-        m_wallRight     = std::make_unique<Square>(glm::vec3(0.0f), 50.0f, 10.0f);
-        m_ceiling       = std::make_unique<Square>(glm::vec3(0.0f), 30.0f, 50.0f);
-        m_floor         = std::make_unique<Square>(glm::vec3(0.0f), 30.0f, 50.0f);
+        m_wallFar       = std::make_unique<AABB>(30.f, 10.f, 0.f, 1.f, glm::vec3(0.2f, 0.1f, 0.5f), glm::vec2(0.f));
+        m_wallNear      = std::make_unique<AABB>(30.f, 10.f, 0.f, 1.f, glm::vec3(0.1f, 0.2f, 0.5f), glm::vec2(0.f));
+        m_wallLeft      = std::make_unique<AABB>(50.f, 10.f, 0.f, 1.f, glm::vec3(0.2f, 0.5f, 0.1f), glm::vec2(0.f));
+        m_wallRight     = std::make_unique<AABB>(50.f, 10.f, 0.f, 1.f, glm::vec3(0.1f, 0.5f, 0.2f), glm::vec2(0.f));
+        m_ceiling       = std::make_unique<AABB>(30.f, 50.f, 0.f, 1.f, glm::vec3(0.5f, 0.1f, 0.2f), glm::vec2(0.f));
+        m_floor         = std::make_unique<AABB>(30.f, 50.f, 0.f, 1.f, glm::vec3(0.5f, 0.2f, 0.1f), glm::vec2(0.f));
 
         GLDebug(glEnable(GL_BLEND));
         GLDebug(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
@@ -70,31 +73,31 @@ namespace test
         glm::mat4 mvp = m_perspMatrix * viewMatrix * modelMatrix;
 
         m_shader->setUniformMat4f("u_MVP", mvp);
-        m_shader->setUniform4f("u_Color", m_color1);
-        renderer.drawSquare(*m_square1, *m_vao, *m_shader, layout);
+        m_shader->setUniform4f("u_Color", glm::vec4(m_square1->getColor(), 1.f));
+        renderer.drawAABB(*m_square1, *m_shader);
 
         modelMatrix = glm::translate(glm::mat4(1.0f), m_transform2);
         mvp = m_perspMatrix * viewMatrix * modelMatrix;
 
         m_shader->setUniformMat4f("u_MVP", mvp);
-        m_shader->setUniform4f("u_Color", m_color2);
-        renderer.drawSquare(*m_square2, *m_vao, *m_shader, layout);
+        m_shader->setUniform4f("u_Color", glm::vec4(m_square2->getColor(), 1.f));
+        renderer.drawAABB(*m_square2, *m_shader);
 
         // Far
         modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -25.0f));
         mvp = m_perspMatrix * viewMatrix * modelMatrix;
 
         m_shader->setUniformMat4f("u_MVP", mvp);
-        m_shader->setUniform4f("u_Color", glm::vec4(0.2f, 0.1f, 0.5f, 1.0f));
-        renderer.drawSquare(*m_wallFar, *m_vao, *m_shader, layout);
+        m_shader->setUniform4f("u_Color", glm::vec4(m_wallFar->getColor(), 1.f));
+        renderer.drawAABB(*m_wallFar, *m_shader);
 
         // Near
         modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, 25.0f));
         mvp = m_perspMatrix * viewMatrix * modelMatrix;
         
         m_shader->setUniformMat4f("u_MVP", mvp);
-        m_shader->setUniform4f("u_Color", glm::vec4(0.1f, 0.2f, 0.5f, 1.0f));
-        renderer.drawSquare(*m_wallNear, *m_vao, *m_shader, layout);
+        m_shader->setUniform4f("u_Color", glm::vec4(m_wallNear->getColor(), 1.f));
+        renderer.drawAABB(*m_wallNear, *m_shader);
 
         // Left
         modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(-15.0f, 0.0f, 0.0f))
@@ -102,8 +105,8 @@ namespace test
         mvp = m_perspMatrix * viewMatrix * modelMatrix;
         
         m_shader->setUniformMat4f("u_MVP", mvp);
-        m_shader->setUniform4f("u_Color", glm::vec4(0.2f, 0.5f, 0.1f, 1.0f));
-        renderer.drawSquare(*m_wallLeft, *m_vao, *m_shader, layout);
+        m_shader->setUniform4f("u_Color", glm::vec4(m_wallLeft->getColor(), 1.f));
+        renderer.drawAABB(*m_wallLeft, *m_shader);
 
         // Right
         modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(15.0f, 0.0f, 0.0f))
@@ -111,8 +114,8 @@ namespace test
         mvp = m_perspMatrix * viewMatrix * modelMatrix;
         
         m_shader->setUniformMat4f("u_MVP", mvp);
-        m_shader->setUniform4f("u_Color", glm::vec4(0.1f, 0.5f, 0.2f, 1.0f));
-        renderer.drawSquare(*m_wallRight, *m_vao, *m_shader, layout);
+        m_shader->setUniform4f("u_Color", glm::vec4(m_wallRight->getColor(), 1.f));
+        renderer.drawAABB(*m_wallRight, *m_shader);
 
         // Ceiling
         modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 5.0f, 0.0f))
@@ -120,8 +123,8 @@ namespace test
         mvp = m_perspMatrix * viewMatrix * modelMatrix;
         
         m_shader->setUniformMat4f("u_MVP", mvp);
-        m_shader->setUniform4f("u_Color", glm::vec4(0.5f, 0.1f, 0.2f, 1.0f));
-        renderer.drawSquare(*m_ceiling, *m_vao, *m_shader, layout);
+        m_shader->setUniform4f("u_Color", glm::vec4(m_ceiling->getColor(), 1.f));
+        renderer.drawAABB(*m_ceiling, *m_shader);
         
         // Floor
         modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, -5.0f, 0.0f))
@@ -129,13 +132,16 @@ namespace test
         mvp = m_perspMatrix * viewMatrix * modelMatrix;
 
         m_shader->setUniformMat4f("u_MVP", mvp);
-        m_shader->setUniform4f("u_Color", glm::vec4(0.5f, 0.2f, 0.1f, 1.0f));
-        renderer.drawSquare(*m_floor, *m_vao, *m_shader, layout);
+        m_shader->setUniform4f("u_Color", glm::vec4(m_floor->getColor(), 1.f));
+        renderer.drawAABB(*m_floor, *m_shader);
 
         // Crosshair
-        m_shader->setUniformMat4f("u_MVP", m_orthoMatrix);
-        m_shader->setUniform4f("u_Color", m_dotColor);
-        renderer.drawSquare(*m_centerDot, *m_vao, *m_shader, layout);
+        modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(m_centerDot->getPosition(), 0.f));
+        mvp = m_orthoMatrix * modelMatrix;
+        
+        m_shader->setUniformMat4f("u_MVP", mvp);
+        m_shader->setUniform4f("u_Color", glm::vec4(m_centerDot->getColor(), 1.f));
+        renderer.drawAABB(*m_centerDot, *m_shader);
     }
     void TestFPS::onImGuiRender() {
         ImGui::Text("Press Mouse_Central_Button to change mode");

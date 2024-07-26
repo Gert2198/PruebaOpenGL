@@ -168,6 +168,9 @@ CMakeFiles/main.dir/src/tests/TestLightTexture.cpp.obj: \
  C:/Users/Usuario/Desktop/PruebaOpenGL/include/GLFW/glfw3.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexArray.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBuffer.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBufferLayout.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/include/glad/glad.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/include/KHR/khrplatform.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/IndexBuffer.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Shader.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/glm.hpp \
@@ -328,11 +331,6 @@ CMakeFiles/main.dir/src/tests/TestLightTexture.cpp.obj: \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/integer.hpp \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/func_integer.inl \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Texture.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/Renderer.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/include/glad/glad.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/include/KHR/khrplatform.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Square.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBufferLayout.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Camera.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/gtc/matrix_transform.hpp \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_projection.hpp \
@@ -361,6 +359,13 @@ CMakeFiles/main.dir/src/tests/TestLightTexture.cpp.obj: \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/backward/auto_ptr.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/pstl/glue_memory_defs.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/pstl/execution_defs.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/Renderer.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/glMacros.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Segment.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Circle.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Figure.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/ForceManager.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/AABB.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imconfig.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/stdarg.h \

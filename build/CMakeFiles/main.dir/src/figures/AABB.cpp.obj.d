@@ -229,6 +229,7 @@ CMakeFiles/main.dir/src/figures/AABB.cpp.obj: \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/concepts \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/range_cmp.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/vector.tcc \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexArray.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBuffer.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/unordered_map \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/ext/aligned_buffer.h \
@@ -247,6 +248,9 @@ CMakeFiles/main.dir/src/figures/AABB.cpp.obj: \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/enable_special_members.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/unordered_map.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/erase_if.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBufferLayout.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/include/glad/glad.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/include/KHR/khrplatform.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/IndexBuffer.h \
  C:\Users\Usuario\Desktop\PruebaOpenGL\src\figures\ForceManager.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/memory \

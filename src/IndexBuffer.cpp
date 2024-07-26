@@ -1,6 +1,6 @@
 #include "IndexBuffer.h"
 
-#include "Renderer.h"
+#include "glMacros.h"
 
 IndexBuffer::IndexBuffer(const unsigned int* data, unsigned int count) : m_Count(count) {
     ASSERT(sizeof(unsigned int) == sizeof(GLuint)); // Cuidao que puede que unsigned int no sea 4 bytes en alguna maquina/compilador

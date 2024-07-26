@@ -18,7 +18,7 @@ private:
     float m_radius;
 public:
     Circle(const float radius, const float mass, const float friction, const glm::vec3& color,
-            const glm::vec2& position, const glm::vec2& velocity, const glm::vec2& acceleration = glm::vec2(0.0f));
+            const glm::vec2& position, const glm::vec2& velocity = glm::vec2(0.0f), const glm::vec2& acceleration = glm::vec2(0.0f));
 
     void checkEdges(float left, float right, float down, float up);
 

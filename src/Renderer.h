@@ -1,22 +1,14 @@
 #pragma once
 
-#include <glad/glad.h>
+#include "glMacros.h"
 
 #include "VertexArray.h"
 #include "IndexBuffer.h"
 #include "Shader.h"
-#include "figures/Square.h"
 
-class Square;
-
-void GLClearErrors();
-bool GLCheckErrors(const char*, const char*, int);
-
-#define ASSERT(x) if (!(x)) __debugbreak();
-#define GLDebug(x) GLClearErrors();\
-    x;\
-    ASSERT(GLCheckErrors(#x, __FILE__, __LINE__))
-// #x devuelve x como un string, __FILE__ y __LINE__ devuelven el fichero y la linea donde se ha producido el error
+#include "Segment.h"
+#include "Circle.h"
+#include "AABB.h"
 
 class Renderer {
 private: 
@@ -25,6 +17,9 @@ public:
     void clear() const;
     void setClearColor(float r, float g, float b, float a) const;
     void draw(const VertexArray &vao, const IndexBuffer &ibo, const Shader &shader) const;
-    void drawLines(const VertexArray &vao, const IndexBuffer &ibo, const Shader &shader) const;
-    void drawSquare(const Square& square, VertexArray &vao, const Shader &shader, const VertexBufferLayout& layout) const;
+    void drawLines(const VertexArray &vao, const IndexBuffer &ibo, const Shader &shader, const float& lineWidth = 1.5f) const;
+
+    void drawSegment(const Segment& segment, const Shader &shader, const float& lineWidth = 1.5f) const;
+    void drawCircle(const Circle& circle, const Shader &shader) const;
+    void drawAABB(const AABB& aabb, const Shader &shader) const;
 };

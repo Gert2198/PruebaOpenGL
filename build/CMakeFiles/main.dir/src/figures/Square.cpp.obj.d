@@ -247,12 +247,10 @@ CMakeFiles/main.dir/src/figures/Square.cpp.obj: \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_vector.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_bvector.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/vector.tcc \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/Renderer.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/include/glad/glad.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/include/KHR/khrplatform.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexArray.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/IndexBuffer.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/Shader.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/Texture.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/string \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stringfwd.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/char_traits.h \
@@ -298,7 +296,6 @@ CMakeFiles/main.dir/src/figures/Square.cpp.obj: \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/cerrno \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/charconv.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/basic_string.tcc \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/Texture.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/iostream \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/ostream \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/ios \

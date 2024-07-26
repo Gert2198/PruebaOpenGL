@@ -1,7 +1,6 @@
 #include "VertexArray.h"
 
-#include "Renderer.h"
-#include "VertexBufferLayout.h"
+#include "glMacros.h"
 
 VertexArray::VertexArray() {
     GLDebug(glGenVertexArrays(1, &m_RendererID));

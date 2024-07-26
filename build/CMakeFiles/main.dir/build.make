@@ -233,11 +233,26 @@ CMakeFiles/main.dir/src/VertexBufferLayout.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/VertexBufferLayout.cpp.s"
 	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Usuario\Desktop\PruebaOpenGL\src\VertexBufferLayout.cpp -o CMakeFiles\main.dir\src\VertexBufferLayout.cpp.s
 
+CMakeFiles/main.dir/src/glMacros.cpp.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/glMacros.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
+CMakeFiles/main.dir/src/glMacros.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/glMacros.cpp
+CMakeFiles/main.dir/src/glMacros.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/main.dir/src/glMacros.cpp.obj"
+	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/glMacros.cpp.obj -MF CMakeFiles\main.dir\src\glMacros.cpp.obj.d -o CMakeFiles\main.dir\src\glMacros.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\glMacros.cpp
+
+CMakeFiles/main.dir/src/glMacros.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/glMacros.cpp.i"
+	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Usuario\Desktop\PruebaOpenGL\src\glMacros.cpp > CMakeFiles\main.dir\src\glMacros.cpp.i
+
+CMakeFiles/main.dir/src/glMacros.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/glMacros.cpp.s"
+	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Usuario\Desktop\PruebaOpenGL\src\glMacros.cpp -o CMakeFiles\main.dir\src\glMacros.cpp.s
+
 CMakeFiles/main.dir/src/vendor/stb/stb_image.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/vendor/stb/stb_image.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/vendor/stb/stb_image.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/stb/stb_image.cpp
 CMakeFiles/main.dir/src/vendor/stb/stb_image.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/main.dir/src/vendor/stb/stb_image.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/main.dir/src/vendor/stb/stb_image.cpp.obj"
 	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/vendor/stb/stb_image.cpp.obj -MF CMakeFiles\main.dir\src\vendor\stb\stb_image.cpp.obj.d -o CMakeFiles\main.dir\src\vendor\stb\stb_image.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\vendor\stb\stb_image.cpp
 
 CMakeFiles/main.dir/src/vendor/stb/stb_image.cpp.i: cmake_force
@@ -252,7 +267,7 @@ CMakeFiles/main.dir/src/figures/AABB.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/figures/AABB.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/figures/AABB.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/AABB.cpp
 CMakeFiles/main.dir/src/figures/AABB.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/main.dir/src/figures/AABB.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/main.dir/src/figures/AABB.cpp.obj"
 	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/figures/AABB.cpp.obj -MF CMakeFiles\main.dir\src\figures\AABB.cpp.obj.d -o CMakeFiles\main.dir\src\figures\AABB.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\figures\AABB.cpp
 
 CMakeFiles/main.dir/src/figures/AABB.cpp.i: cmake_force
@@ -267,7 +282,7 @@ CMakeFiles/main.dir/src/figures/Circle.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/figures/Circle.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/figures/Circle.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Circle.cpp
 CMakeFiles/main.dir/src/figures/Circle.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/main.dir/src/figures/Circle.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/main.dir/src/figures/Circle.cpp.obj"
 	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/figures/Circle.cpp.obj -MF CMakeFiles\main.dir\src\figures\Circle.cpp.obj.d -o CMakeFiles\main.dir\src\figures\Circle.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\figures\Circle.cpp
 
 CMakeFiles/main.dir/src/figures/Circle.cpp.i: cmake_force
@@ -282,7 +297,7 @@ CMakeFiles/main.dir/src/figures/CollisionManager.cpp.obj: CMakeFiles/main.dir/fl
 CMakeFiles/main.dir/src/figures/CollisionManager.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/figures/CollisionManager.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/CollisionManager.cpp
 CMakeFiles/main.dir/src/figures/CollisionManager.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/main.dir/src/figures/CollisionManager.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/main.dir/src/figures/CollisionManager.cpp.obj"
 	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/figures/CollisionManager.cpp.obj -MF CMakeFiles\main.dir\src\figures\CollisionManager.cpp.obj.d -o CMakeFiles\main.dir\src\figures\CollisionManager.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\figures\CollisionManager.cpp
 
 CMakeFiles/main.dir/src/figures/CollisionManager.cpp.i: cmake_force
@@ -297,7 +312,7 @@ CMakeFiles/main.dir/src/figures/Figure.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/figures/Figure.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/figures/Figure.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Figure.cpp
 CMakeFiles/main.dir/src/figures/Figure.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/main.dir/src/figures/Figure.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/main.dir/src/figures/Figure.cpp.obj"
 	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/figures/Figure.cpp.obj -MF CMakeFiles\main.dir\src\figures\Figure.cpp.obj.d -o CMakeFiles\main.dir\src\figures\Figure.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\figures\Figure.cpp
 
 CMakeFiles/main.dir/src/figures/Figure.cpp.i: cmake_force
@@ -312,7 +327,7 @@ CMakeFiles/main.dir/src/figures/ForceManager.cpp.obj: CMakeFiles/main.dir/flags.
 CMakeFiles/main.dir/src/figures/ForceManager.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/figures/ForceManager.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/ForceManager.cpp
 CMakeFiles/main.dir/src/figures/ForceManager.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/main.dir/src/figures/ForceManager.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/main.dir/src/figures/ForceManager.cpp.obj"
 	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/figures/ForceManager.cpp.obj -MF CMakeFiles\main.dir\src\figures\ForceManager.cpp.obj.d -o CMakeFiles\main.dir\src\figures\ForceManager.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\figures\ForceManager.cpp
 
 CMakeFiles/main.dir/src/figures/ForceManager.cpp.i: cmake_force
@@ -323,26 +338,26 @@ CMakeFiles/main.dir/src/figures/ForceManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/figures/ForceManager.cpp.s"
 	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Usuario\Desktop\PruebaOpenGL\src\figures\ForceManager.cpp -o CMakeFiles\main.dir\src\figures\ForceManager.cpp.s
 
-CMakeFiles/main.dir/src/figures/Square.cpp.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/figures/Square.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
-CMakeFiles/main.dir/src/figures/Square.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Square.cpp
-CMakeFiles/main.dir/src/figures/Square.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/main.dir/src/figures/Square.cpp.obj"
-	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/figures/Square.cpp.obj -MF CMakeFiles\main.dir\src\figures\Square.cpp.obj.d -o CMakeFiles\main.dir\src\figures\Square.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\figures\Square.cpp
+CMakeFiles/main.dir/src/figures/Ray2D.cpp.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/figures/Ray2D.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
+CMakeFiles/main.dir/src/figures/Ray2D.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Ray2D.cpp
+CMakeFiles/main.dir/src/figures/Ray2D.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/main.dir/src/figures/Ray2D.cpp.obj"
+	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/figures/Ray2D.cpp.obj -MF CMakeFiles\main.dir\src\figures\Ray2D.cpp.obj.d -o CMakeFiles\main.dir\src\figures\Ray2D.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\figures\Ray2D.cpp
 
-CMakeFiles/main.dir/src/figures/Square.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/figures/Square.cpp.i"
-	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Usuario\Desktop\PruebaOpenGL\src\figures\Square.cpp > CMakeFiles\main.dir\src\figures\Square.cpp.i
+CMakeFiles/main.dir/src/figures/Ray2D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/figures/Ray2D.cpp.i"
+	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Usuario\Desktop\PruebaOpenGL\src\figures\Ray2D.cpp > CMakeFiles\main.dir\src\figures\Ray2D.cpp.i
 
-CMakeFiles/main.dir/src/figures/Square.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/figures/Square.cpp.s"
-	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Usuario\Desktop\PruebaOpenGL\src\figures\Square.cpp -o CMakeFiles\main.dir\src\figures\Square.cpp.s
+CMakeFiles/main.dir/src/figures/Ray2D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/figures/Ray2D.cpp.s"
+	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Usuario\Desktop\PruebaOpenGL\src\figures\Ray2D.cpp -o CMakeFiles\main.dir\src\figures\Ray2D.cpp.s
 
 CMakeFiles/main.dir/src/vendor/imgui/imgui_demo.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/vendor/imgui/imgui_demo.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/vendor/imgui/imgui_demo.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui_demo.cpp
 CMakeFiles/main.dir/src/vendor/imgui/imgui_demo.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/main.dir/src/vendor/imgui/imgui_demo.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/main.dir/src/vendor/imgui/imgui_demo.cpp.obj"
 	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/vendor/imgui/imgui_demo.cpp.obj -MF CMakeFiles\main.dir\src\vendor\imgui\imgui_demo.cpp.obj.d -o CMakeFiles\main.dir\src\vendor\imgui\imgui_demo.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\vendor\imgui\imgui_demo.cpp
 
 CMakeFiles/main.dir/src/vendor/imgui/imgui_demo.cpp.i: cmake_force
@@ -357,7 +372,7 @@ CMakeFiles/main.dir/src/vendor/imgui/imgui_draw.cpp.obj: CMakeFiles/main.dir/fla
 CMakeFiles/main.dir/src/vendor/imgui/imgui_draw.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/vendor/imgui/imgui_draw.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui_draw.cpp
 CMakeFiles/main.dir/src/vendor/imgui/imgui_draw.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/main.dir/src/vendor/imgui/imgui_draw.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/main.dir/src/vendor/imgui/imgui_draw.cpp.obj"
 	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/vendor/imgui/imgui_draw.cpp.obj -MF CMakeFiles\main.dir\src\vendor\imgui\imgui_draw.cpp.obj.d -o CMakeFiles\main.dir\src\vendor\imgui\imgui_draw.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\vendor\imgui\imgui_draw.cpp
 
 CMakeFiles/main.dir/src/vendor/imgui/imgui_draw.cpp.i: cmake_force
@@ -372,7 +387,7 @@ CMakeFiles/main.dir/src/vendor/imgui/imgui_impl_glfw_gl3.cpp.obj: CMakeFiles/mai
 CMakeFiles/main.dir/src/vendor/imgui/imgui_impl_glfw_gl3.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/vendor/imgui/imgui_impl_glfw_gl3.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui_impl_glfw_gl3.cpp
 CMakeFiles/main.dir/src/vendor/imgui/imgui_impl_glfw_gl3.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/main.dir/src/vendor/imgui/imgui_impl_glfw_gl3.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/main.dir/src/vendor/imgui/imgui_impl_glfw_gl3.cpp.obj"
 	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/vendor/imgui/imgui_impl_glfw_gl3.cpp.obj -MF CMakeFiles\main.dir\src\vendor\imgui\imgui_impl_glfw_gl3.cpp.obj.d -o CMakeFiles\main.dir\src\vendor\imgui\imgui_impl_glfw_gl3.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\vendor\imgui\imgui_impl_glfw_gl3.cpp
 
 CMakeFiles/main.dir/src/vendor/imgui/imgui_impl_glfw_gl3.cpp.i: cmake_force
@@ -387,7 +402,7 @@ CMakeFiles/main.dir/src/vendor/imgui/imgui.cpp.obj: CMakeFiles/main.dir/flags.ma
 CMakeFiles/main.dir/src/vendor/imgui/imgui.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/vendor/imgui/imgui.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/imgui/imgui.cpp
 CMakeFiles/main.dir/src/vendor/imgui/imgui.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/main.dir/src/vendor/imgui/imgui.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/main.dir/src/vendor/imgui/imgui.cpp.obj"
 	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/vendor/imgui/imgui.cpp.obj -MF CMakeFiles\main.dir\src\vendor\imgui\imgui.cpp.obj.d -o CMakeFiles\main.dir\src\vendor\imgui\imgui.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\vendor\imgui\imgui.cpp
 
 CMakeFiles/main.dir/src/vendor/imgui/imgui.cpp.i: cmake_force
@@ -402,7 +417,7 @@ CMakeFiles/main.dir/src/tests/Test.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/tests/Test.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/tests/Test.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/Test.cpp
 CMakeFiles/main.dir/src/tests/Test.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/main.dir/src/tests/Test.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/main.dir/src/tests/Test.cpp.obj"
 	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/tests/Test.cpp.obj -MF CMakeFiles\main.dir\src\tests\Test.cpp.obj.d -o CMakeFiles\main.dir\src\tests\Test.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests\Test.cpp
 
 CMakeFiles/main.dir/src/tests/Test.cpp.i: cmake_force
@@ -417,7 +432,7 @@ CMakeFiles/main.dir/src/tests/TestClearColor.cpp.obj: CMakeFiles/main.dir/flags.
 CMakeFiles/main.dir/src/tests/TestClearColor.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/tests/TestClearColor.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestClearColor.cpp
 CMakeFiles/main.dir/src/tests/TestClearColor.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/main.dir/src/tests/TestClearColor.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/main.dir/src/tests/TestClearColor.cpp.obj"
 	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/tests/TestClearColor.cpp.obj -MF CMakeFiles\main.dir\src\tests\TestClearColor.cpp.obj.d -o CMakeFiles\main.dir\src\tests\TestClearColor.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests\TestClearColor.cpp
 
 CMakeFiles/main.dir/src/tests/TestClearColor.cpp.i: cmake_force
@@ -432,7 +447,7 @@ CMakeFiles/main.dir/src/tests/TestTexture.cpp.obj: CMakeFiles/main.dir/flags.mak
 CMakeFiles/main.dir/src/tests/TestTexture.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/tests/TestTexture.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestTexture.cpp
 CMakeFiles/main.dir/src/tests/TestTexture.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/main.dir/src/tests/TestTexture.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/main.dir/src/tests/TestTexture.cpp.obj"
 	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/tests/TestTexture.cpp.obj -MF CMakeFiles\main.dir\src\tests\TestTexture.cpp.obj.d -o CMakeFiles\main.dir\src\tests\TestTexture.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests\TestTexture.cpp
 
 CMakeFiles/main.dir/src/tests/TestTexture.cpp.i: cmake_force
@@ -447,7 +462,7 @@ CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestFPS.cpp
 CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj"
 	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/tests/TestFPS.cpp.obj -MF CMakeFiles\main.dir\src\tests\TestFPS.cpp.obj.d -o CMakeFiles\main.dir\src\tests\TestFPS.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests\TestFPS.cpp
 
 CMakeFiles/main.dir/src/tests/TestFPS.cpp.i: cmake_force
@@ -462,7 +477,7 @@ CMakeFiles/main.dir/src/tests/TestHugeObject.cpp.obj: CMakeFiles/main.dir/flags.
 CMakeFiles/main.dir/src/tests/TestHugeObject.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/tests/TestHugeObject.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestHugeObject.cpp
 CMakeFiles/main.dir/src/tests/TestHugeObject.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/main.dir/src/tests/TestHugeObject.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/main.dir/src/tests/TestHugeObject.cpp.obj"
 	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/tests/TestHugeObject.cpp.obj -MF CMakeFiles\main.dir\src\tests\TestHugeObject.cpp.obj.d -o CMakeFiles\main.dir\src\tests\TestHugeObject.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests\TestHugeObject.cpp
 
 CMakeFiles/main.dir/src/tests/TestHugeObject.cpp.i: cmake_force
@@ -477,7 +492,7 @@ CMakeFiles/main.dir/src/tests/TestLight.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/tests/TestLight.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/tests/TestLight.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestLight.cpp
 CMakeFiles/main.dir/src/tests/TestLight.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/main.dir/src/tests/TestLight.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/main.dir/src/tests/TestLight.cpp.obj"
 	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/tests/TestLight.cpp.obj -MF CMakeFiles\main.dir\src\tests\TestLight.cpp.obj.d -o CMakeFiles\main.dir\src\tests\TestLight.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests\TestLight.cpp
 
 CMakeFiles/main.dir/src/tests/TestLight.cpp.i: cmake_force
@@ -492,7 +507,7 @@ CMakeFiles/main.dir/src/tests/TestLightTexture.cpp.obj: CMakeFiles/main.dir/flag
 CMakeFiles/main.dir/src/tests/TestLightTexture.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/tests/TestLightTexture.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestLightTexture.cpp
 CMakeFiles/main.dir/src/tests/TestLightTexture.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/main.dir/src/tests/TestLightTexture.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/main.dir/src/tests/TestLightTexture.cpp.obj"
 	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/tests/TestLightTexture.cpp.obj -MF CMakeFiles\main.dir\src\tests\TestLightTexture.cpp.obj.d -o CMakeFiles\main.dir\src\tests\TestLightTexture.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests\TestLightTexture.cpp
 
 CMakeFiles/main.dir/src/tests/TestLightTexture.cpp.i: cmake_force
@@ -507,7 +522,7 @@ CMakeFiles/main.dir/src/tests/TestCollisions.cpp.obj: CMakeFiles/main.dir/flags.
 CMakeFiles/main.dir/src/tests/TestCollisions.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/tests/TestCollisions.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestCollisions.cpp
 CMakeFiles/main.dir/src/tests/TestCollisions.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/main.dir/src/tests/TestCollisions.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/main.dir/src/tests/TestCollisions.cpp.obj"
 	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/tests/TestCollisions.cpp.obj -MF CMakeFiles\main.dir\src\tests\TestCollisions.cpp.obj.d -o CMakeFiles\main.dir\src\tests\TestCollisions.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests\TestCollisions.cpp
 
 CMakeFiles/main.dir/src/tests/TestCollisions.cpp.i: cmake_force
@@ -522,7 +537,7 @@ CMakeFiles/main.dir/src/tests/TestPong.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/tests/TestPong.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/tests/TestPong.cpp.obj: C:/Users/Usuario/Desktop/PruebaOpenGL/src/tests/TestPong.cpp
 CMakeFiles/main.dir/src/tests/TestPong.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/main.dir/src/tests/TestPong.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/main.dir/src/tests/TestPong.cpp.obj"
 	c:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/tests/TestPong.cpp.obj -MF CMakeFiles\main.dir\src\tests\TestPong.cpp.obj.d -o CMakeFiles\main.dir\src\tests\TestPong.cpp.obj -c C:\Users\Usuario\Desktop\PruebaOpenGL\src\tests\TestPong.cpp
 
 CMakeFiles/main.dir/src/tests/TestPong.cpp.i: cmake_force
@@ -546,13 +561,14 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/src/VertexBuffer.cpp.obj" \
 "CMakeFiles/main.dir/src/Camera.cpp.obj" \
 "CMakeFiles/main.dir/src/VertexBufferLayout.cpp.obj" \
+"CMakeFiles/main.dir/src/glMacros.cpp.obj" \
 "CMakeFiles/main.dir/src/vendor/stb/stb_image.cpp.obj" \
 "CMakeFiles/main.dir/src/figures/AABB.cpp.obj" \
 "CMakeFiles/main.dir/src/figures/Circle.cpp.obj" \
 "CMakeFiles/main.dir/src/figures/CollisionManager.cpp.obj" \
 "CMakeFiles/main.dir/src/figures/Figure.cpp.obj" \
 "CMakeFiles/main.dir/src/figures/ForceManager.cpp.obj" \
-"CMakeFiles/main.dir/src/figures/Square.cpp.obj" \
+"CMakeFiles/main.dir/src/figures/Ray2D.cpp.obj" \
 "CMakeFiles/main.dir/src/vendor/imgui/imgui_demo.cpp.obj" \
 "CMakeFiles/main.dir/src/vendor/imgui/imgui_draw.cpp.obj" \
 "CMakeFiles/main.dir/src/vendor/imgui/imgui_impl_glfw_gl3.cpp.obj" \
@@ -581,13 +597,14 @@ main.exe: CMakeFiles/main.dir/src/VertexArray.cpp.obj
 main.exe: CMakeFiles/main.dir/src/VertexBuffer.cpp.obj
 main.exe: CMakeFiles/main.dir/src/Camera.cpp.obj
 main.exe: CMakeFiles/main.dir/src/VertexBufferLayout.cpp.obj
+main.exe: CMakeFiles/main.dir/src/glMacros.cpp.obj
 main.exe: CMakeFiles/main.dir/src/vendor/stb/stb_image.cpp.obj
 main.exe: CMakeFiles/main.dir/src/figures/AABB.cpp.obj
 main.exe: CMakeFiles/main.dir/src/figures/Circle.cpp.obj
 main.exe: CMakeFiles/main.dir/src/figures/CollisionManager.cpp.obj
 main.exe: CMakeFiles/main.dir/src/figures/Figure.cpp.obj
 main.exe: CMakeFiles/main.dir/src/figures/ForceManager.cpp.obj
-main.exe: CMakeFiles/main.dir/src/figures/Square.cpp.obj
+main.exe: CMakeFiles/main.dir/src/figures/Ray2D.cpp.obj
 main.exe: CMakeFiles/main.dir/src/vendor/imgui/imgui_demo.cpp.obj
 main.exe: CMakeFiles/main.dir/src/vendor/imgui/imgui_draw.cpp.obj
 main.exe: CMakeFiles/main.dir/src/vendor/imgui/imgui_impl_glfw_gl3.cpp.obj
@@ -606,7 +623,7 @@ main.exe: C:/Users/Usuario/Desktop/PruebaOpenGL/lib/libglfw3.a
 main.exe: CMakeFiles/main.dir/linkLibs.rsp
 main.exe: CMakeFiles/main.dir/objects1.rsp
 main.exe: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Linking CXX executable main.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Linking CXX executable main.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\main.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

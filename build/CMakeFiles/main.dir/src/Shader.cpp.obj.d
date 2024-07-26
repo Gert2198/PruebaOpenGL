@@ -315,17 +315,6 @@ CMakeFiles/main.dir/src/Shader.cpp.obj: \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/fstream.tcc \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/sstream \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/sstream.tcc \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\Renderer.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\glMacros.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/include/glad/glad.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/include/KHR/khrplatform.h \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\VertexArray.h \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\VertexBuffer.h \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\IndexBuffer.h \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\figures/Square.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBufferLayout.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/vector \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_uninitialized.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_vector.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_bvector.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/vector.tcc \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/Texture.h
+ C:/Users/Usuario/Desktop/PruebaOpenGL/include/KHR/khrplatform.h

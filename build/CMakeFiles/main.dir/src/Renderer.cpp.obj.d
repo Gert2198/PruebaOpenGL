@@ -1,6 +1,7 @@
 CMakeFiles/main.dir/src/Renderer.cpp.obj: \
  C:\Users\Usuario\Desktop\PruebaOpenGL\src\Renderer.cpp \
  C:\Users\Usuario\Desktop\PruebaOpenGL\src\Renderer.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\glMacros.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/include/glad/glad.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/include/KHR/khrplatform.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/stdint.h \
@@ -76,6 +77,12 @@ CMakeFiles/main.dir/src/Renderer.cpp.obj: \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/enable_special_members.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/unordered_map.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/erase_if.h \
+ C:\Users\Usuario\Desktop\PruebaOpenGL\src\VertexBufferLayout.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/vector \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_uninitialized.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_vector.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_bvector.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/vector.tcc \
  C:\Users\Usuario\Desktop\PruebaOpenGL\src\IndexBuffer.h \
  C:\Users\Usuario\Desktop\PruebaOpenGL\src\Shader.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/string \
@@ -291,14 +298,27 @@ CMakeFiles/main.dir/src/Renderer.cpp.obj: \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_half.inl \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/integer.hpp \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/func_integer.inl \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\figures/Square.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBufferLayout.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/vector \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_uninitialized.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_vector.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_bvector.h \
- c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/vector.tcc \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/Texture.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Segment.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Circle.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Figure.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/ForceManager.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/memory \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_tempbuf.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/stl_raw_storage_iter.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/ranges_uninitialized.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/ext/concurrence.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/unique_ptr.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/shared_ptr.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/shared_ptr_base.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/allocated_ptr.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/refwrap.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/shared_ptr_atomic.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/atomic_base.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/atomic_lockfree_defines.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/backward/auto_ptr.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/pstl/glue_memory_defs.h \
+ c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/pstl/execution_defs.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/AABB.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/iostream \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/ostream \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/ios \

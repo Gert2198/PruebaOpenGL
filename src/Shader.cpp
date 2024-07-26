@@ -4,7 +4,7 @@
 #include <fstream>
 #include <sstream>
 
-#include "Renderer.h"
+#include "glMacros.h"
 
 Shader::Shader(const string &filepath) : m_RendererID(0), m_Filepath(filepath) {
     ShaderProgramSource source = getShaderContentSingleFile(filepath);

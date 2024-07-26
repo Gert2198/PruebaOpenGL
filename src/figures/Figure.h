@@ -2,6 +2,8 @@
 
 #include "glm/glm.hpp"
 #include <vector>
+#include "VertexArray.h"
+#include "VertexBufferLayout.h"
 #include "VertexBuffer.h"
 #include "IndexBuffer.h"
 #include "ForceManager.h"
@@ -16,9 +18,10 @@ protected:
 
     ForceManager m_forceManager;
 
+    std::unique_ptr<VertexArray> m_vao;
     std::unique_ptr<VertexBuffer> m_vbo;
     std::unique_ptr<IndexBuffer> m_ibo;
-    Figure(const float mass, const float friction, const glm::vec3& color, const glm::vec2& position, const glm::vec2& velocity, const glm::vec2& acceleration = glm::vec2(0.0f));
+    Figure(const float mass, const float friction, const glm::vec3& color, const glm::vec2& position, const glm::vec2& velocity = glm::vec2(0.0f), const glm::vec2& acceleration = glm::vec2(0.0f));
 public:
 
     virtual void update(float deltaTime);
@@ -32,6 +35,7 @@ public:
     inline float getMass() const { return m_mass; }
     inline float getFriction() const { return m_friction; }
     
+    inline VertexArray getVertexArray() const { return *m_vao.get(); }
     inline VertexBuffer getVertexBuffer() const { return *m_vbo.get(); }
     inline IndexBuffer getIndexBuffer() const { return *m_ibo.get(); }
 

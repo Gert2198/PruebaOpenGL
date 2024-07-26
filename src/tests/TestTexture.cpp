@@ -6,6 +6,8 @@
 #include "glm/gtc/matrix_transform.hpp"
 #include "Utils.h"
 
+#include "Renderer.h"
+
 namespace test
 {
     TestTexture::TestTexture(GLFWwindow* window) : m_translation1(200, 200, 0), m_translation2(400, 200, 0), 

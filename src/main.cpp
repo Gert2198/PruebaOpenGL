@@ -4,7 +4,6 @@
 #include <GLFW/glfw3.h>
 
 #include "Utils.h"
-#include "figures/Square.h"
 
 #include "Renderer.h"
 #include "VertexBuffer.h"

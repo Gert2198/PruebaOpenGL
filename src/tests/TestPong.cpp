@@ -141,8 +141,7 @@ namespace test {
             float x = glm::sin(std::rand());
             float y = std::rand();
             glm::vec2 direction = glm::normalize(glm::vec2(x, y));
-            float magnitude = 3.f;
-            m_circle.setVelocity(magnitude * direction);
+            m_circle.setVelocity(m_ballSpeed * direction);
         } 
         if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS || glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS) {
             m_paddle.setPosition(m_paddle.getPosition() + glm::vec2(-1.f, 0.f) * m_paddleSpeed * deltaTime);

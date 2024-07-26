@@ -18,6 +18,12 @@ AABB::AABB(float width, float height, const float mass, const float friction, co
     };
 
     m_ibo = std::make_unique<IndexBuffer>(indices, 6);
+
+    VertexBufferLayout layout;
+    layout.push<float>(2);
+    
+    m_vao->bind();
+    m_vao->addBuffer(*m_vbo, layout);
 }
 
 void AABB::update(float deltaTime) {

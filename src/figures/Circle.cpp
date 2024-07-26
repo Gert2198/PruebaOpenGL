@@ -44,6 +44,12 @@ Circle::Circle(const float radius, const float mass, const float friction, const
     indices[(VERTICES - 1) * 3 + 2] = 0;
 
     m_ibo = std::make_unique<IndexBuffer>(indices, VERTICES * 3);
+
+    VertexBufferLayout layout;
+    layout.push<float>(2);
+    
+    m_vao->bind();
+    m_vao->addBuffer(*m_vbo, layout);
 }
 
 void Circle::checkEdges(float left, float right, float down, float up) {

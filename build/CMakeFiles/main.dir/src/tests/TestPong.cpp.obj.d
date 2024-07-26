@@ -325,7 +325,11 @@ CMakeFiles/main.dir/src/tests/TestPong.cpp.obj: \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/type_half.inl \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/integer.hpp \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/detail/func_integer.inl \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexArray.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBuffer.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBufferLayout.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/include/glad/glad.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/include/KHR/khrplatform.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/IndexBuffer.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/ForceManager.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/memory \
@@ -344,14 +348,10 @@ CMakeFiles/main.dir/src/tests/TestPong.cpp.obj: \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/pstl/execution_defs.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/AABB.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/CollisionManager.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexArray.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Shader.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/Renderer.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/include/glad/glad.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/include/KHR/khrplatform.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Square.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/VertexBufferLayout.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/Texture.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/glMacros.h \
+ C:/Users/Usuario/Desktop/PruebaOpenGL/src/figures/Segment.h \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/gtc/matrix_transform.hpp \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/ext/matrix_projection.hpp \
  C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/glm/gtc/constants.hpp \

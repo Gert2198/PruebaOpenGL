@@ -1,9 +1,13 @@
 #pragma once
 
 #include "Test.h"
-#include "Renderer.h"
 #include "glm/glm.hpp"
+
 #include "Camera.h"
+#include "AABB.h"
+
+#include "VertexArray.h"
+#include "Shader.h"
 
 #include <memory>
 
@@ -14,8 +18,8 @@ namespace test
         std::unique_ptr<VertexArray> m_vao;
         std::unique_ptr<Shader> m_shader;
 
-        std::unique_ptr<Square> m_wallNear, m_wallFar, m_wallLeft, m_wallRight, m_ceiling, m_floor;
-        std::unique_ptr<Square> m_square1, m_square2, m_centerDot;
+        std::unique_ptr<AABB> m_wallNear, m_wallFar, m_wallLeft, m_wallRight, m_ceiling, m_floor;
+        std::unique_ptr<AABB> m_square1, m_square2, m_centerDot;
         glm::vec4 m_color1, m_color2, m_dotColor;
         glm::vec3 m_transform1, m_transform2;
 
