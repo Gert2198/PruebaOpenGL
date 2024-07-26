@@ -4,7 +4,6 @@
 #include "glm/gtc/matrix_transform.hpp"
 
 #include "VertexBuffer.h"
-#include "IndexBuffer.h"
 
 #include <memory>
 
@@ -15,11 +14,11 @@ private:
         bottom = 0, right, top, left
     };
     glm::vec2 m_position; // El centro de la diagonal
-    int m_vertices[3];
+    glm::vec2 m_vertices[3];
     Face m_targetFace;
 
     std::unique_ptr<VertexBuffer> m_vbo;
-    std::unique_ptr<IndexBuffer> m_ibo;
+    // No necesito IBO porque es un único triangulo
 
     float getRotationAngle() const { 
         switch (m_targetFace) {
@@ -30,7 +29,7 @@ private:
         }
     }
 public:
-    Mirror_End(); // Siempre lo voy a crear con el target abajo y el espejo arriba-derecha (la diagonal de izq-arriba a der-abajo)
+    Mirror_End(const glm::vec2& position); // Siempre lo voy a crear con el target abajo y el espejo arriba-derecha (la diagonal de izq-arriba a der-abajo)
 
     glm::mat4 getModelMatrix() const { return glm::translate(glm::mat4(1.f), glm::vec3(m_position, 0.f))
                                             * glm::rotate(glm::mat4(1.f), getRotationAngle(), glm::vec3(0.f, 0.f, 1.f)); }
