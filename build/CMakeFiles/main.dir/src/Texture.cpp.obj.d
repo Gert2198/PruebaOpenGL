@@ -1,6 +1,6 @@
 CMakeFiles/main.dir/src/Texture.cpp.obj: \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\Texture.cpp \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\Texture.h \
+ C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\Texture.cpp \
+ C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\Texture.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/string \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
@@ -128,7 +128,7 @@ CMakeFiles/main.dir/src/Texture.cpp.obj: \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/enable_special_members.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/unordered_map.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/erase_if.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/src/vendor/stb/stb_image.h \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\glMacros.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/include/glad/glad.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/include/KHR/khrplatform.h
+ C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/src/vendor/stb/stb_image.h \
+ C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\glMacros.h \
+ C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/include/glad/glad.h \
+ C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/include/KHR/khrplatform.h

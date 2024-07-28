@@ -1,8 +1,8 @@
 CMakeFiles/main.dir/src/glMacros.cpp.obj: \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\glMacros.cpp \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\glMacros.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/include/glad/glad.h \
- C:/Users/Usuario/Desktop/PruebaOpenGL/include/KHR/khrplatform.h \
+ C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\glMacros.cpp \
+ C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\glMacros.h \
+ C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/include/glad/glad.h \
+ C:/Users/SERGI~1.SER/Desktop/REPOSI~1/OpenGL/PRUEBA~1/include/KHR/khrplatform.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/stdint.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/stdint.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/crtdefs.h \

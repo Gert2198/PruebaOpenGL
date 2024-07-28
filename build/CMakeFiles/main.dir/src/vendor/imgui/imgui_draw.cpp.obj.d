@@ -1,7 +1,7 @@
 CMakeFiles/main.dir/src/vendor/imgui/imgui_draw.cpp.obj: \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\vendor\imgui\imgui_draw.cpp \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\vendor\imgui\imgui.h \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\vendor\imgui\imconfig.h \
+ C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\vendor\imgui\imgui_draw.cpp \
+ C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\vendor\imgui\imgui.h \
+ C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\vendor\imgui\imconfig.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/float.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/float.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/crtdefs.h \
@@ -33,7 +33,7 @@ CMakeFiles/main.dir/src/vendor/imgui/imgui_draw.cpp.obj: \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/malloc.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/std_abs.h \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\vendor\imgui\imgui_internal.h \
+ C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\vendor\imgui\imgui_internal.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/stdio.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -73,6 +73,6 @@ CMakeFiles/main.dir/src/vendor/imgui/imgui_draw.cpp.obj: \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/tr1/poly_hermite.tcc \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/tr1/poly_laguerre.tcc \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/tr1/riemann_zeta.tcc \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\vendor\imgui\stb_textedit.h \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\vendor\imgui\stb_rect_pack.h \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\vendor\imgui\stb_truetype.h
+ C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\vendor\imgui\stb_textedit.h \
+ C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\vendor\imgui\stb_rect_pack.h \
+ C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\vendor\imgui\stb_truetype.h

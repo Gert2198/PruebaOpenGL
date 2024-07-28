@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Usuario\Desktop\PruebaOpenGL
+CMAKE_SOURCE_DIR = "C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories Github\OpenGL\PruebaOpenGL"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Usuario\Desktop\PruebaOpenGL\build
+CMAKE_BINARY_DIR = "C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories Github\OpenGL\PruebaOpenGL\build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles C:\Users\Usuario\Desktop\PruebaOpenGL\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories Github\OpenGL\PruebaOpenGL\build\CMakeFiles" "C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories Github\OpenGL\PruebaOpenGL\build\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Usuario\Desktop\PruebaOpenGL\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories Github\OpenGL\PruebaOpenGL\build\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -463,30 +463,6 @@ src/figures/ForceManager.s: src/figures/ForceManager.cpp.s
 src/figures/ForceManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/ForceManager.cpp.s
 .PHONY : src/figures/ForceManager.cpp.s
-
-src/figures/Ray2D.obj: src/figures/Ray2D.cpp.obj
-.PHONY : src/figures/Ray2D.obj
-
-# target to build an object file
-src/figures/Ray2D.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/Ray2D.cpp.obj
-.PHONY : src/figures/Ray2D.cpp.obj
-
-src/figures/Ray2D.i: src/figures/Ray2D.cpp.i
-.PHONY : src/figures/Ray2D.i
-
-# target to preprocess a source file
-src/figures/Ray2D.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/Ray2D.cpp.i
-.PHONY : src/figures/Ray2D.cpp.i
-
-src/figures/Ray2D.s: src/figures/Ray2D.cpp.s
-.PHONY : src/figures/Ray2D.s
-
-# target to generate assembly for a file
-src/figures/Ray2D.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/figures/Ray2D.cpp.s
-.PHONY : src/figures/Ray2D.cpp.s
 
 src/glMacros.obj: src/glMacros.cpp.obj
 .PHONY : src/glMacros.obj
@@ -947,9 +923,6 @@ help:
 	@echo ... src/figures/ForceManager.obj
 	@echo ... src/figures/ForceManager.i
 	@echo ... src/figures/ForceManager.s
-	@echo ... src/figures/Ray2D.obj
-	@echo ... src/figures/Ray2D.i
-	@echo ... src/figures/Ray2D.s
 	@echo ... src/glMacros.obj
 	@echo ... src/glMacros.i
 	@echo ... src/glMacros.s

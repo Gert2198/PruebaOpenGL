@@ -20,7 +20,6 @@ add_executable(main
 "src/figures/CollisionManager.cpp" 
 "src/figures/Figure.cpp" 
 "src/figures/ForceManager.cpp" 
-"src/figures/Ray2D.cpp" 
 "src/vendor/imgui/imgui_demo.cpp"
 "src/vendor/imgui/imgui_draw.cpp"
 "src/vendor/imgui/imgui_impl_glfw_gl3.cpp"

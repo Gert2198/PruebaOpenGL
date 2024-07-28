@@ -27,8 +27,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/src/figures/Figure.cpp.obj.d"
   "CMakeFiles/main.dir/src/figures/ForceManager.cpp.obj"
   "CMakeFiles/main.dir/src/figures/ForceManager.cpp.obj.d"
-  "CMakeFiles/main.dir/src/figures/Ray2D.cpp.obj"
-  "CMakeFiles/main.dir/src/figures/Ray2D.cpp.obj.d"
   "CMakeFiles/main.dir/src/glMacros.cpp.obj"
   "CMakeFiles/main.dir/src/glMacros.cpp.obj.d"
   "CMakeFiles/main.dir/src/glad.c.obj"

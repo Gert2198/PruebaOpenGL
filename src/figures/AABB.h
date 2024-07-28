@@ -18,6 +18,7 @@ public:
     inline float getWidth() const { return m_width; }
     inline float getHeight() const { return m_height; }
     inline const glm::vec2* getVertices() const { return m_vertices; }
+    inline const glm::vec2 getVertex(int index) const { assert(index < 4); return m_vertices[index]; }
     inline float left() const { return m_vertices[0].x; }
     inline float right() const { return m_vertices[1].x; }
     inline float top() const { return m_vertices[2].y; }

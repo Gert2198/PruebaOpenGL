@@ -7,7 +7,14 @@
 
 #include <memory>
 
-// El rayo rebota en el espejo, y se absorbe en las otras dos caras. Además, si el rayo impacta en la cara que tiene final, cuenta como +1 en targets
+// El rayo rebota en el espejo, y se absorbe en las otras dos caras. Además, si el rayo 
+// impacta en la cara que tiene final, cuenta como +1 en targets
+
+/*
+2
+  \         Forma inicial de Mirror_End, la cara 0-1 tiene el End, y la cara 1-2 tiene el Mirror
+0 - 1
+*/
 class Mirror_End {
 private: 
     enum Face {

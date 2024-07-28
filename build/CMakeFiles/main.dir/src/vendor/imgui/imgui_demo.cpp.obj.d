@@ -1,7 +1,7 @@
 CMakeFiles/main.dir/src/vendor/imgui/imgui_demo.cpp.obj: \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\vendor\imgui\imgui_demo.cpp \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\vendor\imgui\imgui.h \
- C:\Users\Usuario\Desktop\PruebaOpenGL\src\vendor\imgui\imconfig.h \
+ C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\vendor\imgui\imgui_demo.cpp \
+ C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\vendor\imgui\imgui.h \
+ C:\Users\sergi.SERGIO-LOZANO\Desktop\Repositories\ Github\OpenGL\PruebaOpenGL\src\vendor\imgui\imconfig.h \
  c:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/float.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/float.h \
  c:/TDM-GCC-64/x86_64-w64-mingw32/include/crtdefs.h \
