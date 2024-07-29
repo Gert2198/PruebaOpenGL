@@ -27,6 +27,9 @@ public:
     bool checkCollision(const Circle& a, const Circle& b);
     bool checkCollision(const AABB& a, const Circle& b);
     bool checkCollision(const AABB& a, const AABB& b);
+    
+    bool intersects(const Ray2D& ray, const Segment& seg);
+    bool intersects(const Ray2D& ray, const AABB& rect);
 
     void resolveCollision(Circle& a, Circle& b);
     void resolveCollision(AABB& a, Circle& b);

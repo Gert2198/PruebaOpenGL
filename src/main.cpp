@@ -27,6 +27,7 @@
 #include "tests/TestLightTexture.h"
 #include "tests/TestCollisions.h"
 #include "tests/TestPong.h"
+#include "tests/mirrorGame/TestMirrors.h"
 
 using std::cout; 
 using std::endl; 
@@ -95,6 +96,7 @@ int main() {
         testMenu->registerTest<test::TestLightTexture>("Light with textures test");
         testMenu->registerTest<test::TestCollision>("Circle tests");
         testMenu->registerTest<test::TestPong>("Pong tests");
+        testMenu->registerTest<test::TestMirrors>("Mirror test");
 
         while(!glfwWindowShouldClose(window)) {
             float currentFrame = static_cast<float>(glfwGetTime());

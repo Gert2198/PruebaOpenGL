@@ -11,7 +11,12 @@ bool CollisionManager::checkPointInside(const glm::vec2& point, const Segment& s
     if (point == seg.getStart() || point == seg.getEnd()) return false;
     glm::vec2 dir1 = glm::normalize(seg.getDirection());
     glm::vec2 dir2 = glm::normalize(seg.getEnd() - point);
-    return dir1 == dir2;
+    glm::vec2 dir3 = glm::normalize(seg.getStart() - point);
+
+    glm::vec2 error1 = dir1 - dir2;
+    glm::vec2 error2 = dir3 + dir1;
+
+    return glm::length(error1) < 0.0001f && glm::length(error2) < 0.0001f;
 }
 
 bool CollisionManager::checkCollision(const Circle& a, const Circle& b) {
@@ -63,6 +68,17 @@ bool CollisionManager::checkCollision(const AABB& a, const AABB& b) {
     return b.left() <= a.right() && a.left() <= b.right() && b.bottom() <= a.top() && a.bottom() <= b.top();
 }
 
+bool CollisionManager::intersects(const Ray2D& ray, const Segment& seg) {
+    return glm::abs(glm::dot(ray.getDirection(), seg.getDirection())) != 1;
+}
+bool CollisionManager::intersects(const Ray2D& ray, const AABB& rect) {
+    glm::vec2 vertices[] = { rect.getVertex(0), rect.getVertex(1), rect.getVertex(2), rect.getVertex(3) };
+    for (int i = 0; i < 4; i++) {
+        Segment seg(vertices[i], vertices[(i + 1)%4]);
+        if (intersects(ray, seg)) return true;
+    }
+    return false;
+}
 void CollisionManager::resolveCollision(Circle& a, Circle& b) {
     glm::vec2 aPos = a.getPosition(),   bPos = b.getPosition();
     float aRadius = a.getRadius(),      bRadius = b.getRadius();
@@ -228,13 +244,16 @@ std::pair<bool, glm::vec2> CollisionManager::impactPoint(const Ray2D& ray, const
         y = m * x + n;
     }
     glm::vec2 impact(x, y);
-    result = std::pair<bool, glm::vec2>(checkPointInside(impact, seg), impact);
+
+    bool condition = rayDir.x != 0 ? (impact.x - rayPos.x) / rayDir.x > 0 : (impact.y - rayPos.y) / rayDir.y > 0;
+
+    result = std::pair<bool, glm::vec2>(checkPointInside(impact, seg) && condition, impact);
     return result;
 }
 std::pair<bool, std::pair<glm::vec2, Segment>> CollisionManager::impactPoint(const Ray2D& ray, const AABB& rect) const {
     glm::vec2 vertices[] = { rect.getVertex(0), rect.getVertex(1), rect.getVertex(2), rect.getVertex(3) };
     glm::vec2 rayPos = ray.getPoint();
-    float maxLength = std::numeric_limits<float>::infinity();
+    float bestLength = std::numeric_limits<float>::infinity();
     std::pair<bool, std::pair<glm::vec2, Segment>> bestImpact(
         false, 
         std::pair<glm::vec2, Segment>(glm::vec2(0.f), 
@@ -251,9 +270,13 @@ std::pair<bool, std::pair<glm::vec2, Segment>> CollisionManager::impactPoint(con
             std::pair<glm::vec2, Segment>(impact.second, 
             seg)
         );
-        float length = glm::length(impact.second - rayPos);
-        if (length < maxLength) {
-            maxLength = length;
+        glm::vec2 dir = impact.second - rayPos;
+        // glm::vec2 normalizedDir = glm::normalize(dir);
+        // glm::vec2 normalizedRayDir = glm::normalize(ray.getDirection());
+        // if (normalizedDir != normalizedRayDir) continue;
+        float length = glm::length(dir);
+        if (length < bestLength) {
+            bestLength = length;
             bestImpact = candidate;
         }
     }
@@ -262,7 +285,8 @@ std::pair<bool, std::pair<glm::vec2, Segment>> CollisionManager::impactPoint(con
 
 glm::vec2 CollisionManager::reflectedVector(const glm::vec2& rayDirection, const glm::vec2& surfaceDirection) const {
     glm::vec2 normal = glm::normalize(glm::vec2(surfaceDirection.y, -surfaceDirection.x));
-    return rayDirection - 2 * glm::dot(rayDirection, normal) * normal;
+    glm::vec2 reflected = rayDirection - 2 * glm::dot(rayDirection, normal) * normal;
+    return reflected;
 }
 
 float CollisionManager::cuandoColisionan(const glm::vec2& p, const Circle& c) const {

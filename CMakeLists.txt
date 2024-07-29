@@ -33,6 +33,7 @@ add_executable(main
 "src/tests/TestLightTexture.cpp"
 "src/tests/TestCollisions.cpp"
 "src/tests/TestPong.cpp"
+"src/tests/mirrorGame/TestMirrors.cpp"
 )
 target_include_directories(main PRIVATE include)
 target_include_directories(main PRIVATE src)
