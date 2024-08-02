@@ -137,7 +137,7 @@ std::pair<bool, Segment> CollisionManager::resolveCollision(Ray2D& ray, Segment&
     if (impact.first) {
         result.second = Segment(ray.getPoint(), impact.second);
         ray.setPoint(impact.second);
-        ray.setDirection(glm::normalize(reflectedVector(rayDir, segDir)));
+        ray.setDirection(glm::normalize(reflectedVector(rayDir, seg)));
     }
     return result;
 }
@@ -152,7 +152,7 @@ std::pair<bool, Segment> CollisionManager::resolveCollision(Ray2D& ray, AABB& re
         
         result.second = Segment(ray.getPoint(), impact.second.first);
         ray.setPoint(impact.second.first);
-        ray.setDirection(glm::normalize(reflectedVector(rayDir, segDir)));
+        ray.setDirection(glm::normalize(reflectedVector(rayDir, seg)));
     }
     return result;
 }
@@ -283,7 +283,8 @@ std::pair<bool, std::pair<glm::vec2, Segment>> CollisionManager::impactPoint(con
     return bestImpact;
 }
 
-glm::vec2 CollisionManager::reflectedVector(const glm::vec2& rayDirection, const glm::vec2& surfaceDirection) const {
+glm::vec2 CollisionManager::reflectedVector(const glm::vec2& rayDirection, const Segment& seg) const {
+    glm::vec2 surfaceDirection = seg.getDirection();
     glm::vec2 normal = glm::normalize(glm::vec2(surfaceDirection.y, -surfaceDirection.x));
     glm::vec2 reflected = rayDirection - 2 * glm::dot(rayDirection, normal) * normal;
     return reflected;

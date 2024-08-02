@@ -2,7 +2,9 @@
 
 #include "../Test.h"
 
-#include "CollisionManager.h"
+#include "Mirror_End.h"
+#include "DoubleMirror.h"
+#include "MirrorConstants.h"
 
 #include "VertexArray.h"
 #include "Shader.h"
@@ -12,19 +14,23 @@ namespace test
 {
     class TestMirrors : public Test {
     private: 
-        AABB m_rect;
-        Segment m_seg;
         Ray2D m_ray;
-        float m_rayAngle;
         glm::vec2 m_firstPos, m_firstDir;
-        std::vector<Segment> m_segments;
 
-        CollisionManager m_collisionManager;
+        // 0 -> aire, 1 -> rayo, 2 -> mirror_end, 3 -> doubleMirror, 4 -> barrier, 5 -> blocker
+        unsigned char grid[GRID_SIZE][GRID_SIZE];
+
+        std::unordered_map<unsigned char, Mirror_End> m_mirrors;
+        std::unordered_map<unsigned char, DoubleMirror> m_doubleMirrors;
+
+        Mirror_End m_mirror;
+        std::vector<Segment> m_drawableSegments;
+
+        int m_targets;
 
         glm::mat4 m_projMatrix;
 
-        std::unique_ptr<VertexArray> m_vao;
-        std::unique_ptr<Shader> m_shader;
+        Shader m_shader;
     public: 
         TestMirrors(GLFWwindow* window);
         ~TestMirrors();
@@ -33,8 +39,12 @@ namespace test
         void onRender() override;
         void onImGuiRender() override;
 
+        void drawGrid();
+
         // Callbacks
         // void cursor_position_callback(GLFWwindow* window, double xpos, double ypos);
+
+        // Necesito funciones pick y place
     };
 } // namespace test
 

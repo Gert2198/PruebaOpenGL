@@ -28,6 +28,7 @@
 #include "tests/TestCollisions.h"
 #include "tests/TestPong.h"
 #include "tests/mirrorGame/TestMirrors.h"
+#include "tests/TestFluid.h"
 
 using std::cout; 
 using std::endl; 
@@ -97,6 +98,7 @@ int main() {
         testMenu->registerTest<test::TestCollision>("Circle tests");
         testMenu->registerTest<test::TestPong>("Pong tests");
         testMenu->registerTest<test::TestMirrors>("Mirror test");
+        testMenu->registerTest<test::TestFluid>("Fluid test");
 
         while(!glfwWindowShouldClose(window)) {
             float currentFrame = static_cast<float>(glfwGetTime());

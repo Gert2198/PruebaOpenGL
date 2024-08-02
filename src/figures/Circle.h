@@ -6,6 +6,7 @@
 #include "IndexBuffer.h"
 
 #include "glm/glm.hpp"
+#include "glm/gtc/matrix_transform.hpp"
 
 #include <memory>
 #include <vector>
@@ -22,7 +23,13 @@ public:
 
     void checkEdges(float left, float right, float down, float up);
 
+    void updateVbo();
+
     inline float getRadius() const { return m_radius; }
     inline float getPerimeter() const { return 2 * PI * m_radius; }
     inline float getArea() const { return PI * m_radius * m_radius; }
+
+    inline void setRadius(float radius) { m_radius = radius; updateVbo(); }
+
+    inline glm::mat4 getModelMatrix() const { return glm::translate(glm::mat4(1.f), glm::vec3(m_position, 0.f)); }
 };

@@ -75,6 +75,33 @@ void Renderer::drawCircle(const Circle& circle, const Shader &shader) const {
 
     GLDebug(glDrawElements(GL_TRIANGLES, ibo.getCount(), GL_UNSIGNED_INT, nullptr));
 }
+void Renderer::drawCircleOutline(const float& radius, const Shader &shader, const float& lineWidth) const {
+    shader.bind();
+
+    VertexArray vao;
+    vao.bind();
+    
+    glm::vec2 vertices[VERTICES];
+
+    float angle = 0.0f;
+    float increment = 2 * PI / (float) VERTICES;
+
+    for (int i = 0; i < VERTICES; i++) {
+        glm::vec2 vertex(radius * cos(angle), radius * sin(angle));
+        vertices[i] = vertex;
+        angle += increment;
+    }
+
+    VertexBuffer vbo(vertices, VERTICES * 2 * sizeof(float));
+
+    VertexBufferLayout layout;
+    layout.push<float>(2);
+    vao.addBuffer(vbo, layout);
+
+    GLDebug(glLineWidth(lineWidth));
+
+    GLDebug(glDrawArrays(GL_LINE_LOOP, 0, VERTICES));
+}
 void Renderer::drawAABB(const AABB& aabb, const Shader &shader) const {
     shader.bind();
     
@@ -89,4 +116,17 @@ void Renderer::drawAABB(const AABB& aabb, const Shader &shader) const {
     ibo.bind();
 
     GLDebug(glDrawElements(GL_TRIANGLES, ibo.getCount(), GL_UNSIGNED_INT, nullptr));
+}
+
+void Renderer::drawMirror(const Mirror_End &mirror, const Shader &shader) const {
+    shader.bind();
+
+    VertexArray vao(mirror.getVertexArray());
+    vao.bind();
+
+    VertexBufferLayout layout;
+    layout.push<float>(2); 
+    vao.addBuffer(mirror.getVertexBuffer(), layout);
+    
+    GLDebug(glDrawArrays(GL_TRIANGLES, 0, 3));
 }

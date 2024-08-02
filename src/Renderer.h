@@ -9,6 +9,7 @@
 #include "Segment.h"
 #include "Circle.h"
 #include "AABB.h"
+#include "tests/mirrorGame/Mirror_End.h"
 
 class Renderer {
 private: 
@@ -21,5 +22,7 @@ public:
 
     void drawSegment(const Segment& segment, const Shader &shader, const float& lineWidth = 1.5f) const;
     void drawCircle(const Circle& circle, const Shader &shader) const;
+    void drawCircleOutline(const float& radius, const Shader &shader, const float& lineWidth = 1.5f) const;
     void drawAABB(const AABB& aabb, const Shader &shader) const;
+    void drawMirror(const Mirror_End &mirror, const Shader &shader) const;
 };

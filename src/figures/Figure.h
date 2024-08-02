@@ -35,6 +35,9 @@ public:
     inline float getMass() const { return m_mass; }
     inline float getFriction() const { return m_friction; }
     
+    inline void setMass(float mass) { m_mass = mass; }
+    inline void setFriction(float friction) { m_friction = friction; }
+    
     inline VertexArray getVertexArray() const { return *m_vao.get(); }
     inline VertexBuffer getVertexBuffer() const { return *m_vbo.get(); }
     inline IndexBuffer getIndexBuffer() const { return *m_ibo.get(); }

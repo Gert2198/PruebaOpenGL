@@ -1,8 +1,5 @@
 #pragma once
 
-class AABB;
-class Circle;
-
 #include "AABB.h"
 #include "Circle.h"
 #include "Ray2D.h"
@@ -10,14 +7,6 @@ class Circle;
 
 class CollisionManager {
 private:
-    std::pair<bool, glm::vec2> impactPoint(Circle& a, Circle& b) const;
-    std::pair<bool, glm::vec2> impactPoint(AABB& a, Circle& b) const;
-
-    std::pair<bool, glm::vec2> impactPoint(const Ray2D& ray, const Segment& seg) const;
-    std::pair<bool, std::pair<glm::vec2, Segment>> impactPoint(const Ray2D& ray, const AABB& rect) const;
-
-    glm::vec2 reflectedVector(const glm::vec2& rayDirection, const glm::vec2& surfaceDirection) const;
-
     float cuandoColisionan(const glm::vec2& p, const Circle& c) const;
 public:
     bool checkPointInside(const glm::vec2& point, const Circle& circle) const;
@@ -28,6 +17,12 @@ public:
     bool checkCollision(const AABB& a, const Circle& b);
     bool checkCollision(const AABB& a, const AABB& b);
     
+    std::pair<bool, glm::vec2> impactPoint(Circle& a, Circle& b) const;
+    std::pair<bool, glm::vec2> impactPoint(AABB& a, Circle& b) const;
+
+    std::pair<bool, glm::vec2> impactPoint(const Ray2D& ray, const Segment& seg) const;
+    std::pair<bool, std::pair<glm::vec2, Segment>> impactPoint(const Ray2D& ray, const AABB& rect) const;
+
     bool intersects(const Ray2D& ray, const Segment& seg);
     bool intersects(const Ray2D& ray, const AABB& rect);
 
@@ -38,4 +33,5 @@ public:
     std::pair<bool, Segment> resolveCollision(Ray2D& ray, Segment& seg);
     std::pair<bool, Segment> resolveCollision(Ray2D& ray, AABB& rect);
 
+    glm::vec2 reflectedVector(const glm::vec2& rayDirection, const Segment& surfaceDirection) const;
 };
