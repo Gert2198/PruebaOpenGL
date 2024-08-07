@@ -16,8 +16,8 @@ void Figure::update(float deltaTime) {
     glm::vec2 f = m_forceManager.netForce();
 
     m_acceleration = f / m_mass;
-    m_velocity = m_velocity + m_acceleration * deltaTime;
-    m_position = m_position + m_velocity * deltaTime;
+    m_velocity += m_acceleration * deltaTime;
+    m_position += m_velocity * deltaTime;
 
     m_forceManager.clearForces();
 }
